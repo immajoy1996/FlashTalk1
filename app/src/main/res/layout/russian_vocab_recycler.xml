@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="@dimen/vocab_recycler_view_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@drawable/custom_ripple">
+
+    <TextView
+        android:id="@+id/english"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="person"
+        android:textColor="@color/sea_green"
+        android:textSize="@dimen/vocab_practice_recycler_view_font_size_word" />
+
+    <TextView
+        android:textColor="@color/transliteration_color"
+        android:id="@+id/transliterations"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="chelavyek"
+        android:padding="5dp"
+        android:textStyle="italic"
+        android:textSize="@dimen/vocab_recycler_view_font_size_translit"
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
+        android:layout_weight="1"
+
+        />
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/russian"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="человек"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/vocab_practice_recycler_view_font_size_word"
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
+        android:layout_weight="1"
+
+        />
+
+</LinearLayout>

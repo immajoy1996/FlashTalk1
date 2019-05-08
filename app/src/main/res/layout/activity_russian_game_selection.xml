@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_russian_language"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RussianGameSelectionActivity"
+    android:background="@drawable/ocean3"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:background="@color/medium_sea_green"
+        app:titleTextColor="@color/white_smoke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/arrow_button_width"
+                android:layout_height="@dimen/arrow_button_height"
+                android:background="@drawable/arrow_back_pressed" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="Test Yourself!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbar_font_size"
+            android:fontFamily="@font/treb_ms_regular"
+            android:visibility="visible"
+
+            />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/medium_sea_green"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyler_view_russian_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/medium_sea_green"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/play"
+                    android:layout_width="@dimen/russian_game_selection_play_width"
+                    android:layout_height="@dimen/russian_game_selection_play_height"
+                    android:background="@drawable/game_selector_grey"
+                    android:clickable="false"
+                    android:text="Play!"
+                    android:textColor="@color/light_grey" />
+
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

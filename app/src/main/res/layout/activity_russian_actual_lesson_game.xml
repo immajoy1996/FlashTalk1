@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ocean3"
+    tools:context=".RussianActualLessonGameActivity"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_fragment1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_alignParentTop="true"
+        android:background="@color/medium_sea_green"
+        app:titleTextColor="@color/white_smoke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="@dimen/arrow_button_width"
+                    android:layout_height="@dimen/arrow_button_height"
+                    android:background="@drawable/arrow_back_pressed" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/game_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="FlashTalk"
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_font_size"
+                android:fontFamily="@font/treb_ms_regular"
+
+                />
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:fontFamily="@font/treb_ms_regular"
+                android:text="Score : 0%"
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_font_size"
+
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/activity_horizontal_margin"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/game_rounded_corner_rect"
+            android:orientation="vertical"
+            android:padding="@dimen/russian_actual_games_padding"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose the correct translation"
+                android:textSize="@dimen/russian_actual_games_instruction_font_size"
+                android:textColor="@color/black"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+
+                />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:text="Привет. Ты знаешь английский? Привет. Ты знаешь английский? Привет. Ты знаешь английский?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/russian_actual_games_question_font_size"
+                android:textStyle="bold"
+                android:visibility="visible"
+
+                />
+
+            <ImageView
+                android:id="@+id/game_image"
+                android:layout_width="@dimen/russian_actual_games_image_width"
+                android:layout_height="@dimen/russian_actual_games_image_height"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:src="@drawable/indianflag"
+                android:visibility="gone"
+
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/firstrow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/russian_actual_games_answer_height"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/russian_actual_games_vertical_spacing"
+            >
+
+            <LinearLayout
+                android:id="@+id/answer1_layout"
+                android:layout_width="@dimen/russian_actual_games_token_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:background="@drawable/game_rounded_corner_rect"
+                >
+
+                <TextView
+                    android:id="@+id/answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/treb_ms_regular"
+                    android:gravity="center"
+                    android:padding="@dimen/russian_actual_games_padding"
+                    android:text="привет"
+                    android:textColor="@color/transliteration_color"
+                    android:textSize="@dimen/russian_actual_games_answer_font_size" />
+
+                <TextView
+                    android:id="@+id/check1"
+                    android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                    android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                    android:background="@drawable/checkmark1"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/answer2_layout"
+                android:layout_width="@dimen/russian_actual_games_token_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:background="@drawable/game_rounded_corner_rect"
+                >
+
+                <TextView
+                    android:id="@+id/answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/treb_ms_regular"
+                    android:gravity="center"
+                    android:padding="@dimen/russian_actual_games_padding"
+                    android:text="привет, мой друг"
+                    android:textColor="@color/transliteration_color"
+                    android:textSize="@dimen/russian_actual_games_answer_font_size" />
+
+                <TextView
+                    android:id="@+id/check2"
+                    android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                    android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                    android:background="@drawable/xmark2"
+                    />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondrow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/russian_actual_games_answer_height"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/answer3_layout"
+                android:layout_width="@dimen/russian_actual_games_token_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:background="@drawable/game_rounded_corner_rect"
+                >
+
+                <TextView
+                    android:id="@+id/answer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/treb_ms_regular"
+                    android:gravity="center"
+                    android:padding="@dimen/russian_actual_games_padding"
+                    android:text="The quick brown fox jumped."
+                    android:textColor="@color/transliteration_color"
+                    android:textSize="@dimen/russian_actual_games_answer_font_size"
+                    />
+
+                <TextView
+                    android:id="@+id/check3"
+                    android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                    android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                    android:background="@drawable/xmark2"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/answer4_layout"
+                android:layout_width="@dimen/russian_actual_games_token_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:background="@drawable/game_rounded_corner_rect"
+                >
+
+                <TextView
+                    android:id="@+id/answer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Hello. Do you know English?"
+                    android:textSize="@dimen/russian_actual_games_answer_font_size"
+                    android:textColor="@color/transliteration_color"
+                    android:fontFamily="@font/treb_ms_regular"
+                    android:gravity="center"
+                    android:padding="@dimen/russian_actual_games_padding"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/check4"
+                    android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                    android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                    android:background="@drawable/xmark2"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answerlong1_layout"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/russian_actual_games_vertical_spacing"
+            android:padding="@dimen/russian_actual_games_padding"
+            android:background="@drawable/game_rounded_corner_rect"
+            >
+
+            <TextView
+                android:id="@+id/answerlong1_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="I don't know how to answer this silly question!"
+                android:textSize="@dimen/russian_actual_games_answer_font_size"
+                android:textColor="@color/transliteration_color"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/answerlong1_check"
+                android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                android:background="@drawable/checkmark1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answerlong2_layout"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="@dimen/russian_actual_games_padding"
+            android:background="@drawable/game_rounded_corner_rect"
+            >
+
+            <TextView
+                android:id="@+id/answerlong2_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="This is a better app than Duolingo! I can feel it."
+                android:textSize="@dimen/russian_actual_games_answer_font_size"
+                android:textColor="@color/transliteration_color"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/answerlong2_check"
+                android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                android:background="@drawable/checkmark1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answerlong3_layout"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="@dimen/russian_actual_games_padding"
+            android:background="@drawable/game_rounded_corner_rect"
+            >
+
+            <TextView
+                android:id="@+id/answerlong3_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="I don't know how to answer this silly question!"
+                android:textSize="@dimen/russian_actual_games_answer_font_size"
+                android:textColor="@color/transliteration_color"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:padding="@dimen/russian_actual_games_padding"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/answerlong3_check"
+                android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                android:background="@drawable/checkmark1"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

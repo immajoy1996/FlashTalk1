@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/recycler_view_checkbox_layout"
+    android:background="@drawable/game_selector2"
+    >
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recycler_view_checkbox_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/recycler_view_row_height"
+        android:textSize="@dimen/recycler_view_row_font_size"
+        android:textColor="@color/black"
+        android:text="Alphabets"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textStyle="bold"
+        >
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="@dimen/recycler_view_checkbox_width"
+        android:layout_height="@dimen/recycler_view_checkbox_height"
+        android:theme="@style/checkBoxStyle"
+        />
+
+</LinearLayout>

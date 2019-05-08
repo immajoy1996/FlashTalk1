@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_smoke"
+    tools:context=".RussianAFriendsHouseFragment3">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_alignParentTop="true"
+        android:background="@color/medium_sea_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white_smoke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Examples"
+                android:gravity="center|left"
+                android:layout_weight="1"
+                android:textSize="@dimen/toolbar_font_size"
+                android:textStyle="bold"
+                android:textColor="@color/white_smoke"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="3/3"
+                android:gravity="center|left"
+                android:textSize="@dimen/toolbar_font_size"
+                android:textStyle="bold"
+                android:textColor="@color/white_smoke"
+                android:layout_marginRight="15dp"
+
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text='The genitive case takes the place of "of" in english. Phrases like "a way of life" or "the heart of America" will use the genitive. '
+        android:textColor="@color/black"
+        android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/example1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Это дом друга."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/explanation1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="This is the house of a friend."
+                    android:textColor="@color/transliteration_color"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/example2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/accusativecase_fragment3_vertical_spacing"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Это собака друга."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/explanation2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="This is the dog of a friend."
+                    android:textColor="@color/transliteration_color"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/example3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/accusativecase_fragment3_vertical_spacing"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Это рубашка девушки."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/explanation3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="This is the shirt of a woman."
+                    android:textColor="@color/transliteration_color"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/example4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/accusativecase_fragment3_vertical_spacing"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Это дом сестры друга."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/explanation4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="This is the house of the sister of a friend."
+                    android:textColor="@color/transliteration_color"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/example5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/accusativecase_fragment3_vertical_spacing"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Это машина папы друга."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/explanation5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="This is the car of the dad of a friend."
+                    android:textColor="@color/transliteration_color"
+                    android:textSize="@dimen/accusativecase_fragment3_font_size_intro"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/light_grey"
+    tools:context=".RussianCleanupFragment1">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/light_grey"
+        tools:context=".RussianCleanupFragment1">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size"
+            android:layout_alignParentTop="true"
+            android:background="@color/medium_sea_green"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/white_smoke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/back_button"
+                        android:layout_width="@dimen/arrow_button_width"
+                        android:layout_height="@dimen/arrow_button_height"
+                        android:background="@drawable/arrow_back_pressed" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="Wrap Up!"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/treb_ms_regular"
+                    android:textSize="@dimen/toolbar_font_size"
+                    android:visibility="visible"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/seekbar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    >
+
+                    <SeekBar
+                        android:id="@+id/seekbar"
+                        android:layout_width="@dimen/seekbar_length"
+                        android:layout_height="match_parent"
+                        android:thumbTint="@color/white"
+                        android:progressDrawable="@drawable/audio_progress_bar"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <com.example.immanuel.flashtalk.CircularImageView2
+                        android:id="@+id/audio"
+                        android:layout_width="@dimen/circular_button_volume_width"
+                        android:layout_height="@dimen/circular_button_volume_height"
+                        android:src="@drawable/volumetrans2"
+                        android:visibility="gone"
+                        />
+
+                    <com.example.immanuel.flashtalk.CircularImageView2
+                        android:id="@+id/pause"
+                        android:layout_width="@dimen/circular_button_volume_width"
+                        android:layout_height="@dimen/circular_button_volume_height"
+                        android:src="@drawable/pause_icon1"
+                        android:visibility="gone"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/forward_button"
+                        android:layout_width="@dimen/arrow_button_width"
+                        android:layout_height="@dimen/arrow_button_height"
+                        android:background="@drawable/arrow_forward_pressed" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/linearlayout1"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:layout_marginTop="@dimen/cleanup_top_spacing"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/intro1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Conjugations for plurals follow the same pattern: remove the -ать or -ить ending and add the new one. Swipe to see examples.   "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/cleanup_font_size_intro" />
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cleanup_vertical_spacing"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/header_layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_medium_sea_green"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="знать"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="znat"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="to know"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/cleanup_font_size_word" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:text="мы знаем"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:padding="5dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="zna-yem"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="we know"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:text="вы знаете"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="zna-yet-e"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="you(pl) know"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="они знают"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="zna-yut"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="they know"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cleanup_vertical_spacing"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout2"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/header_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_medium_sea_green"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="делать"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="dyel-at"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="to do"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/cleanup_font_size_word" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="мы делаем"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="dyel-a-yem"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="we do"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="вы делаете"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="dyel-at-ye"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:text="you(pl) do"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="они делают"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="dyel-a-yut"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="they do"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cleanup_vertical_spacing"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout3"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/header_layout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_medium_sea_green"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="говорить"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="gah-var-eet"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:textStyle="italic"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="to speak"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:fontFamily="@font/treb_ms_regular"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="мы говорим"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="gah-var-eem"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="we speak"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout8"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="вы говорите"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="gah-var-eesh"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:textStyle="italic"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="you(pl) speak"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/verb_layout9"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="они говорят"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:text="gah-var-yat"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/cleanup_font_size_translit"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/treb_ms_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="they speak"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/cleanup_font_size_word"
+                             />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

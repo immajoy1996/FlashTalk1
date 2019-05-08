@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ocean3"
+    tools:context="com.example.immanuel.flashtalk.MainActivity">
+
+    <com.example.immanuel.flashtalk.CircularImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/russia_button"
+        android:src="@drawable/russiaflag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+   <com.example.immanuel.flashtalk.CircularImageView
+       android:layout_width="60dp"
+       android:layout_height="60dp"
+       android:id="@+id/portugal_button"
+       android:src="@drawable/portugalflag"
+       app:layout_constraintCircle="@+id/russia_button"
+       app:layout_constraintCircleAngle="0"
+       app:layout_constraintCircleRadius="125dp"
+       tools:layout_editor_absoluteY="144dp"
+       tools:layout_editor_absoluteX="162dp" />
+        />
+
+    <com.example.immanuel.flashtalk.CircularImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/french_button"
+        android:src="@drawable/frenchflag2"
+        app:layout_constraintCircle="@+id/russia_button"
+        app:layout_constraintCircleAngle="60"
+        app:layout_constraintCircleRadius="125dp"
+        tools:layout_editor_absoluteY="199dp"
+        tools:layout_editor_absoluteX="258dp" />
+
+    <com.example.immanuel.flashtalk.CircularImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/spanish_button"
+        android:src="@drawable/spanishflagsmall"
+        app:layout_constraintCircle="@+id/russia_button"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="125dp"
+        tools:layout_editor_absoluteY="309dp"
+        tools:layout_editor_absoluteX="258dp" />
+
+
+    <com.example.immanuel.flashtalk.CircularImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/arabic_button"
+        android:src="@drawable/syriaflag1"
+        app:layout_constraintCircle="@+id/russia_button"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="125dp"
+        tools:layout_editor_absoluteY="364dp"
+        tools:layout_editor_absoluteX="162dp" />
+
+
+    <com.example.immanuel.flashtalk.CircularImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/italian_button"
+        android:src="@drawable/italianflag"
+        app:layout_constraintCircle="@+id/russia_button"
+        app:layout_constraintCircleAngle="240"
+        app:layout_constraintCircleRadius="125dp"
+        tools:layout_editor_absoluteY="309dp"
+        tools:layout_editor_absoluteX="67dp" />
+
+
+
+    <com.example.immanuel.flashtalk.CircularImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/german_button"
+        android:src="@drawable/germanflag"
+        app:layout_constraintCircle="@+id/russia_button"
+        app:layout_constraintCircleAngle="300"
+        app:layout_constraintCircleRadius="125dp"
+        tools:layout_editor_absoluteY="199dp"
+        tools:layout_editor_absoluteX="67dp" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:id="@+id/russian_text"
+        android:text="русский"
+        android:gravity="center"
+        android:fontFamily="casual"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/russia_button"
+        app:layout_constraintRight_toRightOf="@+id/russia_button" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:id="@+id/portugese_text"
+        android:text="português"
+        android:gravity="center"
+        android:fontFamily="casual"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/portugal_button"
+        app:layout_constraintRight_toRightOf="@+id/portugal_button" />
+
+
+
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:id="@+id/french_text"
+        android:text="français"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/french_button"
+        app:layout_constraintRight_toRightOf="@+id/french_button" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:id="@+id/spanish_text"
+        android:text="español"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/spanish_button"
+        app:layout_constraintRight_toRightOf="@+id/spanish_button" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:id="@+id/arabic_text"
+        android:text="عربى"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/arabic_button"
+        app:layout_constraintRight_toRightOf="@+id/arabic_button" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:id="@+id/italian_text"
+        android:text="italiano"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/italian_button"
+        app:layout_constraintRight_toRightOf="@+id/italian_button" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:id="@+id/german_text"
+        android:text="deutsche"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/german_button"
+        app:layout_constraintRight_toRightOf="@+id/german_button" />
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_smoke"
+    tools:context=".RussianISaidItPerfectiveFragment1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_alignParentTop="true"
+        android:background="@color/medium_sea_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white_smoke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="@dimen/arrow_button_width"
+                    android:layout_height="@dimen/arrow_button_height"
+                    android:background="@drawable/arrow_back_pressed" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/ihave_fragment1_title_weight"
+                android:gravity="center|left"
+                android:text="Two For One"
+                android:textColor="@color/white_smoke"
+                android:textSize="@dimen/toolbar_font_size"
+                android:textStyle="bold"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <com.example.immanuel.flashtalk.CircularImageView2
+                    android:id="@+id/audio_white"
+                    android:layout_width="@dimen/circular_button_volume_width"
+                    android:layout_height="@dimen/circular_button_volume_height"
+                    android:src="@drawable/volumetrans2"
+                    android:visibility="visible"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/forward_button"
+                    android:layout_width="@dimen/circular_button_volume_width"
+                    android:layout_height="@dimen/circular_button_volume_height"
+                    android:background="@drawable/arrow_forward_pressed" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/intro1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:padding="@dimen/these_people_fragment1_padding_intro"
+        android:text="This is the last aspect of the past tense. Mastering this section will open up the Russian language for you."
+        android:textColor="@color/black"
+        android:textSize="@dimen/these_people_fragment1_font_size_translit"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/ihave_fragment1_padding"
+                >
+
+                <TextView
+                    android:id="@+id/intro2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="Every verb in Russian has two forms: the Imperfective and the Perfective. All the verbs we've covered are Imperfective. You already know these."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/imperfective"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ihave_fragment1_vertical_spacing"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="* Use the Imperfective for an action which develops over a span of time."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/perfective"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ihave_fragment1_vertical_spacing"
+                    android:fontFamily="casual"
+                    android:gravity="center"
+                    android:text="* Use the Perfective for an action which is completed at a single point in time."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

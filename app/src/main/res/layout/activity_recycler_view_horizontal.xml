@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ocean3"
+    android:orientation="vertical"
+    tools:context=".RecyclerViewHorizontal">
+
+    <android.support.v7.widget.Toolbar
+    android:id="@+id/main_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_size"
+    android:background="@color/medium_sea_green"
+    app:titleTextColor="@color/white_smoke">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="@integer/language_recycler_view_weight_title"
+            android:gravity="center|left"
+            android:text="FlashTalk"
+            android:fontFamily="@font/treb_ms_regular"
+            android:textColor="@color/white_smoke"
+            android:textSize="@dimen/toolbar_font_size"
+
+            />
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+        <android.support.v7.widget.RecyclerView
+        android:id="@+id/horizontal_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_russian_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.immanuel.flashtalk.RussianSplash"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="@dimen/launcher_screen_dim"
+            android:layout_height="@dimen/launcher_screen_dim"
+            android:background="@drawable/lightning1" />
+
+
+        <com.example.immanuel.flashtalk.TypeWriter
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/treb_ms_regular"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="FlashTalk"
+            android:textColor="@color/medium_sea_green"
+            android:textSize="@dimen/launcher_font_size" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

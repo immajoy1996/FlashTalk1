@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_ripple"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:background="@color/medium_sea_green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/toolbar_font_size"
+        android:textColor="@color/white"
+        android:text="Tutorial"
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
+        android:padding="5dp"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/msg"
+        android:background="@color/white_smoke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/toolbar_font_size"
+        android:textColor="@color/black"
+        android:text="See the arrows in the toolbar? This means you can click them or swipe the page to see more."
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
+        android:padding="5dp"
+        >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_smoke"
+        android:gravity="right"
+        >
+
+        <LinearLayout
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_ripple"
+            >
+
+            <TextView
+                android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                android:background="@drawable/checkmark1"
+
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

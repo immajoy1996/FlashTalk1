@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/light_grey"
+    tools:context=".RussianToThinkFragment1">
+
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".RussianToThinkFragment1">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_size"
+            android:layout_alignParentTop="true"
+            android:background="@color/medium_sea_green"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/white_smoke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="I'm Thinking"
+                    android:textColor="@color/white_smoke"
+                    android:textSize="@dimen/toolbar_font_size"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|left"
+                    android:text="1/3"
+                    android:textColor="@color/white_smoke"
+                    android:textSize="@dimen/toolbar_font_size"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/linearlayout1"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:layout_marginTop="@dimen/idontunderstand_top_spacing"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="думать is a regular and important verb."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/ican_fragment1_font_size_intro"
+                        android:textStyle="bold" />
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ican_fragment1_vertical_spacing"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/medium_sea_green"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="думать"
+                            android:textColor="@color/white_smoke"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="doom-at"
+                            android:textColor="@color/white_smoke"
+                            android:textSize="@dimen/ican_fragment1_font_size_translit"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="to think"
+                            android:textColor="@color/white_smoke"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="я думаю"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="doom-a-yu"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/ican_fragment1_font_size_translit"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="I think"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_grey"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="ты думаешь"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="doom-a-yesh"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/ican_fragment1_font_size_translit"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="you think"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_grey"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="он/она думает"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="doom-a-yet"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/ican_fragment1_font_size_translit"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="he/she thinks"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_grey"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="мы думаем"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="doom-a-yem"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/ican_fragment1_font_size_translit"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="we think"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_grey"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="вы думаете"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="doom-a-yete"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/ican_fragment1_font_size_translit"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="you(pl) think"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_grey"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white_smoke"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="они думают"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="doom-a-yut"
+                            android:textColor="@color/transliteration_color"
+                            android:textSize="@dimen/ican_fragment1_font_size_translit"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/tothink_fragment1_height"
+                            android:layout_weight="1"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:padding="@dimen/ican_fragment1_padding_boxes"
+                            android:text="they think"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/ican_fragment1_font_size_word"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

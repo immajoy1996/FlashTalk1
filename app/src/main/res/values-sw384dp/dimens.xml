@@ -1,0 +1,5 @@
+<resources>
+    <integer name="circular_image_view_width">6</integer>
+    <integer name="circular_image_view_width2">6</integer>
+    <integer name="circular_image_view_test_width">2</integer>
+</resources>
