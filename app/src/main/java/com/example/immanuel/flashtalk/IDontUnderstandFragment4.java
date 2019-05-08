@@ -1,16 +1,21 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 public class IDontUnderstandFragment4 extends Fragment {
@@ -60,6 +65,14 @@ public class IDontUnderstandFragment4 extends Fragment {
 
         //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_verbs_fragment4");
         //mediaPlayer= MediaPlayer.create(rootView.getContext(),uri);
+
+        TextView textView_intro=rootView.findViewById(R.id.intro);
+        String intro_str="A few more examples. Notice that хорошо can also mean \"okay\".";
+        String keyword1="хорошо";
+        SpannableString spannableString1=new SpannableString(intro_str);
+        spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),intro_str.indexOf(keyword1),intro_str.indexOf(keyword1)+keyword1.length(),0);
+        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),intro_str.indexOf(keyword1),intro_str.indexOf(keyword1)+keyword1.length(),0);
+        textView_intro.setText(spannableString1);
 
         CircularImageViewTest games=rootView.findViewById(R.id.games);
         games.setOnClickListener(new View.OnClickListener() {

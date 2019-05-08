@@ -89,29 +89,31 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                             }
                             else{
                                 categories.add(pos+1,"Alphabet");
-                                categories.add(pos+2,"- Essentials 1 -");
-                                categories.add(pos+3,"Something Nice!");
-                                categories.add(pos+4,"Dialogue 1 - A Testy Exchange");
-                                categories.add(pos+5,"- Essentials 2 -");
-                                categories.add(pos+6,"Vocab 1 - People");
-                                categories.add(pos+7,"I Don't Understand");
-                                categories.add(pos+8,"I'm Studying");
-                                categories.add(pos+9,"Nouns");
-                                categories.add(pos+10,"His House, Her Car");
-                                categories.add(pos+11,"Dialogue 2 - A Naive Tourist");
-                                categories.add(pos+12,"Vocab 2 - General");
-                                categories.add(pos+13,"How's The Weather?");
-                                categories.add(pos+14,"A Pretty Woman");
-                                categories.add(pos+15,"An Important Exception");
-                                categories.add(pos+16,"Countries And People");
-                                categories.add(pos+17,"Dialogue 3 - The United Nations");
-                                categories.add(pos+18,"This Man, This Woman");
-                                categories.add(pos+19,"What?");
+                                categories.add(pos+2,"Accents");
+                                categories.add(pos+3,"- Essentials 1 -");
+                                categories.add(pos+4,"Something Nice!");
+                                categories.add(pos+5,"Dialogue 1 - A Testy Exchange");
+                                categories.add(pos+6,"- Essentials 2 -");
+                                categories.add(pos+7,"Be Polite!");
+                                categories.add(pos+8,"Vocab 1 - People");
+                                categories.add(pos+9,"I Don't Understand");
+                                categories.add(pos+10,"I'm Studying");
+                                categories.add(pos+11,"Nouns");
+                                categories.add(pos+12,"His House, Her Car");
+                                categories.add(pos+13,"Dialogue 2 - A Naive Tourist");
+                                categories.add(pos+14,"Vocab 2 - General");
+                                categories.add(pos+15,"How's The Weather?");
+                                categories.add(pos+16,"A Pretty Woman");
+                                categories.add(pos+17,"An Important Exception");
+                                categories.add(pos+18,"Countries And People");
+                                categories.add(pos+19,"Dialogue 3 - The United Nations");
+                                categories.add(pos+20,"This Man, This Woman");
+                                categories.add(pos+21,"What?");
                                 //categories.add(pos+10,"Vocab 2 - Things");
-                                categories.add(pos+20,"I Want");
-                                categories.add(pos+21,"I Like");
-                                categories.add(pos+22,"Dialogue 4 - A Charming Accent");
-                                notifyItemRangeInserted(pos+1, 22);
+                                categories.add(pos+22,"I Want");
+                                categories.add(pos+23,"I Like");
+                                categories.add(pos+24,"Dialogue 4 - A Charming Accent");
+                                notifyItemRangeInserted(pos+1, 24);
                             }
                             return;
 
@@ -231,6 +233,9 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                         case "Alphabet":
                             view.getContext().startActivity(new Intent(view.getContext(), RussianAlphabetActivity.class));
                             return;
+                        case "Accents":
+                            view.getContext().startActivity(new Intent(view.getContext(), RussianAccentsActivity.class));
+                            return;
                         case "- Essentials 1 -":
                             if (categories.get(pos+1).equals("I, You, He, She")) {
                                 //holder.myTextView.setTextColor(view.getResources().getColor(R.color.black));
@@ -294,6 +299,10 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
 
                         case "Wrap Up":
                             view.getContext().startActivity(new Intent(view.getContext(),RussianCleanupActivity.class));
+                            return;
+
+                        case "Be Polite!":
+                            view.getContext().startActivity(new Intent(view.getContext(), RussianBePoliteActivity.class));
                             return;
 
                         case "I Don't Understand":
