@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/river1"
     tools:context=".RussianImStudyingFragment3">
 
     <!-- TODO: Update blank fragment layout -->
@@ -125,15 +126,11 @@
         android:textSize="@dimen/idontunderstand_fragment4_font_size_intro"
         />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/medium_sea_green"
             >
 
             <LinearLayout
@@ -233,7 +230,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Он изучает русский и она изучает английский."
+                    android:text="Он изучает русский а она изучает английский."
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment4_font_size"
                     android:textStyle="bold" />
@@ -259,10 +256,6 @@
 
 
         </LinearLayout>
-
-
-
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>

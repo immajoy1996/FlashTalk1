@@ -1,11 +1,13 @@
 package com.example.immanuel.flashtalk;
 
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +61,18 @@ public class RussianReadingHisBookFragment1 extends Fragment {
 
         final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_verbs_fragment1");
         mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
+
+        TextView intro=rootView.findViewById(R.id.intro);
+        String str="Remember that его, её and их always stay the same regardless of gender or case.";
+        String intro_keyword1="его";
+        String intro_keyword2="её";
+        String intro_keyword3="их";
+        SpannableString spannableString=new SpannableString(str);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword1),str.indexOf(intro_keyword1)+intro_keyword1.length(),0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword2),str.indexOf(intro_keyword2)+intro_keyword2.length(),0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword3),str.indexOf(intro_keyword3)+intro_keyword3.length(),0);
+
+        intro.setText(spannableString);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override

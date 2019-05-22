@@ -1,6 +1,8 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
@@ -8,9 +10,15 @@ import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class RussianAFewMoreActivity extends AppCompatActivity {
+
+    MediaPlayer mediaPlayer;
+    int STEP_TIME=100;
+    //ImageView volume;
+    //ImageView pause;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +32,79 @@ public class RussianAFewMoreActivity extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
+                endit();
+                finish();
+                //startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
             }
         });
+
+        CircularImageViewTest games=findViewById(R.id.games);
+        games.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
+                endit();
+                Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
+                intent.putExtra("LESSON_NAME","A Few More!");
+                //pause.setVisibility(View.GONE);
+                //volume.setVisibility(View.VISIBLE);
+                startActivity(intent);
+            }
+        });
+
+        final Uri uri1=Uri.parse("android.resource://"+this.getPackageName()+"/raw/more1");
+        final Uri uri2=Uri.parse("android.resource://"+this.getPackageName()+"/raw/more2");
+        final Uri uri3=Uri.parse("android.resource://"+this.getPackageName()+"/raw/more3");
+        final Uri uri4=Uri.parse("android.resource://"+this.getPackageName()+"/raw/more4");
+
+        LinearLayout linearLayout1=findViewById(R.id.linearLayout1);
+        linearLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                doit(view,uri1);
+
+            }
+        });
+
+        LinearLayout linearLayout2=findViewById(R.id.linearLayout2);
+        linearLayout2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                doit(view,uri2);
+
+            }
+        });
+
+        LinearLayout linearLayout3=findViewById(R.id.linearLayout3);
+        linearLayout3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri2);
+                mediaPlayer.start();*/
+                doit(view,uri3);
+            }
+        });
+
+        LinearLayout linearLayout4=findViewById(R.id.linearLayout4);
+        linearLayout4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri2);
+                mediaPlayer.start();*/
+                doit(view,uri4);
+            }
+        });
+
 
         TextView intro_textview=findViewById(R.id.intro);
         String str="Let's use a few more verbs in the past!";
@@ -77,5 +155,71 @@ public class RussianAFewMoreActivity extends AppCompatActivity {
         SpannableString spannableString4=new SpannableString(str4);
         spannableString4.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)), str4.indexOf(keyword4), str4.indexOf(keyword4)+keyword4.length(), 0);
         example4_textview.setText(spannableString4);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        endit();
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
     }
 }

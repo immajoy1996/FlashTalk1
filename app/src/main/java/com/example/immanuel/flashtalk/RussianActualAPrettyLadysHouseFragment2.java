@@ -70,25 +70,27 @@ public class RussianActualAPrettyLadysHouseFragment2 extends Fragment {
         });
 
         TextView example1=rootView.findViewById(R.id.example1);
-        String str1="Это дом их друга.";
-        String keyword1="их";
+        String str1="Это дом хорошего мужчины.";
+        String keyword1="хорошего";
 
         SpannableString spannableString1=new SpannableString(str1);
         spannableString1.setSpan(new UnderlineSpan(), str1.indexOf(keyword1), str1.indexOf(keyword1)+keyword1.length(), 0);
         example1.setText(spannableString1);
 
         TextView example2=rootView.findViewById(R.id.example2);
-        String str2="Это дом их сестры.";
+        String str2="Это дом хорошей женщины.";
+        String keyword2="хорошей";
 
         SpannableString spannableString2=new SpannableString(str2);
-        spannableString2.setSpan(new UnderlineSpan(), str2.indexOf(keyword1), str2.indexOf(keyword1)+keyword1.length(), 0);
+        spannableString2.setSpan(new UnderlineSpan(), str2.indexOf(keyword2), str2.indexOf(keyword2)+keyword2.length(), 0);
         example2.setText(spannableString2);
 
         TextView example3=rootView.findViewById(R.id.example3);
-        String str3="Это дверь их здания.";
+        String str3="Это вход хорошего места.";
+        String keyword3="хорошего";
 
         SpannableString spannableString3=new SpannableString(str3);
-        spannableString3.setSpan(new UnderlineSpan(), str3.indexOf(keyword1), str3.indexOf(keyword1)+keyword1.length(), 0);
+        spannableString3.setSpan(new UnderlineSpan(), str3.indexOf(keyword3), str3.indexOf(keyword3)+keyword3.length(), 0);
         example3.setText(spannableString3);
 
         /*TextView example4=rootView.findViewById(R.id.example4);

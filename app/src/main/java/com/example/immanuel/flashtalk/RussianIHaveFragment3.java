@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -124,6 +126,29 @@ public class RussianIHaveFragment3 extends Fragment {
             }
         });
 
+        TextView intro=rootView.findViewById(R.id.intro);
+        String str="After у, the pronouns его, её and их become него, неё, and них respectively.";
+        String intro_keyword1="него";
+        String intro_keyword2="неё";
+        String intro_keyword3="них";
+        String intro_keyword4="у";
+        String intro_keyword5="его, е";
+        String intro_keyword6="её and";
+        String intro_keyword7="их b";
+        SpannableString spannableString=new SpannableString(str);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword1),str.indexOf(intro_keyword1)+intro_keyword1.length(),0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword2),str.indexOf(intro_keyword2)+intro_keyword2.length(),0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword3),str.indexOf(intro_keyword3)+intro_keyword3.length(),0);
+
+        spannableString.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str.indexOf(intro_keyword1),str.indexOf(intro_keyword1)+intro_keyword1.length(),0);
+        spannableString.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str.indexOf(intro_keyword2),str.indexOf(intro_keyword2)+intro_keyword2.length(),0);
+        spannableString.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str.indexOf(intro_keyword3),str.indexOf(intro_keyword3)+intro_keyword3.length(),0);
+
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword4),str.indexOf(intro_keyword4)+intro_keyword1.length(),0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword5),str.indexOf(intro_keyword5)+3,0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword6),str.indexOf(intro_keyword6)+2,0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword7),str.indexOf(intro_keyword7)+2,0);
+        intro.setText(spannableString);
         //TextView intro=rootView.findViewById(R.id.intro);
         //TextView intro2=rootView.findViewById(R.id.intro2);
         //String str_intro="After у, the pronouns его, её and их become него, неё, and них respectively.";

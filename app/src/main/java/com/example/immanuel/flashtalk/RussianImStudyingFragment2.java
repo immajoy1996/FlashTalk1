@@ -31,11 +31,15 @@ public class RussianImStudyingFragment2 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
+
+
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/imstudying_fragment1_sentence1");
                 mediaPlayer= MediaPlayer.create(getContext(),uri);*/
-                endit();
+                //endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -100,9 +104,9 @@ public class RussianImStudyingFragment2 extends Fragment {
             }
         });
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/imstudying_fragment1_sentence1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/imstudying_fragment1_sentence2");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/imstudying_fragment1_sentence3");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/stud1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/study2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/stud3");
 
         LinearLayout linearLayout1=rootView.findViewById(R.id.linearLayout1);
         linearLayout1.setOnClickListener(new View.OnClickListener() {

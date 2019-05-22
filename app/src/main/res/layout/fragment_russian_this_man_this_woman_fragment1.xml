@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianThisManThisWomanFragment1">
 
@@ -132,6 +132,7 @@
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin"
         android:gravity="center"
+
         >
 
         <LinearLayout
@@ -171,7 +172,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="этот человек"
+                android:text="этот мужчина"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="bold" />
@@ -354,7 +355,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="эта девушка"
+                android:text="эта женщина"
                 android:textColor="@color/red"
                 android:textSize="@dimen/gender_fragment2_font_size_translit"
                 android:textStyle="bold" />

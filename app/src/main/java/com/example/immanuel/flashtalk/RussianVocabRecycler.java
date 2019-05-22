@@ -40,7 +40,43 @@ public class RussianVocabRecycler extends RecyclerView.Adapter<RussianVocabRecyc
         this.transliterations=data2;
         this.english_words=data3;
         vocab_files.put("default","android.resource://"+context.getPackageName()+"/raw/wrong_answer");
-        vocab_files.put("man","android.resource://"+context.getPackageName()+"/raw/correct_answer");
+        vocab_files.put("man","android.resource://"+context.getPackageName()+"/raw/prq1");
+        vocab_files.put("woman","android.resource://"+context.getPackageName()+"/raw/prq2");
+        vocab_files.put("friend","android.resource://"+context.getPackageName()+"/raw/prq3");
+        vocab_files.put("mom","android.resource://"+context.getPackageName()+"/raw/prq4");
+        vocab_files.put("dad","android.resource://"+context.getPackageName()+"/raw/prq5");
+        vocab_files.put("brother","android.resource://"+context.getPackageName()+"/raw/prq6");
+        vocab_files.put("sister","android.resource://"+context.getPackageName()+"/raw/prq8");
+
+        vocab_files.put("store","android.resource://"+context.getPackageName()+"/raw/bdd1");
+        vocab_files.put("cafe","android.resource://"+context.getPackageName()+"/raw/bdd2");
+        vocab_files.put("hotel","android.resource://"+context.getPackageName()+"/raw/bdd3");
+        vocab_files.put("highschool","android.resource://"+context.getPackageName()+"/raw/bdd4");
+        vocab_files.put("restaurant","android.resource://"+context.getPackageName()+"/raw/bdd5");
+        vocab_files.put("airport","android.resource://"+context.getPackageName()+"/raw/bdd6");
+        vocab_files.put("park","android.resource://"+context.getPackageName()+"/raw/bdd7");
+
+        vocab_files.put("food","android.resource://"+context.getPackageName()+"/raw/fdd1");
+        vocab_files.put("drink","android.resource://"+context.getPackageName()+"/raw/fdd2");
+        vocab_files.put("coffee","android.resource://"+context.getPackageName()+"/raw/fdd3");
+        vocab_files.put("tea","android.resource://"+context.getPackageName()+"/raw/fdd4");
+        vocab_files.put("juice","android.resource://"+context.getPackageName()+"/raw/fdd5");
+        vocab_files.put("ice-cream","android.resource://"+context.getPackageName()+"/raw/fdd6");
+        vocab_files.put("banana","android.resource://"+context.getPackageName()+"/raw/fdd7");
+        vocab_files.put("apple","android.resource://"+context.getPackageName()+"/raw/fdd8");
+        vocab_files.put("cake","android.resource://"+context.getPackageName()+"/raw/fdd9");
+        vocab_files.put("water","android.resource://"+context.getPackageName()+"/raw/fdd10");
+        vocab_files.put("vodka","android.resource://"+context.getPackageName()+"/raw/fdd11");
+
+        vocab_files.put("Today","android.resource://"+context.getPackageName()+"/raw/tod1");
+        vocab_files.put("day","android.resource://"+context.getPackageName()+"/raw/tod2");
+        vocab_files.put("weather","android.resource://"+context.getPackageName()+"/raw/tod3");
+        vocab_files.put("book","android.resource://"+context.getPackageName()+"/raw/tod4");
+        vocab_files.put("building","android.resource://"+context.getPackageName()+"/raw/tod5");
+        vocab_files.put("place","android.resource://"+context.getPackageName()+"/raw/tod6");
+        vocab_files.put("house","android.resource://"+context.getPackageName()+"/raw/tod7");
+        vocab_files.put("car","android.resource://"+context.getPackageName()+"/raw/tod8");
+
 
     }
 

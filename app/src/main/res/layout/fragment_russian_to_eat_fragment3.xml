@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@drawable/river1"
     tools:context=".RussianToEatFragment3">
 
     <!-- TODO: Update blank fragment layout -->
@@ -43,9 +43,9 @@
                 android:layout_weight="@integer/ican_fragment3_title_weight"
                 android:gravity="center|left"
                 android:text="Examples"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -71,7 +71,7 @@
                 android:layout_weight="@integer/ican_fragment3_games_weight"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/arrow_button_width"
                     android:layout_height="@dimen/arrow_button_height"
@@ -87,24 +87,20 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/ican_fragment3_height"
-        android:fontFamily="casual"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="@dimen/ican_fragment3_padding"
         android:text="It's important to master this verb."
         android:textColor="@color/black"
         android:textSize="@dimen/ican_fragment3_font_size_intro"
-        android:textStyle="bold" />
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:background="@color/white"
+        />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/medium_sea_green"
             >
 
             <LinearLayout
@@ -122,9 +118,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/ican_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Они могут говорить по-русски. "
+                    android:text="Я не могу есть сейчас."
                     android:textColor="@color/black"
                     android:textSize="@dimen/ican_fragment3_font_size"
                     android:textStyle="bold" />
@@ -139,12 +135,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/ican_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="They can speak Russian."
+                    android:text="I can't eat now."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/ican_fragment3_font_size" />
 
             </LinearLayout>
 
@@ -163,9 +158,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/ican_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Мы можем делать это?"
+                    android:text="Что вы хотите есть?"
                     android:textColor="@color/black"
                     android:textSize="@dimen/ican_fragment3_font_size"
                     android:textStyle="bold" />
@@ -180,12 +175,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/ican_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Can we do this?"
+                    android:text="What do you want to eat?"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/ican_fragment3_font_size" />
 
             </LinearLayout>
 
@@ -204,9 +198,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/ican_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Вы можете говорить там?"
+                    android:text="Я только ем фрукты."
                     android:textColor="@color/black"
                     android:textSize="@dimen/ican_fragment3_font_size"
                     android:textStyle="bold" />
@@ -221,22 +215,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/ican_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Can you guys talk there?"
+                    android:text="I only eat fruits."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/ican_fragment3_font_size" />
 
             </LinearLayout>
 
 
 
         </LinearLayout>
-
-
-
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>

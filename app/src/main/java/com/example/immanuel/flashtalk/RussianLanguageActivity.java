@@ -1,6 +1,8 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,6 +19,8 @@ import java.util.ArrayList;
 
 public class RussianLanguageActivity extends AppCompatActivity {
 
+    MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,15 +35,24 @@ public class RussianLanguageActivity extends AppCompatActivity {
         });
 
         final Animation anim_wobble = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.wobble);
+        anim_wobble.setRepeatCount(Animation.INFINITE);
 
         final CircularImageViewTest dialogView=findViewById(R.id.dialog);
+        back_arrow.startAnimation(anim_wobble);
+
+        SpannableString msg1=new SpannableString("See the icons in the top right. Click one to read some funny dialogues. Click the other to test yourself.");
+        (new MyApplication(getApplicationContext())).show_hints(getSupportFragmentManager(),msg1,"Language_Activity");
+
+        dialogView.startAnimation(anim_wobble);
+
         dialogView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 final Intent intent=new Intent(getApplicationContext(),RussianDialogueSplashActivity.class);
                 intent.putExtra("DIALOG_TITLE","Dialogues");
                 intent.putExtra("IMAGE_SRC","book3");
-                dialogView.startAnimation(anim_wobble);
                 startActivity(intent);
                 /*new Timer().schedule(new TimerTask() {
                     @Override
@@ -52,18 +65,21 @@ public class RussianLanguageActivity extends AppCompatActivity {
         });
 
         final CircularImageViewTest gameView=findViewById(R.id.games);
+        gameView.startAnimation(anim_wobble);
+
         gameView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gameView.startAnimation(anim_wobble);
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 startActivity(new Intent(getApplicationContext(),RussianGamesSplashActivity.class));
             }
         });
 
-        String msg1 = "See the two icons in the toolbar. Click one to see some funny dialogues. Click the other to test yourself.";
-        SpannableString spannableString1 = new SpannableString(msg1);
+        String msg0 = "See the two icons in the toolbar. Click one to see some funny dialogues. Click the other to test yourself.";
+        SpannableString spannableString1 = new SpannableString(msg0);
 
-        (new MyApplication()).show_hints(getSupportFragmentManager(),spannableString1,"HINT_TWO_CIRCLES");
+        //(new MyApplication()).show_hints(getSupportFragmentManager(),spannableString1,"HINT_TWO_CIRCLES");
 
 
         final ArrayList<String>categories=new ArrayList<>();
@@ -143,6 +159,67 @@ public class RussianLanguageActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        endit();
         startActivity(new Intent(getApplicationContext(),MainActivity.class));
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
     }
 }

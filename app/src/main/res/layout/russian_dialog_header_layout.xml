@@ -12,10 +12,9 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:textColor="@color/dark_red"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
-        android:textStyle="bold"
-        android:background="@color/light_grey"
+
         >
     </TextView>
 

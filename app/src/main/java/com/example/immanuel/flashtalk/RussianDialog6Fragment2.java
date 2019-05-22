@@ -66,7 +66,7 @@ public class RussianDialog6Fragment2 extends Fragment {
         final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_pronouns_fragment3_sentence1");
         mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
 
-        CircularImageView2 games=rootView.findViewById(R.id.games);
+        CircularImageViewTest games=rootView.findViewById(R.id.games);
         games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,7 +74,7 @@ public class RussianDialog6Fragment2 extends Fragment {
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
-                intent.putExtra("LESSON_NAME","Dialogue 6 - An Impatient Waitress");
+                intent.putExtra("LESSON_NAME","Dialogue 6 - An Rude Waiter");
                 //pause.setVisibility(View.GONE);
                 //volume.setVisibility(View.VISIBLE);
                 startActivity(intent);
@@ -101,7 +101,7 @@ public class RussianDialog6Fragment2 extends Fragment {
             }
         });
 
-        LinearLayout linearLayout2=rootView.findViewById(R.id.linearLayout2);
+        /*LinearLayout linearLayout2=rootView.findViewById(R.id.linearLayout2);
         linearLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,7 +111,7 @@ public class RussianDialog6Fragment2 extends Fragment {
                 mediaPlayer= MediaPlayer.create(getContext(),uri2);
                 mediaPlayer.start();
             }
-        });
+        });*/
 
         /*LinearLayout linearLayout3=rootView.findViewById(R.id.linearLayout3);
         linearLayout3.setOnClickListener(new View.OnClickListener() {

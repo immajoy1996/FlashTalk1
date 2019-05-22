@@ -151,7 +151,7 @@ public class RussianCountriesAndPeopleFragment3 extends Fragment {
         intro.setText(spannableString_intro);
 
         TextView example1=rootView.findViewById(R.id.example1);
-        String str1="Он французский человек.";
+        String str1="Он французский мужчина.";
         String keyword1="французский";
 
         SpannableString spannableString1=new SpannableString(str1);
@@ -159,7 +159,7 @@ public class RussianCountriesAndPeopleFragment3 extends Fragment {
         example1.setText(spannableString1);
 
         TextView example2=rootView.findViewById(R.id.example2);
-        String str2="Она французская девушка.";
+        String str2="Она французская женщина.";
         String keyword2="французская";
 
         SpannableString spannableString2=new SpannableString(str2);

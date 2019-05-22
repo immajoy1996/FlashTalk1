@@ -6,6 +6,6 @@
         android:width="1dp"
         android:height="@dimen/activity_vertical_margin" />
 
-    <solid android:color="@color/light_grey" />
+
 
 </shape>

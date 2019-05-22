@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/river1"
     tools:context=".RussianImWatchingTVFragment3">
 
     <!-- TODO: Update blank fragment layout -->
@@ -43,9 +44,9 @@
                 android:layout_weight="10"
                 android:gravity="center|left"
                 android:text="Examples"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -98,7 +99,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"
@@ -116,24 +117,20 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:background="@color/white"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="@dimen/imwatchingtv_fragment4_padding"
-        android:background="@color/white"
-        android:text="Notice that word order in Russian is much more flexible than in English."
+        android:text="A few more examples."
         android:textColor="@color/black"
         android:textSize="@dimen/idontunderstand_fragment4_font_size_intro"
-        android:textStyle="bold" />
+         />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/medium_sea_green"
             >
 
             <LinearLayout
@@ -151,9 +148,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment4_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Я, сейчас, не хочу смотрю фильм."
+                    android:text="Что ты смотришь?"
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment4_font_size"
                     android:textStyle="bold" />
@@ -168,12 +165,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment4_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="I don't want to watch a movie now."
+                    android:text="What are you watching?"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment4_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/idontunderstand_fragment4_font_size" />
 
             </LinearLayout>
 
@@ -192,9 +188,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment4_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Почему ты смотришь это?"
+                    android:text="Этот фильм очень интересный. Я хочу смотреть это."
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment4_font_size"
                     android:textStyle="bold" />
@@ -209,12 +205,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment4_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Why are you watching that?"
+                    android:text="This movie is very interesting. I want to watch it."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment4_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/idontunderstand_fragment4_font_size" />
 
             </LinearLayout>
 
@@ -233,9 +228,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment4_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Пожалуйста, я не хочу смотреть телевизор."
+                    android:text="Он всегда смотрит интересные фильмы."
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment4_font_size"
                     android:textStyle="bold" />
@@ -250,22 +245,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment4_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Please, I don't want to watch TV."
+                    android:text="He always watches interesting movies."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment4_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/idontunderstand_fragment4_font_size" />
 
             </LinearLayout>
 
 
 
         </LinearLayout>
-
-
-
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>

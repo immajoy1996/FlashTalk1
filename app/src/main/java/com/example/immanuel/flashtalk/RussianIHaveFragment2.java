@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,6 +84,8 @@ public class RussianIHaveFragment2 extends Fragment {
         String keyword2="у takes";
         spannableStringBuilder_intro2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str_intro2.indexOf(keyword1),str_intro2.indexOf(keyword1)+1,0);
         spannableStringBuilder_intro2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str_intro2.indexOf(keyword2),str_intro2.indexOf(keyword2)+1,0);
+        spannableStringBuilder_intro2.setSpan(new StyleSpan(Typeface.BOLD),str_intro2.indexOf(keyword1),str_intro2.indexOf(keyword1)+1,0);
+        spannableStringBuilder_intro2.setSpan(new StyleSpan(Typeface.BOLD),str_intro2.indexOf(keyword2),str_intro2.indexOf(keyword2)+1,0);
         intro2.setText(spannableStringBuilder_intro2);
         intro1.setText(str_intro1);
 

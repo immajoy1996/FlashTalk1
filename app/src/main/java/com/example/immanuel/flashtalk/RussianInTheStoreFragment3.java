@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +59,9 @@ public class RussianInTheStoreFragment3 extends Fragment {
 
         SpannableString spannableString_intro=new SpannableString(str_intro);
         spannableString_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)), str_intro.indexOf(intro_keyword1), str_intro.indexOf(intro_keyword1)+intro_keyword1.length(), 0);
+        spannableString_intro.setSpan(new StyleSpan(Typeface.BOLD), str_intro.indexOf(intro_keyword1), str_intro.indexOf(intro_keyword1)+intro_keyword1.length(), 0);
+        spannableString_intro.setSpan(new StyleSpan(Typeface.BOLD), str_intro.indexOf("в"), str_intro.indexOf("в")+1, 0);
+        spannableString_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)), str_intro.indexOf("в"), str_intro.indexOf("в")+1, 0);
         intro.setText(spannableString_intro);
 
         TextView example1=rootView.findViewById(R.id.example1);

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianIReadItPerfectiveActualFragment2">
 
@@ -42,22 +42,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="@integer/these_people_fragment2_title_weight"
+                android:layout_weight="@integer/plurals_fragment2_title_weight"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center|left"
                 android:text="Examples"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
 
                 />
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_weight="@integer/these_people_fragment2_volume_weight"
+                android:layout_weight="@integer/plurals_fragment2_volume_weight"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageView
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -69,10 +70,10 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="@integer/these_people_fragment2_games_weight"
+                android:layout_weight="@integer/imreadingmybook_fragment3_games_weight"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"
@@ -80,6 +81,7 @@
                     />
 
             </LinearLayout>
+
 
         </LinearLayout>
 
@@ -90,117 +92,130 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="@dimen/these_people_fragment2_padding"
-        android:text="Notice that whenever there's a span of time, we use the imperfective."
+        android:text="Like always, whenever there's a span of time, we use the imperfective."
         android:textColor="@color/black"
         android:textSize="@dimen/these_people_fragment2_font_size_intro"
-        android:textStyle="bold" />
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
         android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="center"
         >
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/these_people_fragment2_padding"
-                >
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Откуда вы? Вы из Америки?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                <TextView
-                    android:id="@+id/example1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Вчера я сделал моё задание."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="bold"
+                />
 
-                    />
+            <TextView
+                android:id="@+id/explanation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Yesterday, I read my book."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-                <TextView
-                    android:id="@+id/explanation1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Yesterday, I read my book."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="italic"
+                />
+        </LinearLayout>
 
-                    />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-                <TextView
-                    android:id="@+id/example2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/these_people_fragment2_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Если моя мама сказала это, я сделал это."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="bold"
+            <TextView
+                android:id="@+id/example2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Нет. Я из России."
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                    />
+                />
 
-                <TextView
-                    android:id="@+id/explanation2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="She already read the novel."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="italic"
+            <TextView
+                android:id="@+id/explanation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="She already read the novel."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-                    />
+                />
 
-                <TextView
-                    android:id="@+id/example3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/these_people_fragment2_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Она никогда не делала её работу."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="bold"
+        </LinearLayout>
 
-                    />
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-                <TextView
-                    android:id="@+id/explanation3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Every day, we read math books in class."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="italic"
+            <TextView
+                android:id="@+id/example3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Хорошо. Я из Франции."
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                    />
+                />
 
-            </LinearLayout>
+            <TextView
+                android:id="@+id/explanation3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Every day, we read math books in class."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-        </android.support.v7.widget.CardView>
-
+                />
+        </LinearLayout>
 
     </LinearLayout>
 

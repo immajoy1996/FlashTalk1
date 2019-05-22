@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ocean3"
+    android:background="@drawable/river1"
     android:orientation="vertical"
     tools:context=".RussianLessonGamesSplashActivity">
 
@@ -46,11 +46,11 @@
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Practice"
+            android:fontFamily="@font/treb_ms_regular"
             android:gravity="center"
             android:padding="5dp"
-            android:fontFamily="@font/treb_ms_regular"
-            android:textColor="@color/medium_sea_green"
+            android:text="Practice"
+            android:textColor="@color/white"
             android:textSize="@dimen/games_splash_font_size" />
 
     </LinearLayout>

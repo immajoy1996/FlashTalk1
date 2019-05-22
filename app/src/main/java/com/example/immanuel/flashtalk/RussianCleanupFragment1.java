@@ -74,18 +74,18 @@ public class RussianCleanupFragment1 extends Fragment {
         //spannableString_intro2.setSpan(new StyleSpan(Typeface.BOLD), intro2.indexOf(intro_keyword3), intro2.indexOf(intro_keyword3)+intro_keyword3.length(), 0);
         textView_intro1.setText(spannableString_intro1);
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence1"); // header1
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence2");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence3");
-        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence4");
-        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence5"); // header2
-        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence6");
-        final Uri uri7=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence7");
-        final Uri uri8=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence8");
-        final Uri uri9=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence9"); //header3
-        final Uri uri10=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence10");
-        final Uri uri11=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence11");
-        final Uri uri12=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1_sentence12");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah1"); // header1
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah3");
+        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah4");
+        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah5"); // header2
+        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah6");
+        final Uri uri7=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah7");
+        final Uri uri8=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah8");
+        final Uri uri9=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah9"); //header3
+        final Uri uri10=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah10");
+        final Uri uri11=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah11");
+        final Uri uri12=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/blah12");
 
         LinearLayout headerLayout1=rootView.findViewById(R.id.header_layout1);
         headerLayout1.setOnClickListener(new View.OnClickListener() {

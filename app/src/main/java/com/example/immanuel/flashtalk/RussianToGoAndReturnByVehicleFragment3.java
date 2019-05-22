@@ -55,16 +55,22 @@ public class RussianToGoAndReturnByVehicleFragment3 extends Fragment {
         //Toolbar.setTitle("Basic Verbs");
 
         TextView textView1=rootView.findViewById(R.id.sentence1);
-        String str1="Сегодня, я иду в библиотеку.";
+        String str1="Он не любит ездить в Санкт-Петербург.";
         SpannableString spannableString1=new SpannableString(str1);
-        spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str1.indexOf("у."),str1.indexOf("у.")+1,0);
+        //spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str1.indexOf("у."),str1.indexOf("у.")+1,0);
         textView1.setText(spannableString1);
 
         TextView textView2=rootView.findViewById(R.id.sentence2);
-        String str2="Ты идешь в улицу сейчас?";
+        String str2="Каждый вечер, я езжу в виблиотеку.";
         SpannableString spannableString2=new SpannableString(str2);
-        spannableString2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str2.indexOf("у с"),str2.indexOf("у с")+1,0);
+        spannableString2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str2.indexOf("у."),str2.indexOf("у.")+1,0);
         textView2.setText(spannableString2);
+
+        TextView textView3=rootView.findViewById(R.id.sentence3);
+        String str3="Я всегда езжу в Нью-Йорк и Хьюстон.";
+        SpannableString spannableString3=new SpannableString(str3);
+        //spannableString3.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str3.indexOf("у."),str3.indexOf("у.")+1,0);
+        textView3.setText(spannableString3);
 
         ImageButton back_button=(ImageButton)rootView.findViewById(R.id.back_button);
         //ImageButton forward_button=(ImageButton)rootView.findViewById(R.id.forward_button);

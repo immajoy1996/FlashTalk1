@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white_smoke"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RussianPluralPossessivePronounsFragment2"
-    >
-
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianPluralPossessivePronounsFragment2">
 
@@ -57,9 +45,9 @@
                 android:layout_weight="1"
                 android:gravity="center|left"
                 android:text="His Friends, Her Books"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -101,13 +89,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="@dimen/plural_possessives_fragment2_padding_intro"
         android:text="Remember that его, её and их never change."
         android:textColor="@color/black"
-        android:textSize="@dimen/plural_possessives_fragment2_font_size_translit"
-        android:textStyle="bold" />
+        android:textSize="@dimen/plural_possessives_fragment2_font_size_translit" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -129,31 +116,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="his friends"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="его друзья"
@@ -177,31 +162,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="his sisters"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="его сестры"
@@ -224,31 +207,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="his books"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="его книги"
@@ -272,31 +253,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="her friends"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="её друзья "
@@ -319,32 +298,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="her sisters"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="её сестры"
@@ -367,31 +344,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="her books"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="её книги"
@@ -405,5 +380,3 @@
     </LinearLayout>
 
 </LinearLayout>
-
-</android.support.v4.widget.NestedScrollView>

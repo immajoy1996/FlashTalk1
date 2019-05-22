@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     tools:context=".RussianGenderFragment1">
 
     <android.support.v7.widget.Toolbar
@@ -119,15 +119,11 @@
         android:gravity="center"
         >
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@drawable/rect_white"
             android:orientation="vertical"
             android:padding="5dp">
 
@@ -207,8 +203,6 @@
 
         </LinearLayout>
 
-
-    </android.support.v7.widget.CardView>
 
     </LinearLayout>
 

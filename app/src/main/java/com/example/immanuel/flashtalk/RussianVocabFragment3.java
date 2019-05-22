@@ -1,8 +1,6 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,10 +29,11 @@ public class RussianVocabFragment3 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                adapter.mediaPlayer_vocab.stop();
+                /*adapter.mediaPlayer_vocab.stop();
                 adapter.mediaPlayer_vocab.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
-                adapter.mediaPlayer_vocab= MediaPlayer.create(getContext(),uri);
+                adapter.mediaPlayer_vocab= MediaPlayer.create(getContext(),uri);*/
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -72,28 +71,30 @@ public class RussianVocabFragment3 extends Fragment {
 
         ImageButton back_button=rootView.findViewById(R.id.back_button);
 
-        final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/question_words_fragment1");
-        adapter.mediaPlayer_vocab=MediaPlayer.create(rootView.getContext(),uri);
+        //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/question_words_fragment1");
+        //adapter.mediaPlayer_vocab=MediaPlayer.create(rootView.getContext(),uri);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                adapter.mediaPlayer_vocab.stop();
+                /*adapter.mediaPlayer_vocab.stop();
                 adapter.mediaPlayer_vocab.release();
-                adapter.mediaPlayer_vocab=MediaPlayer.create(getContext(),uri);
+                adapter.mediaPlayer_vocab=MediaPlayer.create(getContext(),uri);*/
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
                 getActivity().finish();
             }
         });
 
-        CircularImageView2 games=rootView.findViewById(R.id.games);
+        CircularImageViewTest games=rootView.findViewById(R.id.games);
         games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                adapter.mediaPlayer_vocab.stop();
+                /*adapter.mediaPlayer_vocab.stop();
                 adapter.mediaPlayer_vocab.release();
-                adapter.mediaPlayer_vocab=MediaPlayer.create(getContext(),uri);
+                adapter.mediaPlayer_vocab=MediaPlayer.create(getContext(),uri);*/
+                endit();
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","Vocab 3 - Places");
                 //pause.setVisibility(View.GONE);
@@ -122,9 +123,17 @@ public class RussianVocabFragment3 extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        adapter.mediaPlayer_vocab.stop();
-        adapter.mediaPlayer_vocab.release();
-        Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
-        adapter.mediaPlayer_vocab= MediaPlayer.create(getContext(),uri);
+        endit();
+    }
+
+    void endit(){
+        if(adapter.mediaPlayer_vocab!=null) {
+            adapter.mediaPlayer_vocab.stop();
+            adapter.mediaPlayer_vocab.reset();
+            adapter.mediaPlayer_vocab.release();
+            adapter.mediaPlayer_vocab=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
     }
 }

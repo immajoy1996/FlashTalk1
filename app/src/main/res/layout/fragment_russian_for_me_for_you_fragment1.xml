@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     tools:context=".RussianForMeForYouFragment1">
 
     <android.support.v7.widget.Toolbar
@@ -40,26 +40,27 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="@integer/ihave_fragment1_title_weight"
+                android:layout_weight="@integer/plurals_fragment2_title_weight"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center|left"
-                android:text="It's For You"
-                android:textColor="@color/white_smoke"
+                android:text="It's For You!"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
 
                 />
 
             <LinearLayout
                 android:layout_width="wrap_content"
+                android:layout_weight="@integer/plurals_fragment2_volume_weight"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:gravity="center">
 
                 <com.example.immanuel.flashtalk.CircularImageView2
-                    android:id="@+id/audio_white"
+                    android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
                     android:src="@drawable/volumetrans2"
-                    android:visibility="visible"
                     />
 
             </LinearLayout>
@@ -71,11 +72,12 @@
 
                 <ImageButton
                     android:id="@+id/forward_button"
-                    android:layout_width="@dimen/circular_button_volume_width"
-                    android:layout_height="@dimen/circular_button_volume_height"
+                    android:layout_width="@dimen/arrow_button_width"
+                    android:layout_height="@dimen/arrow_button_height"
                     android:background="@drawable/arrow_forward_pressed" />
 
             </LinearLayout>
+
 
         </LinearLayout>
 
@@ -89,79 +91,99 @@
         android:gravity="center"
         >
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:background="@drawable/rect_white"
+            android:orientation="vertical"
+            android:padding="@dimen/plurals_fragment1_padding">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/intro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/ihave_fragment1_padding"
-                >
+                android:background="@color/white"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="из means &quot;from&quot;. Anything after из takes the genitive case. It's easy. Keep in mind the &quot;Shush GoalKeeper&quot; Rule. "
+                android:textColor="@color/black"
+                android:textSize="@dimen/plural_pronouns_font_size_intro" />
 
-                <TextView
-                    android:id="@+id/intro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text='для means "for". Whatever comes directly after it takes the genitive case. Pronouns in the genitive are exactly the same as the accusative ones!'
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="bold" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/example1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/ihave_fragment1_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Это мороженое для меня."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/plurals_fragment1_vertical_spacing"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-                <TextView
-                    android:id="@+id/explanation1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="This ice cream is for me."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="italic" />
+            <TextView
+                android:id="@+id/example1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Это мороженое для меня."
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                <TextView
-                    android:id="@+id/example2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/ihave_fragment1_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Эта книга для тебя."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="bold" />
+                />
 
-                <TextView
-                    android:id="@+id/explanation2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="This book is for you."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="italic" />
+            <TextView
+                android:id="@+id/explanation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="This ice cream is for me."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-            </LinearLayout>
+                />
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-        </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/example2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Этот вопрос для тебя."
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/explanation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="This question is for you."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 

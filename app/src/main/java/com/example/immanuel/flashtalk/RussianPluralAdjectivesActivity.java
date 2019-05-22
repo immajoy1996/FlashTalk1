@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.ImageButton;
@@ -25,8 +27,8 @@ public class RussianPluralAdjectivesActivity extends AppCompatActivity {
 
         ImageButton back_button=(ImageButton)findViewById(R.id.back_button);
 
-        final Uri uri=Uri.parse("android.resource://"+this.getPackageName()+"/raw/basic_pronouns_fragment3");
-        mediaPlayer= MediaPlayer.create(getApplicationContext(),uri);
+        //final Uri uri=Uri.parse("android.resource://"+this.getPackageName()+"/raw/basic_pronouns_fragment3");
+        //mediaPlayer= MediaPlayer.create(getApplicationContext(),uri);
         //ImageButton forward_button=(ImageButton)rootView.findViewById(R.id.forward_button);
         //final ViewPager viewPager=(ViewPager)getActivity().findViewById(R.id.plural_possessive_pronouns_pager);
 
@@ -34,22 +36,24 @@ public class RussianPluralAdjectivesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getApplicationContext(),uri);
+                mediaPlayer=MediaPlayer.create(getApplicationContext(),uri);*/
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
                 finish();
             }
         });
 
-        CircularImageView2 games=findViewById(R.id.games);
+        CircularImageViewTest games=findViewById(R.id.games);
         games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getApplicationContext(),uri);
+                mediaPlayer=MediaPlayer.create(getApplicationContext(),uri);*/
+                endit();
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","Interesting People");
                 //pause.setVisibility(View.GONE);
@@ -66,6 +70,7 @@ public class RussianPluralAdjectivesActivity extends AppCompatActivity {
         String str_intro="To make a plural adjective just add the -ые ending. Not so hard right!";
         SpannableStringBuilder spannableStringBuilder_intro=new SpannableStringBuilder(str_intro);
         spannableStringBuilder_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.purple)),str_intro.indexOf("-ые"),str_intro.indexOf("-ые")+3,0);
+        spannableStringBuilder_intro.setSpan(new StyleSpan(Typeface.BOLD),str_intro.indexOf("-ые"),str_intro.indexOf("-ые")+3,0);
         textView_intro.setText(spannableStringBuilder_intro);
 
         TextView example1=findViewById(R.id.example1);
@@ -85,7 +90,7 @@ public class RussianPluralAdjectivesActivity extends AppCompatActivity {
         example2.setText(spannableString2);
 
         TextView example3=findViewById(R.id.example3);
-        String str3="Они красивые девушки.";
+        String str3="Они красивые женщины.";
         String keyword3="красивые";
 
         SpannableString spannableString3=new SpannableString(str3);
@@ -105,10 +110,9 @@ public class RussianPluralAdjectivesActivity extends AppCompatActivity {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getApplicationContext(),uri1);
-                mediaPlayer.start();
+
+                doit(view,uri1);
+
             }
         });
 
@@ -117,10 +121,11 @@ public class RussianPluralAdjectivesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getApplicationContext(),uri2);
-                mediaPlayer.start();
+                mediaPlayer=MediaPlayer.create(getContext(),uri2);
+                mediaPlayer.start();*/
+                doit(view,uri2);
             }
         });
 
@@ -129,11 +134,78 @@ public class RussianPluralAdjectivesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getApplicationContext(),uri3);
-                mediaPlayer.start();
+                mediaPlayer=MediaPlayer.create(getContext(),uri3);
+                mediaPlayer.start();*/
+                doit(view,uri3);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        endit();
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
     }
 }

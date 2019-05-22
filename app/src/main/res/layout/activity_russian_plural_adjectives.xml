@@ -45,9 +45,9 @@
                     android:layout_weight="@integer/plural_adjectives_title_weight"
                     android:gravity="center|left"
                     android:text="Interesting People"
-                    android:textColor="@color/white_smoke"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/toolbar_font_size"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/treb_ms_regular"
 
                     />
 
@@ -74,7 +74,7 @@
                     android:layout_weight="@integer/plural_adjectives_games_weight"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.example.immanuel.flashtalk.CircularImageViewTest
                         android:id="@+id/games"
                         android:layout_width="@dimen/circular_button_games_width"
                         android:layout_height="@dimen/circular_button_games_height"
@@ -96,8 +96,7 @@
             android:background="@color/white"
             android:padding="@dimen/plural_adjectives_padding"
             android:text="его, её, and их always stay the same regardless of gender or case."
-            android:fontFamily="casual"
-            android:textStyle="bold"
+            android:fontFamily="@font/treb_ms_regular"
             android:textColor="@color/black"
             android:textSize="@dimen/plural_adjectives_font_size_intro"
             />
@@ -124,7 +123,7 @@
                 android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Они интересные люди."
                 android:textColor="@color/purple"
@@ -137,12 +136,11 @@
                 android:id="@+id/explanation1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="They are interesting people."
                 android:textColor="@color/purple"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -161,7 +159,7 @@
                 android:id="@+id/example2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я люблю интересные книги."
                 android:textColor="@color/purple"
@@ -174,12 +172,11 @@
                 android:id="@+id/explanation2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="I like interesting books."
                 android:textColor="@color/purple"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -199,7 +196,7 @@
                 android:id="@+id/example3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Они красивые девушки."
                 android:textColor="@color/purple"
@@ -212,12 +209,11 @@
                 android:id="@+id/explanation3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="They are beautiful women."
                 android:textColor="@color/purple"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>

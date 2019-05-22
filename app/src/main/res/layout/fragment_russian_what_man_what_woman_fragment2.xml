@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianWhatManWhatWomanFragment2">
 
@@ -199,7 +199,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="What woman?"
+                android:text="What girl?"
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 

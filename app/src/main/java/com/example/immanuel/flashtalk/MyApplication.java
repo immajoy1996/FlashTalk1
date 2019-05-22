@@ -1,26 +1,20 @@
 package com.example.immanuel.flashtalk;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v4.app.FragmentManager;
 import android.text.SpannableString;
 
-public class MyApplication extends Application {
+public class MyApplication {
 
     private static Context context;
 
-    public void onCreate() {
-        super.onCreate();
-        MyApplication.context = getApplicationContext();
-    }
-
-    public static Context getAppContext() {
-        return MyApplication.context;
+    MyApplication(Context cont){
+        context=cont;
     }
 
     void show_hints(FragmentManager fm, SpannableString spannableString1, SpannableString spannableString2, String var_name1, String var_name2){
-        SharedPreferences mPrefs=MyApplication.getAppContext().getSharedPreferences("Hints",0);
+        SharedPreferences mPrefs=context.getSharedPreferences("Hints",0);
         String str1=mPrefs.getString(var_name1,"not found");
         String str2=mPrefs.getString(var_name2,"not found");
         HintDialogDoubleClass hints1 = HintDialogDoubleClass.newInstance(spannableString1, spannableString2);
@@ -52,7 +46,7 @@ public class MyApplication extends Application {
     }
 
     void show_hints(FragmentManager fm, SpannableString spannableString1, String var_name1){
-        SharedPreferences mPrefs=MyApplication.getAppContext().getSharedPreferences("Hints",0);
+        SharedPreferences mPrefs=context.getSharedPreferences("Hints",0);
         String str1=mPrefs.getString(var_name1,"not found");
         //String str2=mPrefs.getString(var_name2,"not found");
         //HintDialogDoubleClass hints1 = HintDialogDoubleClass.newInstance(spannableString1, spannableString2);

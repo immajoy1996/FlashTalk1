@@ -55,12 +55,15 @@ public class RussianVocabFragment1 extends Fragment {
         ArrayList<String> translit=new ArrayList<String>();
         ArrayList<String> english_words=new ArrayList<String>();
 
-        english_words.add("man");english_words.add("woman");english_words.add("friend");
+        english_words.add("man");english_words.add("woman");
+        english_words.add("person");english_words.add("girl");english_words.add("friend");
         english_words.add("mom");english_words.add("dad");english_words.add("brother");english_words.add("sister");
 
+        russian_words.add("мужчина");russian_words.add("женщина");
         russian_words.add("человек");russian_words.add("девушка");russian_words.add("друг");russian_words.add("мама");
         russian_words.add("папа");russian_words.add("брат");russian_words.add("сестра");
 
+        translit.add("moozh-cheen-a");translit.add("zhen-shcheen-a");
         translit.add("chal-a-vy-ek");translit.add("dev-ush-ka");translit.add("droog");translit.add("ma-ma");
         translit.add("pa-pa");translit.add("braht");translit.add("ces-tra");
         // set up the RecyclerView

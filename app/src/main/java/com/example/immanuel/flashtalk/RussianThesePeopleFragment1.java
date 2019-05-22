@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,10 +36,11 @@ public class RussianThesePeopleFragment1 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
-                mediaPlayer= MediaPlayer.create(getContext(),uri);
+                mediaPlayer= MediaPlayer.create(getContext(),uri);*/
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -58,16 +61,17 @@ public class RussianThesePeopleFragment1 extends Fragment {
         ImageButton forward_button=(ImageButton)rootView.findViewById(R.id.forward_button);
         final ViewPager viewPager=getActivity().findViewById(R.id.these_people_pager);
 
-        final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
-        mediaPlayer= MediaPlayer.create(rootView.getContext(),uri);
+        //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
+        //mediaPlayer= MediaPlayer.create(rootView.getContext(),uri);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri);
+                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
                 getActivity().finish();
@@ -82,13 +86,16 @@ public class RussianThesePeopleFragment1 extends Fragment {
             }
         });
 
-        String str="To say \"these\" use эти (eti). It's independent of gender. That's it!";
+        String str="To say \"these\" use эти (et-ee). It's independent of gender. That's it!";
+        String a1="эти (et-ee)";
+        String a2="эти";
+        String a3="et-ee";
 
         SpannableStringBuilder ssBuilder = new SpannableStringBuilder(str);
 
-        ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.purple)),str.indexOf("эти (eti)"),str.indexOf("эти (eti)")+9, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        //ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),str.indexOf("эта (eta)"),str.indexOf("эта (eta)")+9, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        //ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str.indexOf("это (eta)"),str.indexOf("это (eta)")+9, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.purple)),str.indexOf(a1),str.indexOf(a1)+a1.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(a2),str.indexOf(a2)+a2.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new StyleSpan(Typeface.ITALIC),str.indexOf(a3),str.indexOf(a3)+a3.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         TextView textView=rootView.findViewById(R.id.intro);
         textView.setText(ssBuilder);
@@ -106,10 +113,9 @@ public class RussianThesePeopleFragment1 extends Fragment {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri1);
-                mediaPlayer.start();
+
+                doit(view,uri1);
+
             }
         });
 
@@ -118,10 +124,11 @@ public class RussianThesePeopleFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri2);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri2);
             }
         });
 
@@ -130,13 +137,80 @@ public class RussianThesePeopleFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri3);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri3);
             }
         });
 
         return rootView;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        endit();
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
     }
 }

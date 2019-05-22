@@ -49,7 +49,7 @@ public class AlphabetFragment2 extends Fragment {
             spannableString2.setSpan(new StyleSpan(Typeface.BOLD), msg2.indexOf("о."), msg2.indexOf("о.") + 1, 0);
             //SpannableString spannableString_pronunciation=new SpannableString(msg2);
 
-            (new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_COGNATE","HINT_ACCENTS");
+            //(new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_COGNATE","HINT_ACCENTS");
             //HintDialogDoubleClass hints = HintDialogDoubleClass.newInstance(spannableString1, spannableString2,"HINT_COGNATE","HINT_ACCENTS");
             //FragmentManager fm = getFragmentManager();
             //hints.show(fm, "Dialog Double Tag");

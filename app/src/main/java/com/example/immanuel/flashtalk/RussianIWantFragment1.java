@@ -67,13 +67,13 @@ public class RussianIWantFragment1 extends Fragment {
         spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(keyword1),str.indexOf(keyword1)+keyword1.length(),0);
         intro.setText(spannableString);
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb1"); // header1
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb2");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb3");
-        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb4");
-        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb5"); // header2
-        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb6");
-        final Uri uri7=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb7");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/awt1"); // header1
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/awt2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/awt3");
+        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/awt4");
+        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/awt5"); // header2
+        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/awt6");
+        final Uri uri7=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/awt7");
         /*final Uri uri8=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb1");
         final Uri uri9=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb1"); //header3
         final Uri uri10=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb1");

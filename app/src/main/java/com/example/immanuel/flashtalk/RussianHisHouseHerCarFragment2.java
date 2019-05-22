@@ -58,9 +58,9 @@ public class RussianHisHouseHerCarFragment2 extends Fragment {
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/hishousehercar_fragment1_sentence1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/hishousehercar_fragment1_sentence2");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/hishousehercar_fragment1_sentence3");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/th1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/th2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/th3");
         //final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
         //final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
         //final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");

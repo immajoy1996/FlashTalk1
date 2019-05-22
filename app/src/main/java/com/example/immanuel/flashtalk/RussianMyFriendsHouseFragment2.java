@@ -1,11 +1,13 @@
 package com.example.immanuel.flashtalk;
 
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -91,7 +93,7 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
         example2.setText(spannableString2);
 
         TextView example3=rootView.findViewById(R.id.example3);
-        String str3="Это дверь его здания.";
+        String str3="Это вход его здания.";
 
         SpannableString spannableString3=new SpannableString(str3);
         spannableString3.setSpan(new UnderlineSpan(), str3.indexOf("его"), str3.indexOf("его")+3, 0);
@@ -112,11 +114,22 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
         example5.setText(spannableString5);
 
         TextView example6=rootView.findViewById(R.id.example6);
-        String str6="Это дверь её здания.";
+        String str6="Это вход её здания?";
 
         SpannableString spannableString6=new SpannableString(str6);
         spannableString6.setSpan(new UnderlineSpan(), str6.indexOf("её"), str6.indexOf("её")+2, 0);
         example6.setText(spannableString6);
+
+        TextView intro=rootView.findViewById(R.id.intro);
+        String str="Remember that его, её and их always stay the same regardless of gender or case.";
+        String intro_keyword1="его";
+        String intro_keyword2="её";
+        String intro_keyword3="их";
+        SpannableString spannableString=new SpannableString(str);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword1),str.indexOf(intro_keyword1)+intro_keyword1.length(),0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword2),str.indexOf(intro_keyword2)+intro_keyword2.length(),0);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword3),str.indexOf(intro_keyword3)+intro_keyword3.length(),0);
+        intro.setText(spannableString);
 
         /*TextView example7=rootView.findViewById(R.id.example7);
         String str7="Это дом их друга.";

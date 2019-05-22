@@ -1,15 +1,19 @@
 package com.example.immanuel.flashtalk;
 
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 public class RussianToLiveFragment1 extends Fragment {
@@ -48,6 +52,18 @@ public class RussianToLiveFragment1 extends Fragment {
         ImageButton back_button=rootView.findViewById(R.id.back_button);
         ImageButton forward_button=rootView.findViewById(R.id.forward_button);
         final ViewPager viewPager=getActivity().findViewById(R.id.tolive_pager);
+
+        TextView intro=rootView.findViewById(R.id.intro);
+        String str="жить is an irregular verb.";
+        String intro_keyword1="жить";
+        //String intro_keyword2="её";
+        //String intro_keyword3="их";
+        SpannableString spannableString=new SpannableString(str);
+        spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword1),str.indexOf(intro_keyword1)+intro_keyword1.length(),0);
+        //spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword2),str.indexOf(intro_keyword2)+intro_keyword2.length(),0);
+        //spannableString.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword3),str.indexOf(intro_keyword3)+intro_keyword3.length(),0);
+
+        intro.setText(spannableString);
 
         final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb1");
         mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);

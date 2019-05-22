@@ -3,6 +3,8 @@ package com.example.immanuel.flashtalk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.Timer;
@@ -28,13 +30,18 @@ public class RussianVocabSplash extends AppCompatActivity {
         TextView title=findViewById(R.id.title);
         CircularImageViewTest circularImageView2=findViewById(R.id.image);
 
+        final Animation anim_wobble = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.wobble);
+        anim_wobble.setRepeatCount(Animation.INFINITE);
+
+        circularImageView2.startAnimation(anim_wobble);
+
         title.setText(vocab_title);
 
         int id = circularImageView2.getContext().getResources().getIdentifier(img_src, "drawable", circularImageView2.getContext().getPackageName());
         circularImageView2.setImageResource(id);
 
 
-        Timer timer=new Timer();
+        timer=new Timer();
 
         timer.schedule(new TimerTask() {
             @Override
@@ -48,7 +55,9 @@ public class RussianVocabSplash extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         super.onBackPressed();
+        timer.cancel();
     }
 }

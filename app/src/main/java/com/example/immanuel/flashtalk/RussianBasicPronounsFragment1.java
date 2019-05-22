@@ -42,7 +42,7 @@ public class RussianBasicPronounsFragment1 extends Fragment {
             String msg2 = "See the arrows in the toolbar? This means you can click them or swipe the page to see more.";
             SpannableString spannableString2 = new SpannableString(msg2);
 
-            (new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_CLICK_BOXES","HINT_SWIPE");
+            //(new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_CLICK_BOXES","HINT_SWIPE");
 
             //HintDialogDoubleClass hints = HintDialogDoubleClass.newInstance(spannableString1, spannableString2,"HINT_CLICK_PRONOUNS","HINT_SWIPE");
             //FragmentManager fm = getFragmentManager();

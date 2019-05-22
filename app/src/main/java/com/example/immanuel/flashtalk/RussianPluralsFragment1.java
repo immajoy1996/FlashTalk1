@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
@@ -32,10 +33,11 @@ public class RussianPluralsFragment1 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment2");
-                mediaPlayer=MediaPlayer.create(getContext(),uri);
+                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -56,34 +58,35 @@ public class RussianPluralsFragment1 extends Fragment {
 
         SpannableString spannableString=new SpannableString(str);
         spannableString.setSpan(new UnderlineSpan(), str.indexOf("accusative case"), str.indexOf("accusative case")+15, 0);
-        intro_textview.setText(spannableString);
+        intro_textview.setText(spannableString);*/
 
         TextView rule1_textview=rootView.findViewById(R.id.rule1);
-        String rule1_str="* If a fem. noun ends with an а, replace it with an у.";
+        String rule1_str="* If a noun ends in a vowel, replace it with ы.";
         SpannableString spannableString_rule1=new SpannableString(rule1_str);
-        spannableString_rule1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),rule1_str.indexOf("fem."),rule1_str.indexOf("fem.")+4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_rule1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),rule1_str.indexOf("ы"),rule1_str.indexOf("ы")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         rule1_textview.setText(spannableString_rule1);
 
         TextView rule2_textview=rootView.findViewById(R.id.rule2);
-        String rule2_str="* If a fem. noun ends with an я, replace it with an ю.";
+        String rule2_str="* Otherwise, add ы to the end.";
         SpannableString spannableString_rule2=new SpannableString(rule2_str);
-        spannableString_rule2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),rule2_str.indexOf("fem."),rule2_str.indexOf("fem.")+4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        rule2_textview.setText(spannableString_rule2);*/
+        spannableString_rule2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),rule2_str.indexOf("ы"),rule2_str.indexOf("ы")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        rule2_textview.setText(spannableString_rule2);
 
         ImageButton back_button=(ImageButton)rootView.findViewById(R.id.back_button);
         ImageButton forward_button=(ImageButton)rootView.findViewById(R.id.forward_button);
         final ViewPager viewPager=getActivity().findViewById(R.id.plurals_pager);
 
-        final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/question_words_fragment1");
-        mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
+        //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/question_words_fragment1");
+        //mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer= MediaPlayer.create(getContext(),uri);
+                mediaPlayer= MediaPlayer.create(getContext(),uri);*/
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
                 getActivity().finish();
@@ -121,19 +124,16 @@ public class RussianPluralsFragment1 extends Fragment {
         spannableString3.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)), str3.indexOf(keyword3), str3.indexOf(keyword3)+keyword3.length(), 0);
         example3_textview.setText(spannableString3);
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/plural1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/plural2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/plural3");
 
         //TextView example1=rootView.findViewById(R.id.example1);
         example1_textview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer= MediaPlayer.create(getContext(),uri1);
-                mediaPlayer.start();
+                doit(view,uri1);
             }
         });
 
@@ -142,10 +142,7 @@ public class RussianPluralsFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri2);
-                mediaPlayer.start();
+                doit(view,uri2);
             }
         });
 
@@ -154,13 +151,76 @@ public class RussianPluralsFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri3);
-                mediaPlayer.start();
+                doit(view,uri3);
             }
         });
 
         return rootView;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        endit();
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view,Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
     }
 }

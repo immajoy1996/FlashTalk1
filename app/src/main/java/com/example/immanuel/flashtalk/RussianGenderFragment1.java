@@ -14,6 +14,8 @@ import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -178,6 +180,10 @@ public class RussianGenderFragment1 extends Fragment {
                 viewPager.setCurrentItem(page+1);
             }
         });
+
+        final Animation anim = AnimationUtils.loadAnimation(getContext(), R.anim.wobble);
+        back_button.startAnimation(anim);
+        forward_button.startAnimation(anim);
 
 
         /*mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

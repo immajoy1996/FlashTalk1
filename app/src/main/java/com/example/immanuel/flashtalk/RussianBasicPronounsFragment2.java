@@ -34,7 +34,7 @@ public class RussianBasicPronounsFragment2 extends Fragment {
             String msg2 = "See the arrows in the toolbar? This means you can keep swiping!";
             SpannableString spannableString2 = new SpannableString(msg2);
 
-            (new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_CLICK_SENTENCES","HINT_SWIPE_AGAIN");
+            //(new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_CLICK_SENTENCES","HINT_SWIPE_AGAIN");
             //HintDialogDoubleClass hints = HintDialogDoubleClass.newInstance(spannableString1, spannableString2,"HINT_SENTENCES","HINT_SWIPE_AGAIN");
             //FragmentManager fm = getFragmentManager();
             //hints.show(fm, "Dialog Double Tag");

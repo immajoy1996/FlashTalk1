@@ -12,7 +12,7 @@ import android.support.v4.view.ViewPager;
 
 public class RussianVocabActivity extends FragmentActivity {
 
-    private static final int NUM_PAGES = 10;
+    private static final int NUM_PAGES = 6;
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
@@ -74,7 +74,7 @@ public class RussianVocabActivity extends FragmentActivity {
                 return new RussianVocabFragment5();
             }
             else{
-                return new RussianVocabFragment5();
+                return new RussianVocabFragment6();
             }
 
         }

@@ -83,11 +83,11 @@ public class RussianDialog1Fragment2 extends Fragment {
             }
         });
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment1_word1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment1_word2");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment1_word3");
-        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment1_word4");
-        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment1_word5");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/dlog1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/dlog2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/dlog3");
+        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/dlog4");
+        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/dlog5");
         //final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment1_word6");
         //final Uri uri7=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment1_word7");
         //final Uri uri8=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment1_word8");

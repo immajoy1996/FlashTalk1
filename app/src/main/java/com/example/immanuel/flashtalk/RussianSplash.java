@@ -17,11 +17,11 @@ public class RussianSplash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_russian_splash);
 
-        Integer[] d={R.drawable.hot_regions,R.drawable.moscow,R.drawable.russia_map1};
+        Integer[] d={R.drawable.hot_regions,R.drawable.cathedral_funny,R.drawable.russia_map1};
         String[] descrip={"The U.S. State Departments lists Russian as one of the ten most important critical languages for global security","Russian course designed by Immanuel Joy and Manuel Croitoru","Russia is the world's largest country spanning 11 time zones"};
         int n=d.length;
 
-        int p=(int)(Math.random()*n);
+        int p=1;
 
         TextView pic=findViewById(R.id.pic);
         TextView des=findViewById(R.id.description);

@@ -121,7 +121,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="casual"
                     android:gravity="center|left"
-                    android:text="Каждое утро, я ем банан."
+                    android:text="Я могу говорить по-русски но не понимаю."
                     android:textColor="@color/black"
                     android:textSize="@dimen/ican_fragment2_font_size"
                     android:textStyle="bold" />
@@ -138,7 +138,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="casual"
                     android:gravity="center|left"
-                    android:text="Every morning, I eat a banana."
+                    android:text="I can speak Russian but don't understand."
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/ican_fragment2_font_size"
                     android:textStyle="bold" />
@@ -162,7 +162,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="casual"
                     android:gravity="center|left"
-                    android:text="Сейчас, я не хочу есть."
+                    android:text="Что ты можешь делать?"
                     android:textColor="@color/black"
                     android:textSize="@dimen/ican_fragment2_font_size"
                     android:textStyle="bold" />
@@ -179,7 +179,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="casual"
                     android:gravity="center|left"
-                    android:text="I don't want to eat now."
+                    android:text="What can you do?"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/ican_fragment2_font_size"
                     android:textStyle="bold" />
@@ -203,7 +203,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="casual"
                     android:gravity="center|left"
-                    android:text="Я ем, и потом, иду в класс."
+                    android:text="Я не могу делать это."
                     android:textColor="@color/black"
                     android:textSize="@dimen/ican_fragment2_font_size"
                     android:textStyle="bold" />
@@ -220,7 +220,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="casual"
                     android:gravity="center|left"
-                    android:text="I'm eating and after, going to class. "
+                    android:text="I can't do that."
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/ican_fragment2_font_size"
                     android:textStyle="bold" />

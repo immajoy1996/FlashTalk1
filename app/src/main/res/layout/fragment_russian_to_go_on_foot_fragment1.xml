@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/light_grey"
+    android:background="@drawable/river1"
     tools:context=".RussianToGoOnFootFragment1">
-
 
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,7 +16,6 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        android:background="@color/light_grey"
         tools:context=".RussianToGoOnFootFragment1">
 
 
@@ -57,9 +55,9 @@
                     android:layout_weight="1"
                     android:gravity="center|left"
                     android:text="To Go On Foot"
-                    android:textColor="@color/white_smoke"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/toolbar_font_size"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:visibility="visible"
 
                     />
@@ -148,13 +146,15 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="casual"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="Russian has many verbs for &quot;to go&quot; depending on how you travel. This one is to go by walking. It's very irregular!"
                         android:textColor="@color/black"
                         android:textSize="@dimen/idontunderstand_font_size_intro"
-                        android:textStyle="bold" />
+                        android:background="@color/white"
+
+                       />
 
 
                 </android.support.v7.widget.CardView>
@@ -172,10 +172,6 @@
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
             tools:layout_editor_absoluteX="0dp">
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -195,11 +191,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="идти"
-                            android:textColor="@color/white_smoke"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/idontunderstand_font_size_word"
                             android:textStyle="bold" />
 
@@ -207,25 +203,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="id-tee"
-                            android:textColor="@color/white_smoke"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="to go (on foot)"
-                            android:textColor="@color/white_smoke"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/idontunderstand_font_size_word" />
 
 
                     </LinearLayout>
@@ -242,7 +237,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="я иду"
@@ -254,25 +249,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="i-du"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="I go"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/idontunderstand_font_size_word" />
 
 
                     </LinearLayout>
@@ -289,7 +283,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="ты идёшь"
@@ -301,25 +295,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="id-yosh"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="you go "
                             android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/idontunderstand_font_size_word" />
 
 
                     </LinearLayout>
@@ -336,7 +329,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="он идёт"
@@ -348,25 +341,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="id-yot"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="he/she goes"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/idontunderstand_font_size_word" />
 
 
                     </LinearLayout>
@@ -383,7 +375,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="мы идём"
@@ -395,25 +387,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="id-yom"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="we go"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/idontunderstand_font_size_word" />
 
 
                     </LinearLayout>
@@ -430,7 +421,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="вы идёте"
@@ -442,25 +433,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="id-yot-ye"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="you(pl) go"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/idontunderstand_font_size_word" />
 
 
                     </LinearLayout>
@@ -477,7 +467,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="они идут"
@@ -489,34 +479,29 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="id-oot"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="they go"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/idontunderstand_font_size_word" />
 
 
                     </LinearLayout>
 
                 </LinearLayout>
-
-
-
-            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

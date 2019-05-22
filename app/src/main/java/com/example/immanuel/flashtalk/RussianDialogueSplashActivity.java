@@ -3,6 +3,8 @@ package com.example.immanuel.flashtalk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.Timer;
@@ -26,6 +28,11 @@ public class RussianDialogueSplashActivity extends AppCompatActivity {
 
         TextView title=findViewById(R.id.title);
         CircularImageViewTest dialogue_img=findViewById(R.id.image);
+
+        final Animation anim_wobble = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.wobble);
+        anim_wobble.setRepeatCount(Animation.INFINITE);
+
+        dialogue_img.startAnimation(anim_wobble);
 
         title.setText(dialog_title);
 
@@ -76,9 +83,9 @@ public class RussianDialogueSplashActivity extends AppCompatActivity {
                         finish();
                         return;
                     case "Dialogue 9 - A Very Boring Man":
-                        Intent intent7=new Intent(getApplicationContext(),RussianDialog5Activity.class);
+                        Intent intent9=new Intent(getApplicationContext(),RussianDialog9Activity.class);
                         //intent1.putExtra("FROM_PAGE","Lang Activity Page");
-                        startActivity(intent7);
+                        startActivity(intent9);
                         finish();
                         return;
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/medium_sea_green"
+    android:background="@drawable/river1"
     tools:context=".RussianToGoAndReturnByVehicleFragment3"
     >
 
@@ -53,9 +53,9 @@
                     android:layout_weight="@integer/ican_fragment3_title_weight"
                     android:gravity="center|left"
                     android:text="Examples"
-                    android:textColor="@color/white_smoke"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/toolbar_font_size"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/treb_ms_regular"
 
                     />
 
@@ -98,23 +98,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:fontFamily="casual"
+            android:fontFamily="@font/treb_ms_regular"
             android:gravity="center"
             android:padding="5dp"
             android:text="Some more examples."
             android:textColor="@color/black"
-            android:textSize="@dimen/idontunderstand_fragment3_font_size_intro"
-            android:textStyle="bold" />
+            android:textSize="@dimen/idontunderstand_fragment3_font_size_intro" />
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/medium_sea_green"
                 >
 
                 <LinearLayout
@@ -133,9 +128,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/idontunderstand_fragment3_height"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="casual"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center|left"
-                        android:text="Сегодня, я иду в библиотеку."
+                        android:text="Они всегда едят в класс."
                         android:textColor="@color/black"
                         android:textSize="@dimen/idontunderstand_fragment3_font_size"
                         android:textStyle="bold" />
@@ -150,12 +145,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/idontunderstand_fragment3_height"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="casual"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center|left"
-                        android:text="Today, I'm going (on foot) to the library."
+                        android:text="He doesn't like going to Saint Petersburg. (by vehicle)"
                         android:textColor="@color/transliteration_color"
-                        android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
                 </LinearLayout>
 
@@ -175,9 +169,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/idontunderstand_fragment3_height"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="casual"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center|left"
-                        android:text="Ты идешь в улицу сейчас?"
+                        android:text="Каждый вечер, я езжу в виблиотеку."
                         android:textColor="@color/black"
                         android:textSize="@dimen/idontunderstand_fragment3_font_size"
                         android:textStyle="bold" />
@@ -192,12 +186,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/idontunderstand_fragment3_height"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="casual"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center|left"
-                        android:text="You're going (on foot) to the street now?"
+                        android:text="Every evening, I go to the library. (by vehicle)"
                         android:textColor="@color/transliteration_color"
-                        android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
                 </LinearLayout>
 
@@ -217,9 +210,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/idontunderstand_fragment3_height"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="casual"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center|left"
-                        android:text="Мы идём на университет сейчас."
+                        android:text="Мы не хотим ездить в Америку."
                         android:textColor="@color/black"
                         android:textSize="@dimen/idontunderstand_fragment3_font_size"
                         android:textStyle="bold" />
@@ -234,21 +227,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/idontunderstand_fragment3_height"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="casual"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center|left"
-                        android:text="We are going (on foot) to the university now."
+                        android:text="I always go to New York and Houston. (by vehicle)"
                         android:textColor="@color/transliteration_color"
-                        android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
                 </LinearLayout>
 
 
             </LinearLayout>
 
-
-
-        </android.support.v7.widget.CardView>
 
 
     </LinearLayout>

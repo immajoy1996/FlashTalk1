@@ -82,9 +82,9 @@ public class RussianDialog6Fragment1 extends Fragment {
         TextView explanation1=(TextView)rootView.findViewById(R.id.example1);
         final TextView translation1=(TextView)rootView.findViewById(R.id.translation1);
 
-        String str1="ОФИЦИАНТКА : Привет. Что вы хотите есть сегодня?";
+        String str1="ОФИЦИАНТ : Привет. Что вы хотите есть сегодня?";
         String trans1="Hi. What do you want to eat today?";
-        String str1_name="ОФИЦИАНТКА :";
+        String str1_name="ОФИЦИАНТ :";
 
         SpannableString spannableString1=new SpannableString(str1);
         SpannableString spannableString1_trans=new SpannableString(trans1);
@@ -96,8 +96,8 @@ public class RussianDialog6Fragment1 extends Fragment {
         TextView explanation2=(TextView)rootView.findViewById(R.id.example2);
         final TextView translation2=(TextView)rootView.findViewById(R.id.translation2);
 
-        String str2="ДЖОН : Привет, Официантка. Я не хочу есть ничего.";
-        String trans2="Hi, waitress. I don't want to eat anything.";
+        String str2="ДЖОН : Привет, Официант Я не хочу есть ничего.";
+        String trans2="Hi, waiter. I don't want to eat anything.";
         String str2_name="ДЖОН :";
         //String str2_keyword1="важный";
         //String trans2_keyword1="important";
@@ -118,9 +118,9 @@ public class RussianDialog6Fragment1 extends Fragment {
         TextView explanation3=(TextView)rootView.findViewById(R.id.example3);
         final TextView translation3=(TextView)rootView.findViewById(R.id.translation3);
 
-        String str3="ОФИЦИАНТКА : Хорошо, а что вы хотите пить? Здесь есть хороший кофе.";
+        String str3="ОФИЦИАНТ : Хорошо, а что вы хотите пить? Здесь есть хороший кофе.";
         String trans3="Okay, and what do you want to drink? Here there is good coffee.";
-        String str3_name="ОФИЦИАНТКА :";
+        String str3_name="ОФИЦИАНТ :";
 
         SpannableString spannableString3=new SpannableString(str3);
         SpannableString spannableString3_trans=new SpannableString(trans3);
@@ -148,9 +148,9 @@ public class RussianDialog6Fragment1 extends Fragment {
         TextView explanation5=(TextView)rootView.findViewById(R.id.example5);
         final TextView translation5=(TextView)rootView.findViewById(R.id.translation5);
 
-        String str5="ОФИЦИАНТКА : Хорошо, хорошо, это трудно. Есть вода . . .";
+        String str5="ОФИЦИАНТ : Хорошо, хорошо, это трудно. Есть вода . . .";
         String trans5="Okay, okay, this is hard. There is water . . .";
-        String str5_name="ОФИЦИАНТКА :";
+        String str5_name="ОФИЦИАНТ :";
 
         SpannableString spannableString5=new SpannableString(str5);
         SpannableString spannableString5_trans=new SpannableString(trans5);
@@ -178,9 +178,9 @@ public class RussianDialog6Fragment1 extends Fragment {
         TextView explanation7=(TextView)rootView.findViewById(R.id.example7);
         final TextView translation7=(TextView)rootView.findViewById(R.id.translation7);
 
-        String str7="ОФИЦИАНТКА : А хотите водку? Здесь есть самая хорошая водка в России.";
-        String trans7="And do you want vodka. Here there's the best vodka in Russia.";
-        String str7_name="ОФИЦИАНТКА :";
+        String str7="ОФИЦИАНТ : А хотите водку? Здесь, самая лучшая водка в России.";
+        String trans7="And do you want vodka. Here, there's the best vodka in Russia.";
+        String str7_name="ОФИЦИАНТ :";
         //String str5_keyword1="почему";
         //String trans5_keyword1="why";
         SpannableString spannableString7=new SpannableString(str7);
@@ -211,9 +211,9 @@ public class RussianDialog6Fragment1 extends Fragment {
         TextView explanation9=(TextView)rootView.findViewById(R.id.example9);
         final TextView translation9=(TextView)rootView.findViewById(R.id.translation9);
 
-        String str9="ОФИЦИАНТКА : А ЧТО ВЫ ХОТИТЕ?";
+        String str9="ОФИЦИАНТ : А ЧТО ВЫ ХОТИТЕ?";
         String trans9="AND WHAT DO YOU WANT?";
-        String str9_name="ОФИЦИАНТКА :";
+        String str9_name="ОФИЦИАНТ :";
         //String str9_keyword1="Молодец";
         //String trans9_keyword1="Well done!";
         SpannableString spannableString9=new SpannableString(str9);
@@ -229,7 +229,7 @@ public class RussianDialog6Fragment1 extends Fragment {
         final TextView translation10=(TextView)rootView.findViewById(R.id.translation10);
 
         String str10="ДЖОН : Хм . . . вы знаете где туалет?";
-        String trans10="Hmm . . . Do you know where is the restroom?";
+        String trans10="Hmm . . . Do you know where's the restroom?";
         String str10_name="ДЖОН :";
         //String str5_keyword1="почему";
         //String trans5_keyword1="why";

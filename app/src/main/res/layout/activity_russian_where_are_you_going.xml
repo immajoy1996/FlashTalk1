@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/river1"
     android:orientation="vertical"
     tools:context=".RussianWhereAreYouGoingActivity">
 
@@ -42,9 +43,9 @@
                 android:layout_weight="@integer/ican_fragment3_title_weight"
                 android:gravity="center|left"
                 android:text="Where Are You Going?"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -88,23 +89,19 @@
         android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="5dp"
         android:text="In Russian, location words change when you're talking about going somewhere. Gd-ye becomes Koo-da and Tam becomes Too-da."
         android:textColor="@color/black"
         android:textSize="@dimen/idontunderstand_fragment3_font_size_intro"
-        android:textStyle="bold" />
+        android:background="@color/white" />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/medium_sea_green"
             >
 
             <LinearLayout
@@ -122,9 +119,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Я не понимаю русский."
+                    android:text="Куда вы идёте?"
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment3_font_size"
                     android:textStyle="bold" />
@@ -139,12 +136,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Where are you going?"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
             </LinearLayout>
 
@@ -163,9 +159,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Я не понимаю что ты говоришь."
+                    android:text="Я иду туда."
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment3_font_size"
                     android:textStyle="bold" />
@@ -180,12 +176,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="I am going there. To my university."
+                    android:text="I'm going there."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
             </LinearLayout>
 
@@ -204,9 +199,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Я понимаю чуть чуть. "
+                    android:text="Куда он идёт? Почему он идёт туда?"
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment3_font_size"
                     android:textStyle="bold" />
@@ -221,22 +216,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="I don't want to go there."
+                    android:text="Where is he going? Why is he going there?"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
             </LinearLayout>
 
 
 
         </LinearLayout>
-
-
-
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>

@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/light_grey"
+    android:background="@drawable/river1"
     tools:context=".RussianCleanupFragment1">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,6 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        android:background="@color/light_grey"
         tools:context=".RussianCleanupFragment1">
 
 
@@ -172,9 +171,6 @@
             app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
             tools:layout_editor_absoluteX="0dp">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -370,10 +366,6 @@
                 </LinearLayout>
 
 
-
-            </android.support.v7.widget.CardView>
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -386,9 +378,6 @@
             app:layout_constraintTop_toBottomOf="@+id/linearlayout2"
             tools:layout_editor_absoluteX="0dp">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -582,9 +571,6 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
-
-
         </LinearLayout>
 
 
@@ -597,10 +583,6 @@
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/linearlayout3"
             tools:layout_editor_absoluteX="0dp">
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -802,10 +784,6 @@
 
 
                 </LinearLayout>
-
-
-
-            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

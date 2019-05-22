@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/river1"
     tools:context=".RussianToGoOnFootFragment2">
 
     <!-- TODO: Update blank fragment layout -->
@@ -43,9 +44,9 @@
                 android:layout_weight="@integer/ican_fragment2_title_weight"
                 android:gravity="center|left"
                 android:text="Examples"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -86,24 +87,19 @@
         android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="5dp"
         android:background="@color/white"
-        android:text='на (na) and в (v) can both mean "to" as well. в is sometimes pronounced as an "f." Look at the examples.'
+        android:text='в can also mean "to" as well. в is sometimes pronounced as an "f." Look at the examples.'
         android:textColor="@color/black"
-        android:textSize="@dimen/idontunderstand_fragment3_font_size_intro"
-        android:textStyle="bold" />
+        android:textSize="@dimen/idontunderstand_fragment3_font_size_intro" />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/medium_sea_green"
             >
 
             <LinearLayout
@@ -121,7 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Сегодня, я иду в магазин."
                     android:textColor="@color/black"
@@ -138,12 +134,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Today, I'm going (on foot) to the store."
+                    android:text="Today, I'm going to the store. (on foot)"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
             </LinearLayout>
 
@@ -162,9 +157,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Ты идешь в город сейчас?"
+                    android:text="Ты идёшь в город сейчас?"
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment3_font_size"
                     android:textStyle="bold" />
@@ -179,13 +174,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="I'm going to the city now."
+                    android:text="You're going to the city now? (on foot)"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                    android:textStyle="bold"
-                    tools:text="You're going (on foot) to the city now?" />
+                    android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
             </LinearLayout>
 
@@ -204,9 +197,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Мы идём на университет сейчас."
+                    android:text="Мы идём в университет сейчас."
                     android:textColor="@color/black"
                     android:textSize="@dimen/idontunderstand_fragment3_font_size"
                     android:textStyle="bold" />
@@ -221,22 +214,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/idontunderstand_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="We are going (on foot) to the university now."
+                    android:text="We are going to the university now. (on foot)"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/idontunderstand_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/idontunderstand_fragment3_font_size" />
 
             </LinearLayout>
 
-
-
         </LinearLayout>
-
-
-
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>

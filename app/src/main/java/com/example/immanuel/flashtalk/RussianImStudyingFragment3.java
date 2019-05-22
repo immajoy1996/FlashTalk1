@@ -31,7 +31,9 @@ public class RussianImStudyingFragment3 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment4");
                 mediaPlayer= MediaPlayer.create(getContext(),uri);*/
-                endit();
+                //endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -58,7 +60,7 @@ public class RussianImStudyingFragment3 extends Fragment {
         final ViewPager viewPager=getActivity().findViewById(R.id.imstudying_pager);
         //final int MAX=mediaPlayer.getDuration() / STEP_TIME;
 
-        //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_verbs_fragment4");
+        final Uri uri_swoosh=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/swoosh");
         //mediaPlayer= MediaPlayer.create(rootView.getContext(),uri);
 
         CircularImageViewTest games=rootView.findViewById(R.id.games);
@@ -68,6 +70,7 @@ public class RussianImStudyingFragment3 extends Fragment {
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","I'm Studying");
                 //pause.setVisibility(View.GONE);
@@ -90,9 +93,9 @@ public class RussianImStudyingFragment3 extends Fragment {
             }
         });
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment2_sentence1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment2_sentence2");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment2_sentence3");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/study1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/stud2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/study3");
 
         LinearLayout linearLayout1=rootView.findViewById(R.id.linearLayout1);
         linearLayout1.setOnClickListener(new View.OnClickListener() {

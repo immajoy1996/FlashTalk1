@@ -5,11 +5,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 public class RussianToGoAndReturnByVehicleFragment2 extends Fragment {
@@ -82,6 +85,18 @@ public class RussianToGoAndReturnByVehicleFragment2 extends Fragment {
                 viewPager.setCurrentItem(page+1);
             }
         });
+
+        TextView textView1=rootView.findViewById(R.id.sentence1);
+        String str1="Каждый год, мы ездим в Москву.";
+        SpannableString spannableString1=new SpannableString(str1);
+        spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str1.indexOf("у."),str1.indexOf("у.")+1,0);
+        textView1.setText(spannableString1);
+
+        TextView textView3=rootView.findViewById(R.id.sentence3);
+        String str3="Я люблю ездить в Москву.";
+        SpannableString spannableString3=new SpannableString(str3);
+        spannableString3.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str3.indexOf("у."),str3.indexOf("у.")+1,0);
+        textView3.setText(spannableString3);
 
         final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
         final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");

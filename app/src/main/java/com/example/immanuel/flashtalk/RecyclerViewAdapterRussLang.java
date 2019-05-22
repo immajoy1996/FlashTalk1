@@ -2,6 +2,8 @@ package com.example.immanuel.flashtalk;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.view.LayoutInflater;
@@ -26,6 +28,8 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
     private static final int TYPE_ITEM = 1;
     private static final int TYPE_VOCAB = 2;
     private static final int TYPE_DIALOG = 3;
+
+    MediaPlayer mediaPlayer;
 
     // data is passed into the constructor
     RecyclerViewAdapterRussLang(Context context, List<String> data) {
@@ -73,6 +77,9 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
             ((HeaderViewHolder)holder).header_textview.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    //final Uri uri_click=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/click_sound");
+                    //doit(view,uri_click);
+
                     int pos=holder.getAdapterPosition();
                     switch (subject){
                         case "~ Beginner ~":
@@ -138,32 +145,36 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                                 categories.add(pos+6,"Interesting People");
                                 categories.add(pos+7,"These People");
                                 categories.add(pos+8,"I Know Him");
-                                categories.add(pos+9,"I Want To Do");
-                                categories.add(pos+10,"Vocab 4 - Food/Beverages");
-                                categories.add(pos+11,"To Eat");
-                                categories.add(pos+12,"To Drink");
-                                categories.add(pos+13,"Dialogue 6 - An Impatient Waitress");
-                                categories.add(pos+14,"I'm Watching A Movie");
-                                categories.add(pos+15,"- To Go -");
-                                categories.add(pos+16,"I Can");
-                                categories.add(pos+17,"- To Go And Come Back -");
-                                categories.add(pos+18,"The One");
-                                categories.add(pos+19,"Vocab 5 - Numbers");
-                                categories.add(pos+20,"Dialogue 7 - Stereotypes");
-                                categories.add(pos+21,"Reading My Book");
-                                categories.add(pos+22,"Reading His Book");
-                                categories.add(pos+23,"Reading A Good Book");
-                                categories.add(pos+24,"I Have");
-                                categories.add(pos+25,"In The Store");
-                                categories.add(pos+26,"I Live In America");
-                                categories.add(pos+27,"Vocab 6 - Time");
-                                categories.add(pos+28,"Dialogue 8 - An Ordinary Conversation");
-                                categories.add(pos+29,"A Friend's House 1.0");
-                                categories.add(pos+30,"A Friend's House 2.0");
-                                categories.add(pos+31,"My Friend's House");
-                                categories.add(pos+32,"A Pretty Lady's House");
-                                categories.add(pos+33,"Dialogue 9 - A Very Boring Man");
-                                notifyItemRangeInserted(pos+1, 33);
+                                categories.add(pos+9,"I See");
+                                categories.add(pos+10,"I Want To Do");
+                                categories.add(pos+11,"Vocab 4 - Food/Beverages");
+                                categories.add(pos+12,"To Eat");
+                                categories.add(pos+13,"To Drink");
+                                categories.add(pos+14,"I'm Better!");
+                                categories.add(pos+15,"The Best");
+                                categories.add(pos+16,"Dialogue 6 - An Impatient Waitress");
+                                categories.add(pos+17,"I'm Watching A Movie");
+                                categories.add(pos+18,"- To Go -");
+                                categories.add(pos+19,"I Can");
+                                categories.add(pos+20,"- To Go And Come Back -");
+                                categories.add(pos+21,"The One");
+                                categories.add(pos+22,"Vocab 5 - Numbers");
+                                categories.add(pos+23,"Dialogue 7 - Stereotypes");
+                                categories.add(pos+24,"Reading My Book");
+                                categories.add(pos+25,"Reading His Book");
+                                categories.add(pos+26,"Reading A Good Book");
+                                categories.add(pos+27,"I Have");
+                                categories.add(pos+28,"In The Store");
+                                categories.add(pos+29,"I Live In America");
+                                categories.add(pos+30,"In The Morning");
+                                categories.add(pos+31,"Vocab 6 - Time/Abstract");
+                                categories.add(pos+32,"Dialogue 8 - An Ordinary Conversation");
+                                categories.add(pos+33,"A Friend's House 1.0");
+                                categories.add(pos+34,"A Friend's House 2.0");
+                                categories.add(pos+35,"My Friend's House");
+                                categories.add(pos+36,"A Pretty Lady's House");
+                                categories.add(pos+37,"Dialogue 9 - A Very Boring Man");
+                                notifyItemRangeInserted(pos+1, 37);
                             }
                             return;
 
@@ -186,14 +197,16 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                                 categories.add(pos+4,"For My Country");
                                 categories.add(pos+5,"I Don't See My Friend");
                                 categories.add(pos+6,"What Are You Talking About?");
-                                categories.add(pos+7,"You're Talking About My Friend");
-                                categories.add(pos+8,"In A Nice Restaurant");
-                                categories.add(pos+9,"- The Past -");
-                                categories.add(pos+10,"A Few More");
-                                categories.add(pos+11,"I Was In The Restaurant");
-                                categories.add(pos+12,"The Future");
-                                categories.add(pos+13,"- Not So Perfect -");
-                                categories.add(pos+14,"He Told Me");
+                                categories.add(pos+7,"I Think");
+                                categories.add(pos+8,"In My House");
+                                categories.add(pos+9,"In A Nice Restaurant");
+                                categories.add(pos+10,"I Work");
+                                categories.add(pos+11,"- The Past -");
+                                categories.add(pos+12,"A Few More");
+                                categories.add(pos+13,"I Was");
+                                categories.add(pos+14,"The Future");
+                                categories.add(pos+15,"- Not So Perfect -");
+                                categories.add(pos+16,"He Told Me");
                                 /*categories.add(pos+2,"Exceptions");
                                 categories.add(pos+3,"My Friends");
                                 categories.add(pos+4,"Interesting People");
@@ -213,10 +226,36 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                                 categories.add(pos+18,"A Friend's House 2.0");
                                 categories.add(pos+19,"My Friend's House");
                                 categories.add(pos+20,"A Pretty Lady's House");*/
-                                notifyItemRangeInserted(pos+1, 14);
+                                notifyItemRangeInserted(pos+1, 16);
+                            }
+                            return;
+
+                        case "~ Extras ~":
+                            if(pos+1<categories.size()) { //extras is open
+                                int count = 0;
+                                while (pos+1<categories.size()) {
+                                    //holder.myTextView.setTextColor(view.getResources().getColor(R.color.black));
+                                    categories.remove(pos + 1);
+                                    count++;
+                                    //categories.remove(pos+1);
+                                    //categories.remove(pos+1);
+                                }
+                                notifyItemRangeRemoved(pos+1, count);
+                            }
+                            else{
+                                categories.add(pos+1,"You Should");
+                                categories.add(pos+2,"I Need");
+                                categories.add(pos+3,"I'm Bored");
+                                categories.add(pos+4,"I'm Hungry");
+                                categories.add(pos+5,"I'm Glad");
+                                categories.add(pos+6,"To Use");
+
+                                notifyItemRangeInserted(pos+1, 6);
                             }
                             return;
                     }
+
+
                 }
             });
 
@@ -226,6 +265,9 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
             ((ItemViewHolder)holder).llayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    //((ItemViewHolder)holder).myTextView.setBackgroundColor(view.getResources().getColor(R.color.white_smoke));
+                    //final Uri uri_click=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/click_sound");
+                    //doit(view,uri_click);
                     int pos=holder.getAdapterPosition();
 
                     //Toast.makeText(view.getContext(),str+" "+subject, Toast.LENGTH_LONG).show();
@@ -383,6 +425,10 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                             view.getContext().startActivity(new Intent(view.getContext(),RussianAccusativeCaseActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
+                        case "I See":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianToSeeActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
                         case "I Want To Do":
                             view.getContext().startActivity(new Intent(view.getContext(),RussianIWantToDoActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
@@ -393,6 +439,14 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                             return;
                         case "To Drink":
                             view.getContext().startActivity(new Intent(view.getContext(),RussianToDrinkActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+                        case "I'm Better!":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianBetterThanActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+                        case "The Best":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianTheBestActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
                         case "I'm Watching A Movie":
@@ -502,6 +556,10 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                             view.getContext().startActivity(new Intent(view.getContext(),RussianToLiveActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
+                        case "In The Morning":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianPrepositionalExceptionsActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
 
                         case "A Friend's House 1.0":
                             view.getContext().startActivity(new Intent(view.getContext(),RussianAFriendsHouseActivity.class));
@@ -543,12 +601,20 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                             view.getContext().startActivity(new Intent(view.getContext(),RussianWhatAreYouTalkingAboutActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
-                        case "You're Talking About My Friend":
+                        case "I Think":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianToThinkActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+                        case "In My House":
                             view.getContext().startActivity(new Intent(view.getContext(),RussianYoureTalkingAboutMyFriendActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
                         case "In A Nice Restaurant":
                             view.getContext().startActivity(new Intent(view.getContext(),RussianInANiceRestaurantActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+                        case "I Work":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianToWorkActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
 
@@ -591,7 +657,7 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                             view.getContext().startActivity(new Intent(view.getContext(),RussianAFewMoreActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
-                        case "I Was In The Restaurant":
+                        case "I Was":
                             view.getContext().startActivity(new Intent(view.getContext(),RussianIWasActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
@@ -642,6 +708,33 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
                             return;
                         case "He Told Me":
                             view.getContext().startActivity(new Intent(view.getContext(),RussianDativeActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+
+                        case "You Should":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianYouShouldActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+
+                        case "I Need":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianINeedActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+
+                        case "I'm Bored":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianImBoredActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+                        case "I'm Hungry":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianImHungryActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+                        case "I'm Glad":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianImGladActivity.class));
+                            //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
+                            return;
+                        case "To Use":
+                            view.getContext().startActivity(new Intent(view.getContext(),RussianToUseActivity.class));
                             //Toast.makeText(view.getContext(),categories.get(3)+" "+categories.get(4)+" "+categories.get(5), Toast.LENGTH_SHORT).show();
                             return;
 
@@ -703,6 +796,8 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
             ((DialogViewHolder)holder).dialog_llayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    final Uri uri_click=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/click_sound");
+                    doit(view,uri_click);
                     switch (subject){
                         case "Dialogue 1 - A Testy Exchange":
                             Intent intent1=new Intent(view.getContext(),RussianDialogueSplashActivity.class);
@@ -817,6 +912,65 @@ public class RecyclerViewAdapterRussLang extends RecyclerView.Adapter<RecyclerVi
 
     }
 
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
+    }
     /*private boolean isPositionHeader(int position) {
         String str=categories.get(position);
         return (str.equals("Beginner") || str.equals("Functional"));
@@ -865,3 +1019,4 @@ class DialogViewHolder extends RecyclerView.ViewHolder {
         dialog_llayout = itemView.findViewById(R.id.recycler_view_dialog_language_layout);
     }
 }
+

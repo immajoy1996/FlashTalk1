@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/ocean3"
+    android:background="@drawable/river1"
     tools:context=".RussianVocabSplash">
 
     <android.support.v7.widget.Toolbar
@@ -48,7 +48,7 @@
             android:padding="5dp"
             android:gravity="center"
             android:fontFamily="@font/treb_ms_regular"
-            android:textColor="@color/medium_sea_green"
+            android:textColor="@color/white"
             android:textSize="@dimen/vocab_splash_font_size"
             />
 

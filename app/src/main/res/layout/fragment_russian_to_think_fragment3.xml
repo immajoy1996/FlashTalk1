@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@drawable/river1"
     tools:context=".RussianToThinkFragment3">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_fragment2"
+        android:id="@+id/toolbar_fragment3"
         android:layout_width="match_parent"
         android:layout_height="@dimen/toolbar_size"
         android:layout_alignParentTop="true"
@@ -24,186 +24,235 @@
             android:layout_gravity="center"
             >
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="@dimen/arrow_button_width"
+                    android:layout_height="@dimen/arrow_button_height"
+                    android:background="@drawable/arrow_back_pressed" />
+
+            </LinearLayout>
+
             <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:gravity="center|left"
+                android:text="Examples"
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_font_size"
+                android:fontFamily="@font/treb_ms_regular"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/seekbar_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center|left"
-                android:text="Они любят"
-                android:textColor="@color/white_smoke"
-                android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:gravity="center"
+                android:visibility="gone"
+                >
 
-                />
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:thumbTint="@color/white"
+                    android:progressDrawable="@drawable/audio_progress_bar"
+                    />
 
-            <TextView
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <com.example.immanuel.flashtalk.CircularImageView2
+                    android:id="@+id/audio"
+                    android:layout_width="@dimen/circular_button_volume_width"
+                    android:layout_height="@dimen/circular_button_volume_height"
+                    android:src="@drawable/volumetrans2"
+                    />
+
+                <com.example.immanuel.flashtalk.CircularImageView2
+                    android:id="@+id/pause"
+                    android:layout_width="@dimen/circular_button_volume_width"
+                    android:layout_height="@dimen/circular_button_volume_height"
+                    android:src="@drawable/pause_icon1"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginRight="15dp"
-                android:gravity="center|left"
-                android:text="3/3"
-                android:textColor="@color/white_smoke"
-                android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center">
 
-                />
+                <com.example.immanuel.flashtalk.CircularImageViewTest
+                    android:id="@+id/games"
+                    android:layout_width="@dimen/circular_button_games_width"
+                    android:layout_height="@dimen/circular_button_games_height"
+                    android:src="@drawable/chess1"
+                    />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
 
     <TextView
+        android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:background="@color/white"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
-        android:padding="@dimen/imwatchingtv_fragment3_padding"
-        android:text='"To like" is an essential verb is any language.'
+        android:padding="5dp"
+        android:text='Some more examples.'
         android:textColor="@color/black"
-        android:textSize="@dimen/ican_fragment3_font_size_intro"
-        android:textStyle="bold" />
+        android:textSize="@dimen/idontunderstand_fragment4_font_size_intro" />
 
-    <android.support.v7.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:layout_marginTop="@dimen/idontunderstand_fragment4_vertical_spacing"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical"
-            android:background="@color/medium_sea_green"
+            android:background="@drawable/custom_ripple"
             >
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout1"
-                android:layout_marginTop="@dimen/ican_fragment3_vertical_spacing"
+                android:layout_height="@dimen/idontunderstand_fragment4_height"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical"
-                android:background="@drawable/rect"
-                >
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center|left"
+                android:text="Ты знаешь о чём она думает?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/idontunderstand_fragment4_font_size"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/ican_fragment3_height"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
-                    android:gravity="center|left"
-                    android:text="Они могут говорить по-русски. "
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/light_grey"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/ican_fragment3_height"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
-                    android:gravity="center|left"
-                    android:text="They can speak Russian."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout2"
-                android:layout_marginTop="@dimen/ican_fragment3_vertical_spacing"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical"
-                android:background="@drawable/rect"
-                >
+                android:layout_height="1dp"
+                android:background="@color/light_grey"
+                />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/ican_fragment3_height"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
-                    android:gravity="center|left"
-                    android:text="Мы можем делать это?"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/light_grey"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/ican_fragment3_height"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
-                    android:gravity="center|left"
-                    android:text="Can we do this?"
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout3"
-                android:layout_marginTop="@dimen/ican_fragment3_vertical_spacing"
+                android:layout_height="@dimen/idontunderstand_fragment4_height"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical"
-                android:background="@drawable/rect"
-                >
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center|left"
+                android:text="Do you know what she's thinking about?"
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/idontunderstand_fragment4_font_size" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/ican_fragment3_height"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
-                    android:gravity="center|left"
-                    android:text="Вы можете говорить там?"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/light_grey"
-                    />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            android:layout_marginTop="@dimen/idontunderstand_fragment4_vertical_spacing"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/custom_ripple"
+            >
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/ican_fragment3_height"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
-                    android:gravity="center|left"
-                    android:text="Can you guys talk there?"
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ican_fragment3_font_size"
-                    android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/idontunderstand_fragment4_height"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center|left"
+                android:text="Я думаю о вопросе."
+                android:textColor="@color/black"
+                android:textSize="@dimen/idontunderstand_fragment4_font_size"
+                android:textStyle="bold" />
 
-            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey"
+                />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/idontunderstand_fragment4_height"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center|left"
+                android:text="I'm thinking about the question."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/idontunderstand_fragment4_font_size" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3"
+            android:layout_marginTop="@dimen/idontunderstand_fragment4_vertical_spacing"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/custom_ripple"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/idontunderstand_fragment4_height"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center|left"
+                android:text=" Мы думаем о проблеме и о ответе."
+                android:textColor="@color/black"
+                android:textSize="@dimen/idontunderstand_fragment4_font_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/idontunderstand_fragment4_height"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center|left"
+                android:text="We're thinking about the problem and about the answer."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/idontunderstand_fragment4_font_size" />
 
         </LinearLayout>
 
 
 
-    </android.support.v7.widget.CardView>
-
+    </LinearLayout>
 
 </LinearLayout>

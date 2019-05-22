@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/light_grey"
+    android:background="@drawable/river1"
     tools:context=".RussianToDrinkFragment1">
 
 
@@ -55,9 +55,9 @@
                     android:layout_weight="@integer/ican_fragment1_title_weight"
                     android:gravity="center|left"
                     android:text="I'm Drinking"
-                    android:textColor="@color/white_smoke"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/toolbar_font_size"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/treb_ms_regular"
 
                     />
 
@@ -114,15 +114,16 @@
                     >
 
                     <TextView
+                        android:id="@+id/intro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="casual"
+                        android:background="@color/white"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="@dimen/ican_fragment1_padding_intro"
                         android:text="пить is also an irregular verb."
                         android:textColor="@color/black"
-                        android:textSize="@dimen/ican_fragment1_font_size_intro"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/ican_fragment1_font_size_intro" />
 
 
                 </android.support.v7.widget.CardView>
@@ -140,10 +141,6 @@
             android:padding="@dimen/ican_fragment1_padding_boxes"
             app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
             tools:layout_editor_absoluteX="0dp">
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -163,11 +160,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="пить"
-                            android:textColor="@color/white_smoke"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/ican_fragment1_font_size_word"
                             android:textStyle="bold" />
 
@@ -175,25 +172,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="peet"
                             android:textColor="@color/white_smoke"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="to drink"
-                            android:textColor="@color/white_smoke"
-                            android:textSize="@dimen/ican_fragment1_font_size_word"
-                            android:textStyle="bold" />
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/ican_fragment1_font_size_word" />
 
 
                     </LinearLayout>
@@ -210,7 +206,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="я пью"
@@ -222,25 +218,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="p-yu"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="I drink"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/ican_fragment1_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/ican_fragment1_font_size_word" />
 
 
                     </LinearLayout>
@@ -257,7 +252,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="ты пьёшь"
@@ -269,25 +264,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="p-yosh"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="you drink"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/ican_fragment1_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/ican_fragment1_font_size_word" />
 
 
                     </LinearLayout>
@@ -304,7 +298,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="он/она пьёт"
@@ -316,25 +310,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="p-yot"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="he/she drinks"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/ican_fragment1_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/ican_fragment1_font_size_word" />
 
 
                     </LinearLayout>
@@ -351,7 +344,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="мы пьём"
@@ -363,25 +356,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="p-yom"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="we drink"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/ican_fragment1_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/ican_fragment1_font_size_word" />
 
 
                     </LinearLayout>
@@ -398,7 +390,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="вы пьёте"
@@ -410,25 +402,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="p-yot-ye"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="you(pl) drink"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/ican_fragment1_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/ican_fragment1_font_size_word" />
 
 
                     </LinearLayout>
@@ -445,7 +436,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="они пьют"
@@ -457,34 +448,29 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="p-yut"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
                             android:text="they drink"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/ican_fragment1_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/ican_fragment1_font_size_word" />
 
 
                     </LinearLayout>
 
                 </LinearLayout>
-
-
-
-            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

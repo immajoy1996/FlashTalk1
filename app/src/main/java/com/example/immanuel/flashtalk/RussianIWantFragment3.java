@@ -85,9 +85,9 @@ public class RussianIWantFragment3 extends Fragment {
             }
         });
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment2_sentence1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment2_sentence2");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment2_sentence3");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wantq1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wantq2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wantq3");
 
         LinearLayout linearLayout1=rootView.findViewById(R.id.linearLayout1);
         linearLayout1.setOnClickListener(new View.OnClickListener() {

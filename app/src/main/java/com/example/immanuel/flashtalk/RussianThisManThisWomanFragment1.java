@@ -84,12 +84,12 @@ public class RussianThisManThisWomanFragment1 extends Fragment {
         TextView textView=rootView.findViewById(R.id.intro);
         textView.setText(ssBuilder);
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/flash_audio1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/audio_atom");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/tm1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/tm2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/tm3");
+        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/tm4");
+        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/tm5");
+        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/tm6");
         //final Uri uri7=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
         //final Uri uri8=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
 

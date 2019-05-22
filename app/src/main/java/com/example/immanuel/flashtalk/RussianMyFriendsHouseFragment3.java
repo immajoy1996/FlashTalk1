@@ -85,7 +85,7 @@ public class RussianMyFriendsHouseFragment3 extends Fragment {
         example2.setText(spannableString2);
 
         TextView example3=rootView.findViewById(R.id.example3);
-        String str3="Это дверь их здания.";
+        String str3="Это вход их здания.";
 
         SpannableString spannableString3=new SpannableString(str3);
         spannableString3.setSpan(new UnderlineSpan(), str3.indexOf(keyword1), str3.indexOf(keyword1)+keyword1.length(), 0);

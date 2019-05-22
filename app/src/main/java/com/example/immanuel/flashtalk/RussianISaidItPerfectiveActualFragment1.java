@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
-import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -8,10 +9,37 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
 public class RussianISaidItPerfectiveActualFragment1 extends Fragment {
+
+    MediaPlayer mediaPlayer;
+    int STEP_TIME=100;
+    //ImageView volume;
+    //ImageView pause;
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/im_studying_conjug1");
+                mediaPlayer= MediaPlayer.create(getContext(),uri);*/
+                endit();
+                //volume.setVisibility(View.VISIBLE);
+                //pause.setVisibility(View.GONE);
+            }
+            else {
+                // do what you like
+            }
+        }
+    }
 
     public RussianISaidItPerfectiveActualFragment1() {
         // Required empty public constructor
@@ -31,7 +59,9 @@ public class RussianISaidItPerfectiveActualFragment1 extends Fragment {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
+                //startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
+                endit();
+                getActivity().finish();
             }
         });
 
@@ -44,6 +74,28 @@ public class RussianISaidItPerfectiveActualFragment1 extends Fragment {
         });
 
         String str="Here's the imperfective verb and the perfective verb for \"to talk\". The perfective is conjugated in the way we already know!";
+
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/im_studying_conjug1"); // header1
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/imstudying_conjug2");
+
+        LinearLayout linearLayout1=rootView.findViewById(R.id.linearLayout1);
+        linearLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                doit(view,uri1);
+
+            }
+        });
+
+        LinearLayout linearLayout2=rootView.findViewById(R.id.linearLayout2);
+        linearLayout2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                doit(view,uri2);
+            }
+        });
 
         /*SpannableStringBuilder ssBuilder = new SpannableStringBuilder(str);
         String keyword1="masc.";
@@ -62,5 +114,71 @@ public class RussianISaidItPerfectiveActualFragment1 extends Fragment {
         textView.setText(str);
 
         return rootView;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        endit();
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
     }
 }

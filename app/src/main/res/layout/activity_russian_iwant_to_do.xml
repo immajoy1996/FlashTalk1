@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     tools:context=".RussianIWantToDoActivity">
 
     <android.support.v7.widget.Toolbar
@@ -43,9 +43,9 @@
                 android:layout_weight="@integer/iwanttodo_title_weight"
                 android:gravity="center|left"
                 android:text="I Want To Do"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -71,7 +71,7 @@
                 android:layout_weight="@integer/iwanttodo_games_weight"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"
@@ -90,13 +90,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="@dimen/plural_adjectives_padding"
-        android:text='To say something like "I want to do", use the second verb in the infinitive like in English. '
+        android:text='To say something like "I want to do", or "I love speaking" use the second verb in the infinitive like in English. '
         android:textColor="@color/black"
-        android:textSize="@dimen/plural_adjectives_font_size_intro"
-        android:textStyle="bold" />
+        android:textSize="@dimen/plural_adjectives_font_size_intro" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -120,7 +119,7 @@
                 android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я хочу делать это."
                 android:textColor="@color/black"
@@ -133,12 +132,11 @@
                 android:id="@+id/explanation1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="I want to do this."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -157,7 +155,7 @@
                 android:id="@+id/example2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я хочу изучать русский язык."
                 android:textColor="@color/black"
@@ -170,12 +168,11 @@
                 android:id="@+id/explanation2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="I want to study Russian."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -195,7 +192,7 @@
                 android:id="@+id/example3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я люблю говорить по-русски."
                 android:textColor="@color/black"
@@ -208,12 +205,11 @@
                 android:id="@+id/explanation3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="I love to speak Russian."
+                android:text="I love speaking Russian."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/river1"
     tools:context=".RussianImWatchingTVFragment3">
 
     <!-- TODO: Update blank fragment layout -->
@@ -43,9 +44,9 @@
                 android:layout_weight="1"
                 android:gravity="center|left"
                 android:text="Examples"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
                 android:visibility="visible"
 
                 />
@@ -115,24 +116,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
+        android:background="@color/white"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="5dp"
-        android:background="@color/white"
-        android:text="Remember that pronouns take the accusative case as direct objects."
+        android:text="Let's practice!"
         android:textColor="@color/black"
         android:textSize="@dimen/imwatchingtv_fragment3_font_size_intro"
-        android:textStyle="bold" />
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/medium_sea_green"
             >
 
             <LinearLayout
@@ -150,9 +146,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/imwatchingtv_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Я не вижу тебя."
+                    android:text="Я смотрю фильм сейчас."
                     android:textColor="@color/black"
                     android:textSize="@dimen/imwatchingtv_fragment3_font_size"
                     android:textStyle="bold" />
@@ -167,12 +163,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/imwatchingtv_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="I don't see you."
+                    android:text="I'm watching a movie now."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/imwatchingtv_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/imwatchingtv_fragment3_font_size" />
 
             </LinearLayout>
 
@@ -191,9 +186,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/imwatchingtv_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Я хочу видеть фильм сейчас."
+                    android:text="Вы хотите смотреть этот фильм?"
                     android:textColor="@color/black"
                     android:textSize="@dimen/imwatchingtv_fragment3_font_size"
                     android:textStyle="bold" />
@@ -208,12 +203,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/imwatchingtv_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="I want to see a movie now."
+                    android:text="Do you guys want to watch this movie?"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/imwatchingtv_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/imwatchingtv_fragment3_font_size" />
 
             </LinearLayout>
 
@@ -232,9 +226,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/imwatchingtv_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Почему она не хочет видеть меня?"
+                    android:text="Я не хочу смотреть ничего."
                     android:textColor="@color/black"
                     android:textSize="@dimen/imwatchingtv_fragment3_font_size"
                     android:textStyle="bold" />
@@ -249,22 +243,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/imwatchingtv_fragment3_height"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Why does she not want to see me?"
+                    android:text="I don't want to watch anything."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/imwatchingtv_fragment3_font_size"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/imwatchingtv_fragment3_font_size" />
 
             </LinearLayout>
 
-
-
         </LinearLayout>
-
-
-
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>

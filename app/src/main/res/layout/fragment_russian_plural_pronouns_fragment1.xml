@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/river1"
     tools:context=".RussianPluralPronounsFragment1">
 
     <android.support.v7.widget.Toolbar
@@ -122,15 +123,10 @@
         android:textSize="@dimen/plural_pronouns_font_size_intro"
         />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/medium_sea_green"
             android:orientation="vertical"
             >
 
@@ -546,11 +542,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-
 
 
 

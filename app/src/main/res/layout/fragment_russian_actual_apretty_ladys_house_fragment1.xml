@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianActualAPrettyLadysHouseFragment1">
 
@@ -45,9 +45,9 @@
                 android:layout_weight="@integer/accusativecase_fragment1_title_weight"
                 android:gravity="center|left"
                 android:text="A Pretty Lady's House"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -72,15 +72,13 @@
         android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:background="@color/white"
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
         android:padding="@dimen/imreadingmybook_fragment2_padding"
-        android:text="Possessive Pronouns in the genitive case have special forms too. Unlike the accusative case, all the forms change. Get the pattern?"
-        android:fontFamily="casual"
-        android:textStyle="bold"
+        android:text="Adjectives in the genitive case have special forms too. Get the pattern?"
         android:textColor="@color/black"
-        android:textSize="@dimen/imreadingmybook_fragment2_font_size_intro"
-        />
+        android:textSize="@dimen/imreadingmybook_fragment2_font_size_intro" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,9 +102,9 @@
                 android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="Я читаю мой паспорт."
+                android:text="Это дом красивом человека."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
                 android:textStyle="bold"
@@ -117,12 +115,11 @@
                 android:id="@+id/explanation1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="This is the house of my friend."
+                android:text="This is the house of a handsome man."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -141,7 +138,7 @@
                 android:id="@+id/example2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю мою книгу."
                 android:textColor="@color/red"
@@ -154,12 +151,11 @@
                 android:id="@+id/explanation2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="This is the house of my sister."
+                android:text="The is the house of a pretty woman."
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -179,7 +175,7 @@
                 android:id="@+id/example3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю моё задание."
                 android:textColor="@color/medium_sea_green"
@@ -192,12 +188,11 @@
                 android:id="@+id/explanation3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="This is the door of my building."
+                android:text="This is the entrance of the beautiful building."
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -217,7 +212,7 @@
                 android:id="@+id/example4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю твой паспорт."
                 android:textColor="@color/transliteration_color"
@@ -230,12 +225,11 @@
                 android:id="@+id/explanation4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="Is this the house of your friend?"
+                android:text="This is the car of the interesting man."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -254,7 +248,7 @@
                 android:id="@+id/example5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю твою книгу."
                 android:textColor="@color/red"
@@ -267,12 +261,11 @@
                 android:id="@+id/explanation5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="Is this the house of your sister?"
+                android:text="Is this the house of the interesting girl?"
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -292,7 +285,7 @@
                 android:id="@+id/example6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю твоё задание."
                 android:textColor="@color/medium_sea_green"
@@ -305,12 +298,11 @@
                 android:id="@+id/explanation6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="Is this the door of your building?"
+                android:text="This is the entrance of the interesting building."
                 android:textColor="@color/medium_sea_green"
-                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic" />
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro" />
 
         </LinearLayout>
 

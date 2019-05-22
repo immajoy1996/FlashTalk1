@@ -57,6 +57,10 @@ public class RussianDialogActivity extends AppCompatActivity {
         dialog_images.add("lightning1");
         dialog_images.add("lightning1");
         dialog_images.add("lightning1");
+        dialog_images.add("lightning1");
+        dialog_images.add("lightning1");
+        dialog_images.add("N/A");
+        dialog_images.add("lightning1");
 
         dialog_titles.add("~ Beginner ~");
         dialog_titles.add("A Testy Exchange");
@@ -65,8 +69,12 @@ public class RussianDialogActivity extends AppCompatActivity {
         dialog_titles.add("A Charming Accent");
         dialog_titles.add("~ Intermediate ~");
         dialog_titles.add("A Rebel");
-        dialog_titles.add("A Rude Waitress");
+        dialog_titles.add("A Rude Waiter");
+        dialog_titles.add("Stereotypes");
+        dialog_titles.add("A Wild Friend");
         dialog_titles.add("A Very Boring Man");
+        dialog_titles.add("~ Functional ~");
+        dialog_titles.add("A Corrupt Policeman");
 
         // set up the RecyclerView
         RecyclerView recyclerView = findViewById(R.id.recyler_view_dialogs);

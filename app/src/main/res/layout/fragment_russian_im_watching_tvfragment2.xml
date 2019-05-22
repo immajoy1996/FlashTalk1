@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/light_grey"
+    android:background="@drawable/river1"
     tools:context=".RussianImWatchingTVFragment2">
 
 
@@ -16,7 +16,6 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        android:background="@color/light_grey"
         tools:context=".RussianImWatchingTVFragment2">
 
 
@@ -56,9 +55,9 @@
                     android:layout_weight="1"
                     android:gravity="center|left"
                     android:text="I'm Watching A Movie"
-                    android:textColor="@color/white_smoke"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/toolbar_font_size"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:visibility="visible"
 
                     />
@@ -145,15 +144,16 @@
                     >
 
                     <TextView
+                        android:id="@+id/intro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="casual"
+                        android:background="@color/white"
+                        android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="Verbs ending in -еть are conjugated the same way as verbs ending in -ить."
                         android:textColor="@color/black"
-                        android:textSize="@dimen/imwatchingtv_fragment2_font_size_intro"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/imwatchingtv_fragment2_font_size_intro" />
 
 
                 </android.support.v7.widget.CardView>
@@ -171,10 +171,6 @@
             android:padding="5dp"
             app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
             tools:layout_editor_absoluteX="0dp">
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -194,11 +190,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="смотреть"
-                            android:textColor="@color/white_smoke"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/imwatchingtv_fragment2_font_size_word"
                             android:textStyle="bold" />
 
@@ -206,25 +202,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="cmot-ryet"
-                            android:textColor="@color/white_smoke"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/imwatchingtv_fragment2_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="to watch"
-                            android:textColor="@color/white_smoke"
-                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word"
-                            android:textStyle="bold" />
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word" />
 
 
                     </LinearLayout>
@@ -241,7 +236,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="я смотрю"
@@ -253,25 +248,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="cmot-ryu"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/imwatchingtv_fragment2_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
-                            android:text="i watch"
+                            android:text="I watch"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word" />
 
 
                     </LinearLayout>
@@ -288,7 +282,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="ты смотришь"
@@ -300,25 +294,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="cmot-reesh"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/imwatchingtv_fragment2_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="you watch"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word" />
 
 
                     </LinearLayout>
@@ -335,7 +328,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="он/она смотрит"
@@ -347,25 +340,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="cmot-reet"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/imwatchingtv_fragment2_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="he/she watches"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word" />
 
 
                     </LinearLayout>
@@ -382,7 +374,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="мы смотрим"
@@ -394,25 +386,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="cmot-reem"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/imwatchingtv_fragment2_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="we watch"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word" />
 
 
                     </LinearLayout>
@@ -429,7 +420,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="вы смотрите"
@@ -441,25 +432,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="cmot-reet-ye"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/imwatchingtv_fragment2_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
-                            android:text="you (pl) watch"
+                            android:text="you(pl) watch"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word" />
 
 
                     </LinearLayout>
@@ -476,7 +466,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="они смотрят"
@@ -488,34 +478,29 @@
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="cmot-ryat"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/imwatchingtv_fragment2_font_size_translit"
-                            android:textStyle="bold" />
+                            android:textStyle="italic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
-                            android:fontFamily="casual"
+                            android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/imwatchingtv_fragment2_padding"
                             android:text="they watch "
                             android:textColor="@color/black"
-                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word"
-                            android:textStyle="bold" />
+                            android:textSize="@dimen/imwatchingtv_fragment2_font_size_word" />
 
 
                     </LinearLayout>
 
                 </LinearLayout>
-
-
-
-            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

@@ -55,13 +55,13 @@ public class RussianToGoOnFootFragment3 extends Fragment {
         //Toolbar.setTitle("Basic Verbs");
 
         TextView textView1=rootView.findViewById(R.id.sentence1);
-        String str1="Сегодня, я иду в библиотеку.";
+        String str1="Я иду в библиотеку.";
         SpannableString spannableString1=new SpannableString(str1);
         spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str1.indexOf("у."),str1.indexOf("у.")+1,0);
         textView1.setText(spannableString1);
 
         TextView textView2=rootView.findViewById(R.id.sentence2);
-        String str2="Ты идешь в улицу сейчас?";
+        String str2="Я иду в твою комнату сейчас.";
         SpannableString spannableString2=new SpannableString(str2);
         spannableString2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str2.indexOf("у с"),str2.indexOf("у с")+1,0);
         textView2.setText(spannableString2);

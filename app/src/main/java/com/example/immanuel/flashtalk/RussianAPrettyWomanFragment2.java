@@ -60,11 +60,15 @@ public class RussianAPrettyWomanFragment2 extends Fragment {
         //Toolbar.setTitle("Basic Verbs");
 
         TextView textView_intro=rootView.findViewById(R.id.intro);
-        String str_intro="Just one more new one! красиво means beautiful. Notice that it can be applied to men or women.";
+        String str_intro="красиво means beautiful. Notice that it can be applied to men or women. Also, мужчина is masc. It's an exception!";
         String intro_keyword1="красиво";
+        String intro_keyword2="мужчина";
         SpannableStringBuilder spannableStringBuilder_intro=new SpannableStringBuilder(str_intro);
-        spannableStringBuilder_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str_intro.indexOf(intro_keyword1),str_intro.indexOf(intro_keyword1)+intro_keyword1.length(),0);
+        //spannableStringBuilder_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str_intro.indexOf(intro_keyword1),str_intro.indexOf(intro_keyword1)+intro_keyword1.length(),0);
+        //spannableStringBuilder_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str_intro.indexOf(intro_keyword2),str_intro.indexOf(intro_keyword2)+intro_keyword2.length(),0);
         spannableStringBuilder_intro.setSpan(new StyleSpan(Typeface.BOLD),str_intro.indexOf(intro_keyword1),str_intro.indexOf(intro_keyword1)+intro_keyword1.length(),0);
+        spannableStringBuilder_intro.setSpan(new StyleSpan(Typeface.BOLD),str_intro.indexOf(intro_keyword2),str_intro.indexOf(intro_keyword2)+intro_keyword2.length(),0);
+        spannableStringBuilder_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str_intro.indexOf("masc."),str_intro.indexOf("masc.")+5,0);
 
         //spannableStringBuilder_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),str_intro.indexOf("-ая"),str_intro.indexOf("-ая")+3,0);
         //spannableStringBuilder_intro.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str_intro.indexOf("-ое"),str_intro.indexOf("-ое")+3,0);
@@ -95,7 +99,7 @@ public class RussianAPrettyWomanFragment2 extends Fragment {
         example3.setText(spannableString3);
 
         TextView example4=rootView.findViewById(R.id.example4);
-        String str4="Он красивый человек.";
+        String str4="Он красивый мужчина.";
         String str4_keyword1="красивый";
 
         SpannableString spannableString4=new SpannableString(str4);
@@ -103,7 +107,7 @@ public class RussianAPrettyWomanFragment2 extends Fragment {
         example4.setText(spannableString4);
 
         TextView example5=rootView.findViewById(R.id.example5);
-        String str5="Она красивая девушка.";
+        String str5="Она красивая женщина.";
         String str5_keyword1="красивая";
 
         SpannableString spannableString5=new SpannableString(str5);

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".RussianGameSelectionActivity"
-    android:background="@drawable/ocean3"
+    android:background="@drawable/river1"
     >
 
     <android.support.v7.widget.Toolbar

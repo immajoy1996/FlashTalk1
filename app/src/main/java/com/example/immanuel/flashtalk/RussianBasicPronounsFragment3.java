@@ -36,7 +36,7 @@ public class RussianBasicPronounsFragment3 extends Fragment {
                 String msg2 = "Click the quiz icon in the toolbar to practice!";
                 SpannableString spannableString2 = new SpannableString(msg2);
 
-                (new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_CLICK_SENTENCES","HINT_QUIZ");
+                //(new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_CLICK_SENTENCES","HINT_QUIZ");
                 //HintDialogDoubleClass hints = HintDialogDoubleClass.newInstance(spannableString1, spannableString2,"HINT_SENTENCES","HINT_LESSON_GAME");
                 //FragmentManager fm = getFragmentManager();
                 //hints.show(fm, "Dialog Double Tag");

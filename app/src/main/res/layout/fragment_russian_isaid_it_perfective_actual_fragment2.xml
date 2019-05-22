@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white_smoke"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianISaidItPerfectiveActualFragment2">
 
-    <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -42,22 +40,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="@integer/these_people_fragment2_title_weight"
+                android:layout_weight="@integer/plurals_fragment2_title_weight"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center|left"
                 android:text="Examples"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
 
                 />
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_weight="@integer/these_people_fragment2_volume_weight"
+                android:layout_weight="@integer/plurals_fragment2_volume_weight"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageView
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -69,10 +68,10 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="@integer/these_people_fragment2_games_weight"
+                android:layout_weight="@integer/imreadingmybook_fragment3_games_weight"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"
@@ -80,6 +79,7 @@
                     />
 
             </LinearLayout>
+
 
         </LinearLayout>
 
@@ -90,117 +90,129 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
-        android:padding="@dimen/these_people_fragment2_padding"
+        android:padding="5dp"
         android:text="Let's see how to use the perfective. It's conjugated in the usual way for the past tense."
         android:textColor="@color/black"
-        android:textSize="@dimen/these_people_fragment2_font_size_intro"
-        android:textStyle="bold" />
+        android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
         android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="center"
         >
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/these_people_fragment2_padding"
-                >
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Откуда вы? Вы из Америки?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                <TextView
-                    android:id="@+id/example1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Он сказал что он был в магазине."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="bold"
+                />
 
-                    />
+            <TextView
+                android:id="@+id/explanation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="He said that he was in the store."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-                <TextView
-                    android:id="@+id/explanation1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="He said that he was in the store."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="italic"
+                />
+        </LinearLayout>
 
-                    />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-                <TextView
-                    android:id="@+id/example2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/these_people_fragment2_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="В классе, она сказала что я хороший студент."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="bold"
+            <TextView
+                android:id="@+id/example2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Нет. Я из России."
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                    />
+                />
 
-                <TextView
-                    android:id="@+id/explanation2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="In class, she said that I am a good student."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="italic"
+            <TextView
+                android:id="@+id/explanation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="In class, she said that I am a good student."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-                    />
+                />
 
-                <TextView
-                    android:id="@+id/example3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/these_people_fragment2_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Каждый день, она говорила о политике."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="bold"
+        </LinearLayout>
 
-                    />
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-                <TextView
-                    android:id="@+id/explanation3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Every day, she talked about politics."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/these_people_fragment2_font_size_intro"
-                    android:textStyle="italic"
+            <TextView
+                android:id="@+id/example3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Хорошо. Я из Франции."
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                    />
+                />
 
-            </LinearLayout>
+            <TextView
+                android:id="@+id/explanation3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Every day she talked about politics."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-        </android.support.v7.widget.CardView>
-
+                />
+        </LinearLayout>
 
     </LinearLayout>
 

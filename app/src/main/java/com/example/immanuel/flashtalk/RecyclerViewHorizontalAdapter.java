@@ -7,6 +7,8 @@ package com.example.immanuel.flashtalk;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +39,8 @@ public class RecyclerViewHorizontalAdapter extends RecyclerView.Adapter<Recycler
     private LayoutInflater mInflater;
     private Context cont;
     private ItemClickListener mClickListener;
+
+    MediaPlayer mediaPlayer;
 
     // data is passed into the constructor
     RecyclerViewHorizontalAdapter(Context context, List<String> data1,List<String> data2,List<String> data3,List<Drawable> data4,List<Drawable> data5,List<Drawable> data6) {
@@ -104,6 +108,13 @@ public class RecyclerViewHorizontalAdapter extends RecyclerView.Adapter<Recycler
             CircularImageView2=itemView.findViewById(R.id.circular_image_view2);
             CircularImageView3=itemView.findViewById(R.id.circular_image_view3);
 
+            final Animation anim_wobble = AnimationUtils.loadAnimation(itemView.getContext(), R.anim.wobble);
+            anim_wobble.setRepeatCount(Animation.INFINITE);
+
+            CircularImageView1.startAnimation(anim_wobble);
+            CircularImageView2.startAnimation(anim_wobble);
+            CircularImageView3.startAnimation(anim_wobble);
+
             /*ViewGroup.LayoutParams params=(ViewGroup.LayoutParams)CircularImageView1.getLayoutParams();
 
             params.height=itemView.getContext().getResources().getDimensionPixelSize(R.dimen.circular_image_dim);
@@ -112,8 +123,11 @@ public class RecyclerViewHorizontalAdapter extends RecyclerView.Adapter<Recycler
             CircularImageView2.setLayoutParams(params);
             CircularImageView3.setLayoutParams(params);*/
 
+
             final Animation anim = AnimationUtils.loadAnimation(itemView.getContext(), R.anim.scale);
             //final Animation anim_test = AnimationUtils.loadAnimation(itemView.getContext(), R.anim.scale_test);
+
+            final Uri uri_swoosh=Uri.parse("android.resource://"+itemView.getContext().getPackageName()+"/raw/swoosh");
 
             CircularImageView1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -123,6 +137,7 @@ public class RecyclerViewHorizontalAdapter extends RecyclerView.Adapter<Recycler
                     //CircularImageView1.setClickable(false);
                     //CircularImageView2.setClickable(false);
                     //CircularImageView3.setClickable(false);
+                    doit(view,uri_swoosh);
                     myTextView1.startAnimation(anim);
                     new Timer().schedule(new TimerTask() {
                         @Override
@@ -184,6 +199,66 @@ public class RecyclerViewHorizontalAdapter extends RecyclerView.Adapter<Recycler
                 default:
                     Toast.makeText(cont,"Coming Soon",Toast.LENGTH_SHORT).show();
                     return;
+
+        }
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
 
         }
     }

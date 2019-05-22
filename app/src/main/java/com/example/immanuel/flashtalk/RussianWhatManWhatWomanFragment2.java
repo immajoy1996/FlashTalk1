@@ -148,9 +148,9 @@ public class RussianWhatManWhatWomanFragment2 extends Fragment {
         spannableString9.setSpan(new UnderlineSpan(), str9.indexOf("красивое"), str9.indexOf("красивое")+8, 0);
         example9.setText(spannableString9);*/
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/flash_audio1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/audio_atom");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wat1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wat2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wat3");
         //final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
         //final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
         //final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");

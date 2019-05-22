@@ -8,13 +8,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.Spannable;
-import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -146,90 +147,32 @@ public class RussianGenderFragment2 extends Fragment {
             }
         });
 
-        String str="Whether you use мой, моя, or моё depends on the gender of the noun. Get the pattern?";
+        //String str="Whether you use мой (moy), моя (ma-ya), or моё (ma-yo) depends on the gender of the noun. Get the pattern?";
+
+        String str="Whether you use мой (moy), моя (ma-ya), or моё (ma-yo) depends on the gender of the noun. Get the pattern?";
+        String keyword1="мой (moy)";
+        String keyword2="моя (ma-ya)";
+        String keyword3="моё (ma-yo)";
+        String keyword4="moy";
+        String keyword5="ma-ya";
+        String keyword6="ma-yo";
 
         SpannableStringBuilder ssBuilder = new SpannableStringBuilder(str);
 
-        ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str.indexOf("мой"),str.indexOf("мой")+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),str.indexOf("моя"),str.indexOf("моя")+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str.indexOf("моё"),str.indexOf("моё")+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),str.indexOf(keyword1),str.indexOf(keyword1)+keyword1.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),str.indexOf(keyword2),str.indexOf(keyword2)+keyword2.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str.indexOf(keyword3),str.indexOf(keyword3)+keyword3.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        ssBuilder.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf("мой"),str.indexOf("мой")+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ssBuilder.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf("моя"),str.indexOf("моя")+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ssBuilder.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf("моё"),str.indexOf("моё")+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(keyword1),str.indexOf(keyword1)+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(keyword2),str.indexOf(keyword2)+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(keyword3),str.indexOf(keyword3)+3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        ssBuilder.setSpan(new StyleSpan(Typeface.ITALIC),str.indexOf(keyword4),str.indexOf(keyword4)+keyword4.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new StyleSpan(Typeface.ITALIC),str.indexOf(keyword5),str.indexOf(keyword5)+keyword5.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ssBuilder.setSpan(new StyleSpan(Typeface.ITALIC),str.indexOf(keyword6),str.indexOf(keyword6)+keyword6.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         TextView textView=rootView.findViewById(R.id.intro);
         textView.setText(ssBuilder);
-
-        String str_textView1="мой (moy) дом";
-        String str_textView2="моя (ma-ya) машина";
-        String str_textView3="моё (ma-yo) фото";
-        String str_textView4="твой (t-voy) дом";
-        String str_textView5="твоя (t-va-ya) машина";
-        String str_textView6="твоё (t-va-yo) фото";
-
-        String keyword1="moy";
-        String keyword2="ma-ya";
-        String keyword3="ma-yo";
-        String keyword4="t-voy";
-        String keyword5="t-va-ya";
-        String keyword6="t-va-yo";
-
-        String a1="мой";
-        String a2="дом";
-        String b1="моя";
-        String b2="машина";
-        String c1="моё";
-        String c2="фото";
-        String d1="твой";
-        String d2="дом";
-        String e1="твоя";
-        String e2="машина";
-        String f1="твоё";
-        String f2="фото";
-
-        TextView textView1=rootView.findViewById(R.id.textview1);
-        TextView textView2=rootView.findViewById(R.id.textview2);
-        TextView textView3=rootView.findViewById(R.id.textview3);
-        TextView textView4=rootView.findViewById(R.id.textview4);
-        TextView textView5=rootView.findViewById(R.id.textview5);
-        TextView textView6=rootView.findViewById(R.id.textview6);
-
-        SpannableString spannableString1=new SpannableString(str_textView1);
-        SpannableString spannableString2=new SpannableString(str_textView2);
-        SpannableString spannableString3=new SpannableString(str_textView3);
-        SpannableString spannableString4=new SpannableString(str_textView4);
-        SpannableString spannableString5=new SpannableString(str_textView5);
-        SpannableString spannableString6=new SpannableString(str_textView6);
-
-        spannableString1.setSpan(new StyleSpan(Typeface.ITALIC),str_textView1.indexOf(keyword1),str_textView1.indexOf(keyword1)+keyword1.length(),0);
-        spannableString2.setSpan(new StyleSpan(Typeface.ITALIC),str_textView2.indexOf(keyword2),str_textView2.indexOf(keyword2)+keyword2.length(),0);
-        spannableString3.setSpan(new StyleSpan(Typeface.ITALIC),str_textView3.indexOf(keyword3),str_textView3.indexOf(keyword3)+keyword3.length(),0);
-        spannableString4.setSpan(new StyleSpan(Typeface.ITALIC),str_textView4.indexOf(keyword4),str_textView5.indexOf(keyword5)+keyword5.length(),0);
-        spannableString5.setSpan(new StyleSpan(Typeface.ITALIC),str_textView5.indexOf(keyword5),str_textView5.indexOf(keyword5)+keyword5.length(),0);
-        spannableString6.setSpan(new StyleSpan(Typeface.ITALIC),str_textView6.indexOf(keyword6),str_textView6.indexOf(keyword6)+keyword6.length(),0);
-
-        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str_textView1.indexOf(a1),str_textView1.indexOf(a1)+a1.length(),0);
-        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str_textView1.indexOf(a2),str_textView1.indexOf(a2)+a2.length(),0);
-        spannableString2.setSpan(new StyleSpan(Typeface.BOLD),str_textView2.indexOf(b1),str_textView2.indexOf(b1)+b1.length(),0);
-        spannableString2.setSpan(new StyleSpan(Typeface.BOLD),str_textView2.indexOf(b2),str_textView2.indexOf(b2)+b2.length(),0);
-        spannableString3.setSpan(new StyleSpan(Typeface.BOLD),str_textView3.indexOf(c1),str_textView3.indexOf(c1)+c1.length(),0);
-        spannableString3.setSpan(new StyleSpan(Typeface.BOLD),str_textView3.indexOf(c2),str_textView3.indexOf(c2)+c2.length(),0);
-
-        spannableString4.setSpan(new StyleSpan(Typeface.BOLD),str_textView4.indexOf(d1),str_textView4.indexOf(d1)+d1.length(),0);
-        spannableString4.setSpan(new StyleSpan(Typeface.BOLD),str_textView4.indexOf(d2),str_textView4.indexOf(d2)+d2.length(),0);
-        spannableString5.setSpan(new StyleSpan(Typeface.BOLD),str_textView5.indexOf(e1),str_textView5.indexOf(e1)+e1.length(),0);
-        spannableString5.setSpan(new StyleSpan(Typeface.BOLD),str_textView5.indexOf(e2),str_textView5.indexOf(e2)+e2.length(),0);
-        spannableString6.setSpan(new StyleSpan(Typeface.BOLD),str_textView6.indexOf(f1),str_textView6.indexOf(f1)+f1.length(),0);
-        spannableString6.setSpan(new StyleSpan(Typeface.BOLD),str_textView6.indexOf(f2),str_textView6.indexOf(f2)+f2.length(),0);
-
-
-        textView1.setText(spannableString1);
-        textView2.setText(spannableString2);
-        textView3.setText(spannableString3);
-        textView4.setText(spannableString4);
-        textView5.setText(spannableString5);
-        textView6.setText(spannableString6);
 
         /*final TextView title=rootView.findViewById(R.id.title);
         volume=rootView.findViewById(R.id.audio);
@@ -274,6 +217,10 @@ public class RussianGenderFragment2 extends Fragment {
                 viewPager.setCurrentItem(page-1);
             }
         });
+
+        final Animation anim = AnimationUtils.loadAnimation(getContext(), R.anim.wobble);
+        back_button.startAnimation(anim);
+        games.startAnimation(anim);
 
         /*forward_button.setOnClickListener(new View.OnClickListener() {
             @Override

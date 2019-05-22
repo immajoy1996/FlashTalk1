@@ -1,19 +1,10 @@
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white_smoke"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RussianPluralPossessivePronounsFragment1">
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianPluralPossessivePronounsFragment1">
 
@@ -53,9 +44,9 @@
                 android:layout_weight="1"
                 android:gravity="center|left"
                 android:text="My Friends"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -100,8 +91,7 @@
         android:background="@color/white"
         android:padding="@dimen/plural_possessives_fragment1_padding_intro"
         android:text="Whether you use мой, моя, or моё depends on the gender of the noun. Get the pattern?"
-        android:fontFamily="casual"
-        android:textStyle="bold"
+        android:fontFamily="@font/treb_ms_regular"
         android:textColor="@color/black"
         android:textSize="@dimen/plural_possessives_fragment1_font_size_intro"
         />
@@ -126,31 +116,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="my friends"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="мои друзья"
@@ -174,31 +162,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="my sisters"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="мои сестры"
@@ -221,31 +207,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="my books"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="мои книги"
@@ -269,31 +253,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="your friends"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="твои друзья"
@@ -316,32 +298,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="your sisters"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="твои сестры"
@@ -364,31 +344,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="pl."
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="your books"
                 android:textColor="@color/purple"
-                android:textSize="@dimen/gender_fragment2_font_size_translit"
-                android:textStyle="bold" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="твои книги"
@@ -402,5 +380,3 @@
     </LinearLayout>
 
 </LinearLayout>
-
-</android.support.v4.widget.NestedScrollView>

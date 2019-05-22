@@ -3,6 +3,8 @@ package com.example.immanuel.flashtalk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.Timer;
@@ -22,6 +24,14 @@ public class RussianLessonGamesSplashActivity extends AppCompatActivity {
 
         TextView textView=findViewById(R.id.text);
         textView.setText(lesson_name);
+
+        TextView title=findViewById(R.id.title);
+        CircularImageViewTest circularImageView2=findViewById(R.id.image);
+
+        final Animation anim_wobble = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.wobble);
+        anim_wobble.setRepeatCount(Animation.INFINITE);
+
+        circularImageView2.startAnimation(anim_wobble);
 
         timer=new Timer();
         timer.schedule(new TimerTask() {

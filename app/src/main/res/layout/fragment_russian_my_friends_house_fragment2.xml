@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianMyFriendsHouseFragment2">
 
@@ -45,9 +45,9 @@
                 android:layout_weight="@integer/accusativecase_fragment1_title_weight"
                 android:gravity="center|left"
                 android:text="His Friend's House"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -73,13 +73,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="@dimen/imreadingmybook_fragment2_padding"
         android:text="Remember that его, её and их always stay the same regardless of gender or case."
         android:textColor="@color/black"
-        android:textSize="@dimen/imreadingmybook_fragment2_font_size_intro"
-        android:textStyle="bold" />
+        android:textSize="@dimen/imreadingmybook_fragment2_font_size_intro" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,7 +102,7 @@
                 android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю мой паспорт."
                 android:textColor="@color/transliteration_color"
@@ -116,12 +115,11 @@
                 android:id="@+id/explanation1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="This is the house of his friend."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -140,7 +138,7 @@
                 android:id="@+id/example2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю мою книгу."
                 android:textColor="@color/red"
@@ -153,12 +151,11 @@
                 android:id="@+id/explanation2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="This is the house of his sister."
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -178,7 +175,7 @@
                 android:id="@+id/example3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю моё задание."
                 android:textColor="@color/medium_sea_green"
@@ -191,12 +188,11 @@
                 android:id="@+id/explanation3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="This is the door of his building."
+                android:text="This is the entrance of his building."
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -216,7 +212,7 @@
                 android:id="@+id/example4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю твой паспорт."
                 android:textColor="@color/transliteration_color"
@@ -229,12 +225,11 @@
                 android:id="@+id/explanation4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Is this the house of her friend?"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -253,7 +248,7 @@
                 android:id="@+id/example5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю твою книгу."
                 android:textColor="@color/red"
@@ -266,12 +261,11 @@
                 android:id="@+id/explanation5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Is this the house of her sister?"
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -291,7 +285,7 @@
                 android:id="@+id/example6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю твоё задание."
                 android:textColor="@color/medium_sea_green"
@@ -304,12 +298,11 @@
                 android:id="@+id/explanation6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="Is this the door of her building?"
+                android:text="Is this the entrance of her building?"
                 android:textColor="@color/medium_sea_green"
-                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic" />
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro" />
 
         </LinearLayout>
 

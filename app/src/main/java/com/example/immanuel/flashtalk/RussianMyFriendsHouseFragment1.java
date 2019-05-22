@@ -95,7 +95,7 @@ public class RussianMyFriendsHouseFragment1 extends Fragment {
         example2.setText(spannableString2);
 
         TextView example3=rootView.findViewById(R.id.example3);
-        String str3="Это дверь моего здания.";
+        String str3="Это вход моего здания.";
 
         SpannableString spannableString3=new SpannableString(str3);
         spannableString3.setSpan(new UnderlineSpan(), str3.indexOf("моего"), str3.indexOf("моего")+5, 0);
@@ -116,7 +116,7 @@ public class RussianMyFriendsHouseFragment1 extends Fragment {
         example5.setText(spannableString5);
 
         TextView example6=rootView.findViewById(R.id.example6);
-        String str6="Это дверь твоего здания.";
+        String str6="Это вход твоего здания?";
 
         SpannableString spannableString6=new SpannableString(str6);
         spannableString6.setSpan(new UnderlineSpan(), str6.indexOf("твоего"), str6.indexOf("твоего")+6, 0);

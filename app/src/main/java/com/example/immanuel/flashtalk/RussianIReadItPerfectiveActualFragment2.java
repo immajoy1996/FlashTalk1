@@ -1,5 +1,8 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -9,10 +12,36 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
 public class RussianIReadItPerfectiveActualFragment2 extends Fragment {
+
+    MediaPlayer mediaPlayer;
+    int STEP_TIME = 100;
+    //ImageView volume;
+    //ImageView pause;
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/im_studying_conjug1");
+                mediaPlayer= MediaPlayer.create(getContext(),uri);*/
+                endit();
+                //volume.setVisibility(View.VISIBLE);
+                //pause.setVisibility(View.GONE);
+            } else {
+                // do what you like
+            }
+        }
+    }
 
     public RussianIReadItPerfectiveActualFragment2() {
         // Required empty public constructor
@@ -37,6 +66,62 @@ public class RussianIReadItPerfectiveActualFragment2 extends Fragment {
             }
         });
 
+        CircularImageViewTest games=rootView.findViewById(R.id.games);
+        games.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
+                endit();
+                Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
+                intent.putExtra("LESSON_NAME","I Read It!");
+                //pause.setVisibility(View.GONE);
+                //volume.setVisibility(View.VISIBLE);
+                startActivity(intent);
+            }
+        });
+
+        final Uri uri1 = Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/read1"); // header1
+        final Uri uri2 = Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/read2");
+        final Uri uri3 = Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/read3");
+
+        LinearLayout linearLayout1 = rootView.findViewById(R.id.linearLayout1);
+        linearLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                doit(view, uri1);
+
+            }
+        });
+
+        LinearLayout linearLayout2 = rootView.findViewById(R.id.linearLayout2);
+        linearLayout2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri2);
+                mediaPlayer.start();*/
+                doit(view, uri2);
+            }
+        });
+
+        LinearLayout linearLayout3 = rootView.findViewById(R.id.linearLayout3);
+        linearLayout3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri3);
+                mediaPlayer.start();*/
+                doit(view, uri3);
+            }
+        });
+
         TextView example1=rootView.findViewById(R.id.example1);
         String str1="Вчера я прочитал мою книгу. ";
         String keyword1="прочитал";
@@ -56,7 +141,7 @@ public class RussianIReadItPerfectiveActualFragment2 extends Fragment {
         example2.setText(spannableString2);
 
         TextView example3=rootView.findViewById(R.id.example3);
-        String str3="Каждый день, мы читали математикие книги в классе.";
+        String str3="Каждый день, мы читали математические книги в классе.";
         String keyword3="читали";
 
         SpannableString spannableString3=new SpannableString(str3);
@@ -64,5 +149,69 @@ public class RussianIReadItPerfectiveActualFragment2 extends Fragment {
         example3.setText(spannableString3);
 
         return rootView;
+    }
+
+    void endit() {
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri) {
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer = null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                }
+
+                ;
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer = null;
+
+                }
+
+                ;
+            });
+        } else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer = null;
+                }
+
+                ;
+            });
+        }
     }
 }

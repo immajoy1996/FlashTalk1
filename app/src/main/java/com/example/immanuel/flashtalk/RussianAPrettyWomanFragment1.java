@@ -136,9 +136,9 @@ public class RussianAPrettyWomanFragment1 extends Fragment {
         spannableString6.setSpan(new UnderlineSpan(), str6.indexOf(str6_keyword1), str6.indexOf(str6_keyword1)+str6_keyword1.length(), 0);
         example6.setText(spannableString6);*/
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/flash_audio1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/audio_atom");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/id1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/id2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/id3");
         //final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
         //final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
         //final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");

@@ -53,8 +53,8 @@ public class RussianToGoOnFootFragment2 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_russian_to_go_on_foot_fragment2, container, false);
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
-        String str="в (v) means \"to\". It's sometimes pronounced as an \"f\" but it's not really important to know all the rules for these. Look at the examples.";
-        String keyword1="в (v)";
+        String str="в means \"to\". It's sometimes pronounced as an \"f\". Look at the examples.";
+        String keyword1="в";
 
         SpannableStringBuilder ssBuilder = new SpannableStringBuilder(str);
 

@@ -42,8 +42,8 @@
 
                     <ImageButton
                         android:id="@+id/back_button"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="@dimen/arrow_button_width"
+                        android:layout_height="@dimen/arrow_button_height"
                         android:background="@drawable/arrow_back_pressed" />
 
                 </LinearLayout>
@@ -54,9 +54,9 @@
                     android:layout_weight="1"
                     android:gravity="center|left"
                     android:text="A Rebel"
-                    android:textColor="@color/white_smoke"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/toolbar_font_size"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/treb_ms_regular"
 
                     />
 
@@ -83,8 +83,8 @@
 
                     <ImageButton
                         android:id="@+id/forward_button"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="@dimen/arrow_button_width"
+                        android:layout_height="@dimen/arrow_button_height"
                         android:background="@drawable/arrow_forward_pressed" />
 
                 </LinearLayout>
@@ -98,13 +98,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:fontFamily="casual"
+            android:fontFamily="@font/treb_ms_regular"
             android:gravity="center"
             android:padding="@dimen/imreadingmybook_fragment3_padding"
             android:text="Read the dialog between Manny and Lena."
             android:textColor="@color/black"
             android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-            android:textStyle="bold" />
+             />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,7 +128,7 @@
                     android:id="@+id/example1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я читаю ye-vo роман."
                     android:textColor="@color/rosy_brown"
@@ -141,12 +141,11 @@
                     android:id="@+id/translation1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="How's the weather today?"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -166,7 +165,7 @@
                     android:id="@+id/example2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я читаю ye-vo книгу."
                     android:textColor="@color/rosy_brown"
@@ -179,12 +178,11 @@
                     android:id="@+id/translation2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Very interesting. It's not very cold and it's not very hot."
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -205,25 +203,23 @@
                     android:id="@+id/example3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я вижу ye-vo здание."
                     android:textColor="@color/rosy_brown"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
                     android:textStyle="bold"
-
                     />
 
                 <TextView
                     android:id="@+id/translation3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Good. You speak Russian very well!"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -242,7 +238,7 @@
                     android:id="@+id/example4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я читаю ye-vo роман."
                     android:textColor="@color/rosy_brown"
@@ -255,12 +251,11 @@
                     android:id="@+id/translation4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="How's the weather today?"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -279,7 +274,7 @@
                     android:id="@+id/example5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я читаю ye-vo книгу."
                     android:textColor="@color/rosy_brown"
@@ -292,12 +287,11 @@
                     android:id="@+id/translation5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Very interesting. It's not very cold and it's not very hot."
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -317,7 +311,7 @@
                     android:id="@+id/example6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я вижу ye-vo здание."
                     android:textColor="@color/rosy_brown"
@@ -330,12 +324,11 @@
                     android:id="@+id/translation6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Good. You speak Russian very well!"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -354,7 +347,7 @@
                     android:id="@+id/example7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я читаю ye-vo роман."
                     android:textColor="@color/rosy_brown"
@@ -367,12 +360,11 @@
                     android:id="@+id/translation7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="How's the weather today?"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -391,7 +383,7 @@
                     android:id="@+id/example8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я читаю ye-vo книгу."
                     android:textColor="@color/rosy_brown"
@@ -404,12 +396,11 @@
                     android:id="@+id/translation8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Very interesting. It's not very cold and it's not very hot."
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -429,7 +420,7 @@
                     android:id="@+id/example9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я вижу ye-vo здание."
                     android:textColor="@color/rosy_brown"
@@ -442,12 +433,11 @@
                     android:id="@+id/translation9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Good. You speak Russian very well!"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -466,7 +456,7 @@
                     android:id="@+id/example10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я читаю ye-vo роман."
                     android:textColor="@color/rosy_brown"
@@ -479,12 +469,11 @@
                     android:id="@+id/translation10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="How's the weather today?"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -503,7 +492,7 @@
                     android:id="@+id/example11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я читаю ye-vo книгу."
                     android:textColor="@color/rosy_brown"
@@ -516,12 +505,11 @@
                     android:id="@+id/translation11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Very interesting. It's not very cold and it's not very hot."
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />
@@ -541,7 +529,7 @@
                     android:id="@+id/example12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Я вижу ye-vo здание."
                     android:textColor="@color/rosy_brown"
@@ -554,12 +542,11 @@
                     android:id="@+id/translation12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
+                    android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Good. You speak Russian very well!"
                     android:textColor="@color/transliteration_color"
                     android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                    android:textStyle="italic"
                     android:visibility="gone"
 
                     />

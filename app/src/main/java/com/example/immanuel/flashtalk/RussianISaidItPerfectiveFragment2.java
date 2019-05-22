@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -33,13 +34,21 @@ public class RussianISaidItPerfectiveFragment2 extends Fragment {
                 viewPager.setCurrentItem(page-1);
             }
         });
-        /*forward_button.setOnClickListener(new View.OnClickListener() {
+        CircularImageViewTest games=rootView.findViewById(R.id.games);
+        games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int page=viewPager.getCurrentItem();
-                viewPager.setCurrentItem(page+1);
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
+                //endit();
+                Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
+                intent.putExtra("LESSON_NAME","Two For One");
+                //pause.setVisibility(View.GONE);
+                //volume.setVisibility(View.VISIBLE);
+                startActivity(intent);
             }
-        });*/
+        });
 
 
         return rootView;

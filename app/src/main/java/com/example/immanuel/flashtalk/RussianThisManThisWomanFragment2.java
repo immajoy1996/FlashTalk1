@@ -57,12 +57,12 @@ public class RussianThisManThisWomanFragment2 extends Fragment {
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/very1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/very2");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/very3");
+        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/very4");
+        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/very5");
+        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/very6");
 
         LinearLayout linearLayout1=rootView.findViewById(R.id.linearLayout1);
         linearLayout1.setOnClickListener(new View.OnClickListener() {
@@ -189,7 +189,7 @@ public class RussianThisManThisWomanFragment2 extends Fragment {
         intro.setText(spannableString_intro);
 
         TextView example1=rootView.findViewById(R.id.example1);
-        String str1="Этот человек очень красивый.";
+        String str1="Этот мужчина очень красивый.";
         //String keyword1="русский";
 
         SpannableString spannableString1=new SpannableString(str1);
@@ -197,7 +197,7 @@ public class RussianThisManThisWomanFragment2 extends Fragment {
         example1.setText(spannableString1);
 
         TextView example2=rootView.findViewById(R.id.example2);
-        String str2="Эта девушка очень красивая.";
+        String str2="Эта женщина очень красивая.";
         //String keyword2="русская";
 
         SpannableString spannableString2=new SpannableString(str2);

@@ -1,8 +1,12 @@
 package com.example.immanuel.flashtalk;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,8 +46,31 @@ public class RussianInTheStoreFragment2 extends Fragment {
         rule2_textview.setText(spannableString_rule2);
         */
 
-        TextView rule3_textview=rootView.findViewById(R.id.rule3);
-        String rule3_str="* If a noun ends in я, replace it with и.";
+        TextView fem_rule1_textview=rootView.findViewById(R.id.rule1);
+        String fem_rule1_str="* If a noun ends with a vowel, replace it with е.";
+        SpannableString spannableString_fem_rule1=new SpannableString(fem_rule1_str);
+        //spannableString_fem_rule1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),fem_rule1_str.indexOf("fem."),fem_rule1_str.indexOf("fem.")+4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_fem_rule1.setSpan(new StyleSpan(Typeface.BOLD),fem_rule1_str.indexOf("е"),fem_rule1_str.indexOf("е")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        //spannableString_fem_rule1.setSpan(new StyleSpan(Typeface.BOLD),fem_rule1_str.indexOf("ы"),fem_rule1_str.indexOf("ы")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        fem_rule1_textview.setText(spannableString_fem_rule1);
+
+        TextView fem_rule2_textview=rootView.findViewById(R.id.rule2);
+        String fem_rule2_str="* Otherwise, add an е to the end.";
+        SpannableString spannableString_fem_rule2=new SpannableString(fem_rule2_str);
+        //spannableString_fem_rule2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),fem_rule2_str.indexOf("fem."),fem_rule2_str.indexOf("fem.")+4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_fem_rule2.setSpan(new StyleSpan(Typeface.BOLD),fem_rule2_str.indexOf("е"),fem_rule2_str.indexOf("е")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        //spannableString_fem_rule2.setSpan(new StyleSpan(Typeface.BOLD),fem_rule2_str.indexOf("и"),fem_rule2_str.indexOf("и")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        fem_rule2_textview.setText(spannableString_fem_rule2);
+
+        TextView neut_rule1_textview=rootView.findViewById(R.id.rule3);
+        String neut_rule1_str="* If a noun ends in я, replace it with и. ";
+        SpannableString spannableString_neut_rule1=new SpannableString(neut_rule1_str);
+        //spannableString_neut_rule1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),neut_rule1_str.indexOf("neut."),neut_rule1_str.indexOf("neut.")+5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_neut_rule1.setSpan(new StyleSpan(Typeface.BOLD),neut_rule1_str.indexOf("я"),neut_rule1_str.indexOf("я")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_neut_rule1.setSpan(new StyleSpan(Typeface.BOLD),neut_rule1_str.indexOf("и"),neut_rule1_str.indexOf("и")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        neut_rule1_textview.setText(spannableString_neut_rule1);
+
+
 
         //SpannableString spannableString_rule3=new SpannableString(rule3_str);
         //spannableString_rule3.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),rule3_str.indexOf("fem."),rule3_str.indexOf("fem.")+4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);

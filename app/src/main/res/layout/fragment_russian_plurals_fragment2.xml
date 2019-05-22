@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     tools:context=".RussianPluralsFragment2">
 
     <android.support.v7.widget.Toolbar
@@ -41,11 +41,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="@integer/plurals_fragment2_title_weight"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center|left"
                 android:text="The GoalKeeper"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
 
                 />
 
@@ -71,7 +71,7 @@
                 android:layout_weight="@integer/plurals_fragment2_games_weight"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"
@@ -97,14 +97,13 @@
             android:id="@+id/intro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:gravity="center"
-            android:text="It's a general rule in Russian that ы never comes after the letters  г, л, к, or ш. Instead, it is replaced with и. You can remember this with the word &quot;GoaLKeeper.&quot; Look how it affects plurals."
-            android:textColor="@color/black"
-            android:padding="@dimen/plurals_fragment2_padding"
             android:background="@drawable/rect_white"
-            android:textSize="@dimen/plurals_fragment2_font_size_intro"
-            android:textStyle="bold" />
+            android:fontFamily="@font/treb_ms_regular"
+            android:gravity="center"
+            android:padding="@dimen/plurals_fragment2_padding"
+            android:text="It's a general rule in Russian that ы never comes after the letters  г, л, к, or ш. Instead, it is replaced with и. You can remember this with the phrase &quot;Shush GoalKeeper!&quot; Look how it affects plurals."
+            android:textColor="@color/black"
+            android:textSize="@dimen/plurals_fragment2_font_size_intro" />
 
         <TextView
             android:id="@+id/example1"
@@ -112,7 +111,7 @@
             android:layout_height="@dimen/gender_fragment2_height"
             android:layout_marginTop="@dimen/plurals_fragment2_vertical_spacing"
             android:background="@drawable/rect_white"
-            android:fontFamily="casual"
+            android:fontFamily="@font/treb_ms_regular"
             android:gravity="center"
             android:text="девушка - девушки"
             android:textColor="@color/black"
@@ -124,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/gender_fragment2_height"
             android:background="@drawable/rect_white"
-            android:fontFamily="casual"
+            android:fontFamily="@font/treb_ms_regular"
             android:gravity="center"
             android:text="книга - книги"
             android:textColor="@color/black"

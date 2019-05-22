@@ -102,10 +102,25 @@ public class RecyclerViewAdapterDialog extends RecyclerView.Adapter<RecyclerView
                             //intent1.putExtra("FROM_PAGE","Main Dialog Page");
                             view.getContext().startActivity(intent6);
                             return;
-                        case "A Very Boring Man":
-                            Intent intent7=new Intent(view.getContext(),RussianDialog6Activity.class);
+                        case "Stereotypes":
+                            Intent intent7=new Intent(view.getContext(),RussianDialog7Activity.class);
                             //intent1.putExtra("FROM_PAGE","Main Dialog Page");
                             view.getContext().startActivity(intent7);
+                            return;
+                        case "A Wild Friend":
+                            Intent intent8=new Intent(view.getContext(),RussianDialog8Activity.class);
+                            //intent1.putExtra("FROM_PAGE","Main Dialog Page");
+                            view.getContext().startActivity(intent8);
+                            return;
+                        case "A Very Boring Man":
+                            Intent intent9=new Intent(view.getContext(),RussianDialog9Activity.class);
+                            //intent1.putExtra("FROM_PAGE","Main Dialog Page");
+                            view.getContext().startActivity(intent9);
+                            return;
+                        case "A Corrupt Policeman":
+                            Intent intent10=new Intent(view.getContext(),RussianDialog10Activity.class);
+                            //intent1.putExtra("FROM_PAGE","Main Dialog Page");
+                            view.getContext().startActivity(intent10);
                             return;
                     }
 
@@ -256,7 +271,7 @@ public class RecyclerViewAdapterDialog extends RecyclerView.Adapter<RecyclerView
     @Override
     public int getItemViewType(int position) {
         String str=dialog_titles.get(position);
-        if (str.equals("~ Beginner ~") || str.equals("~ Intermediate ~")) {
+        if (str.equals("~ Beginner ~") || str.equals("~ Intermediate ~") || str.equals("~ Functional ~") ) {
             return TYPE_HEADER;
         }
         else{

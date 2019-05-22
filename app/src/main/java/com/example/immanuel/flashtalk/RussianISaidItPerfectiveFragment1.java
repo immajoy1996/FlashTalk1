@@ -1,6 +1,5 @@
 package com.example.immanuel.flashtalk;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -16,6 +15,7 @@ import android.widget.TextView;
 
 
 public class RussianISaidItPerfectiveFragment1 extends Fragment {
+
 
     public RussianISaidItPerfectiveFragment1() {
         // Required empty public constructor
@@ -35,7 +35,8 @@ public class RussianISaidItPerfectiveFragment1 extends Fragment {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
+                //startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
+                getActivity().finish();
             }
         });
         forward_button.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +62,7 @@ public class RussianISaidItPerfectiveFragment1 extends Fragment {
         TextView imperfective=(TextView)rootView.findViewById(R.id.imperfective);
         String str_imperfective="* Use the Imperfective for an action which develops over a span of time.";
         String keyword1_imperfective="Imperfective";
-        String keyword2_imperfective="action which develops over a span of time.";
+        String keyword2_imperfective="action which develops over a span of time";
 
         SpannableStringBuilder ssBuilder_imperfective = new SpannableStringBuilder(str_imperfective);
 
@@ -72,7 +73,7 @@ public class RussianISaidItPerfectiveFragment1 extends Fragment {
         TextView perfective=(TextView)rootView.findViewById(R.id.perfective);
         String str_perfective="* Use the Perfective for an action which is completed at a single point in time.";
         String keyword1_perfective="Perfective";
-        String keyword2_perfective="action which is completed at a single point in time.";
+        String keyword2_perfective="action which is completed at a single point in time";
 
         SpannableStringBuilder ssBuilder_perfective = new SpannableStringBuilder(str_perfective);
 

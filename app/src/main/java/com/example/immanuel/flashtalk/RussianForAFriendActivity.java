@@ -1,16 +1,26 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class RussianForAFriendActivity extends AppCompatActivity {
+
+    MediaPlayer mediaPlayer;
+    int STEP_TIME=100;
+    //ImageView volume;
+    //ImageView pause;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,19 +34,37 @@ public class RussianForAFriendActivity extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
+                //startActivity(new Intent(view.getContext(),RussianLanguageActivity.class));
+                endit();
+                finish();
+            }
+        });
+
+        CircularImageViewTest games=findViewById(R.id.games);
+        games.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
+                endit();
+                Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
+                intent.putExtra("LESSON_NAME","For A Friend");
+                //pause.setVisibility(View.GONE);
+                //volume.setVisibility(View.VISIBLE);
+                startActivity(intent);
             }
         });
 
         TextView intro_textview=findViewById(R.id.intro);
         String str="Remember that anything directly after для takes the genitive case.";
-        //String keyword1="для";
+        String intro_keyword1="для";
         //String keyword2="exactly the same";
 
         SpannableStringBuilder spannableStringBuilder1=new SpannableStringBuilder(str);
         //SpannableString spannableString=new SpannableString(str);
-        //spannableStringBuilder1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)), str.indexOf(keyword1), str.indexOf(keyword1)+keyword1.length(), 0);
-        //spannableStringBuilder1.setSpan(new UnderlineSpan(),str.indexOf(keyword2),str.indexOf(keyword2)+keyword2.length(),0);
+        spannableStringBuilder1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)), str.indexOf(intro_keyword1), str.indexOf(intro_keyword1)+intro_keyword1.length(), 0);
+        spannableStringBuilder1.setSpan(new StyleSpan(Typeface.BOLD),str.indexOf(intro_keyword1),str.indexOf(intro_keyword1)+intro_keyword1.length(),0);
         intro_textview.setText(spannableStringBuilder1);
 
         TextView example1_textview=findViewById(R.id.example1);
@@ -74,5 +102,120 @@ public class RussianForAFriendActivity extends AppCompatActivity {
         SpannableString spannableString4=new SpannableString(str4);
         spannableString4.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)), str4.indexOf(keyword4), str4.indexOf(keyword4)+keyword4.length(), 0);
         example4_textview.setText(spannableString4);
+
+        final Uri uri1=Uri.parse("android.resource://"+this.getPackageName()+"/raw/im_studying_conjug1"); // header1
+        final Uri uri2=Uri.parse("android.resource://"+this.getPackageName()+"/raw/imstudying_conjug2");
+        final Uri uri3=Uri.parse("android.resource://"+this.getPackageName()+"/raw/imstudying_conjug3");
+        final Uri uri4=Uri.parse("android.resource://"+this.getPackageName()+"/raw/imstudying_conjug3");
+
+        LinearLayout linearLayout1=findViewById(R.id.linearLayout1);
+        linearLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                doit(view,uri1);
+
+            }
+        });
+
+        LinearLayout linearLayout2=findViewById(R.id.linearLayout2);
+        linearLayout2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri2);
+                mediaPlayer.start();*/
+                doit(view,uri2);
+            }
+        });
+
+        LinearLayout linearLayout3=findViewById(R.id.linearLayout3);
+        linearLayout3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri2);
+                mediaPlayer.start();*/
+                doit(view,uri3);
+            }
+        });
+
+        LinearLayout linearLayout4=findViewById(R.id.linearLayout4);
+        linearLayout4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
+                /*mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer=MediaPlayer.create(getContext(),uri2);
+                mediaPlayer.start();*/
+                doit(view,uri4);
+            }
+        });
+
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
     }
 }

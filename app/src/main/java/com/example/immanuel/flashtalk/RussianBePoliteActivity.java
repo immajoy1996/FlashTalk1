@@ -30,17 +30,17 @@ public class RussianBePoliteActivity extends AppCompatActivity {
         TextView explanation1=(TextView)findViewById(R.id.intro);
         //final TextView translation1=(TextView)findViewById(R.id.translation1);
 
-        String str1="Ты is the friendly way to say \"you\". If you're talking to someone you don't know well, use вы. It can mean either \"you guys\" or a polite \"you\". It's conjugated in the same way. Look at the examples.";
-        String keyword1="Ты";
+        String str1="ты is the friendly way to say \"you\". If you're talking to someone you don't know well, use вы. It can mean either \"you guys\" or a polite \"you\". It's conjugated in the same way. Look at the examples.";
+        String keyword1="ты";
         String keyword2="вы.";
 
         SpannableString spannableString1=new SpannableString(str1);
         //SpannableString spannableString1_trans=new SpannableString(trans1);
         spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str1.indexOf(keyword1),str1.indexOf(keyword1)+keyword1.length(),0);
-        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword1),str1.indexOf(keyword1)+1,0);
+        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword1),str1.indexOf(keyword1)+keyword1.length(),0);
 
         spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str1.indexOf(keyword2),str1.indexOf(keyword2)+keyword2.length(),0);
-        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword2),str1.indexOf(keyword2)+1,0);
+        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword2),str1.indexOf(keyword2)+keyword2.length(),0);
 
         explanation1.setText(spannableString1);
 

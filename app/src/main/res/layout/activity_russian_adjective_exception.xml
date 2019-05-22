@@ -165,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="He's a good man."
+                android:text="He's a good person."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 

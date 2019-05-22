@@ -18,8 +18,8 @@ public class HintDialogDoubleClass extends DialogFragment implements
     public Dialog d;
     public LinearLayout check;
     public TextView textView_msg;
-    public SpannableString msg1;
-    public SpannableString msg2;
+    public SpannableString msg1=null;
+    public SpannableString msg2=null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,8 +67,8 @@ public class HintDialogDoubleClass extends DialogFragment implements
     @Override
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
-        HintDialogClass next_hint=HintDialogClass.newInstance(msg2);
-        next_hint.show(getFragmentManager(),"Dialog");
+        HintDialogClass next_hint = HintDialogClass.newInstance(msg2);
+        next_hint.show(getFragmentManager(), "Dialog");
         //state_hint_swipe = mPrefs.getString("HINT_SWIPE", "not found");
     }
 

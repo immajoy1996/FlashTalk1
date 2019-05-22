@@ -11,7 +11,7 @@ import android.support.v4.view.ViewPager;
 
 public class RussianInANiceRestaurantActivity extends FragmentActivity {
 
-    private static final int NUM_PAGES = 1;
+    private static final int NUM_PAGES = 2;
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 

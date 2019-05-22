@@ -172,7 +172,7 @@ public class RussianCountriesAndPeopleFragment2 extends Fragment {
         intro.setText(spannableString_intro);
 
         TextView example1=rootView.findViewById(R.id.example1);
-        String str1="Он русский человек.";
+        String str1="Он русский мужчина.";
         String keyword1="русский";
 
         SpannableString spannableString1=new SpannableString(str1);
@@ -180,7 +180,7 @@ public class RussianCountriesAndPeopleFragment2 extends Fragment {
         example1.setText(spannableString1);
 
         TextView example2=rootView.findViewById(R.id.example2);
-        String str2="Она русская девушка.";
+        String str2="Она русская женщина.";
         String keyword2="русская";
 
         SpannableString spannableString2=new SpannableString(str2);
@@ -196,7 +196,7 @@ public class RussianCountriesAndPeopleFragment2 extends Fragment {
         example3.setText(spannableString3);
 
         TextView example4=rootView.findViewById(R.id.example4);
-        String str4="Он американский человек.";
+        String str4="Он американский мужчина.";
         String keyword4="американский";
 
         SpannableString spannableString4=new SpannableString(str4);
@@ -204,7 +204,7 @@ public class RussianCountriesAndPeopleFragment2 extends Fragment {
         example4.setText(spannableString4);
 
         TextView example5=rootView.findViewById(R.id.example5);
-        String str5="Она американская девушка.";
+        String str5="Она американская женщина.";
         String keyword5="американская";
 
         SpannableString spannableString5=new SpannableString(str5);

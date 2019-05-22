@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianTheOneFragment1">
 
@@ -46,9 +46,9 @@
                 android:layout_weight="1"
                 android:gravity="center|left"
                 android:text="One Man"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
                 android:visibility="visible"
 
                 />
@@ -121,8 +121,7 @@
         android:background="@color/white"
         android:padding="@dimen/imreadingmybook_fragment3_padding"
         android:text="его, её, and их always stay the same regardless of gender or case."
-        android:fontFamily="casual"
-        android:textStyle="bold"
+        android:fontFamily="@font/treb_ms_regular"
         android:textColor="@color/black"
         android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
         />
@@ -149,7 +148,7 @@
                 android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю ye-vo роман."
                 android:textColor="@color/transliteration_color"
@@ -162,12 +161,11 @@
                 android:id="@+id/explanation1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="one man"
+                android:text="one person"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -186,7 +184,7 @@
                 android:id="@+id/example2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю ye-vo книгу."
                 android:textColor="@color/red"
@@ -199,12 +197,11 @@
                 android:id="@+id/explanation2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="one woman"
+                android:text="one girl"
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -224,7 +221,7 @@
                 android:id="@+id/example3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я вижу ye-vo здание."
                 android:textColor="@color/medium_sea_green"
@@ -237,12 +234,11 @@
                 android:id="@+id/explanation3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="one building"
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>

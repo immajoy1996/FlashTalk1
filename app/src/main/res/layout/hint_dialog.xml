@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/dialog_ripple"
+    android:background="@drawable/rect_dialog"
     >
 
     <TextView
@@ -22,7 +22,7 @@
 
     <TextView
         android:id="@+id/msg"
-        android:background="@color/white_smoke"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/toolbar_font_size"
@@ -37,15 +37,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white_smoke"
         android:gravity="right"
+        android:background="@color/white"
         >
 
         <LinearLayout
             android:id="@+id/check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/dialog_ripple"
+            android:background="@drawable/rect_white"
             >
 
             <TextView

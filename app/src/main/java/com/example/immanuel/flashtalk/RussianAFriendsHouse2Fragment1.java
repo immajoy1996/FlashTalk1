@@ -1,11 +1,13 @@
 package com.example.immanuel.flashtalk;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,6 +56,7 @@ public class RussianAFriendsHouse2Fragment1 extends Fragment {
         TextView masc_rule1_textview=rootView.findViewById(R.id.masc_rule1);
         String masc_rule1_str="* For most masc. nouns, add an а to the end.";
         SpannableString spannableString_masc_rule1=new SpannableString(masc_rule1_str);
+        spannableString_masc_rule1.setSpan(new StyleSpan(Typeface.BOLD),masc_rule1_str.indexOf("а"),masc_rule1_str.indexOf("а")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannableString_masc_rule1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)),masc_rule1_str.indexOf("masc."),masc_rule1_str.indexOf("masc.")+5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         masc_rule1_textview.setText(spannableString_masc_rule1);
 
@@ -61,24 +64,32 @@ public class RussianAFriendsHouse2Fragment1 extends Fragment {
         String fem_rule1_str="* If a fem. noun ends with an а, replace it with an ы.";
         SpannableString spannableString_fem_rule1=new SpannableString(fem_rule1_str);
         spannableString_fem_rule1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),fem_rule1_str.indexOf("fem."),fem_rule1_str.indexOf("fem.")+4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_fem_rule1.setSpan(new StyleSpan(Typeface.BOLD),fem_rule1_str.indexOf("а"),fem_rule1_str.indexOf("а")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_fem_rule1.setSpan(new StyleSpan(Typeface.BOLD),fem_rule1_str.indexOf("ы"),fem_rule1_str.indexOf("ы")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         fem_rule1_textview.setText(spannableString_fem_rule1);
 
         TextView fem_rule2_textview=rootView.findViewById(R.id.fem_rule2);
         String fem_rule2_str="* If a fem. noun ends with a я, replace it with an и.";
         SpannableString spannableString_fem_rule2=new SpannableString(fem_rule2_str);
-        spannableString_fem_rule2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),fem_rule1_str.indexOf("fem."),fem_rule1_str.indexOf("fem.")+4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_fem_rule2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.red)),fem_rule2_str.indexOf("fem."),fem_rule2_str.indexOf("fem.")+4, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_fem_rule2.setSpan(new StyleSpan(Typeface.BOLD),fem_rule2_str.indexOf("я"),fem_rule2_str.indexOf("я")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_fem_rule2.setSpan(new StyleSpan(Typeface.BOLD),fem_rule2_str.indexOf("и"),fem_rule2_str.indexOf("и")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         fem_rule2_textview.setText(spannableString_fem_rule2);
 
         TextView neut_rule1_textview=rootView.findViewById(R.id.neut_rule1);
         String neut_rule1_str="* If a neut. noun ends with an о, replace it with an а.";
         SpannableString spannableString_neut_rule1=new SpannableString(neut_rule1_str);
         spannableString_neut_rule1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),neut_rule1_str.indexOf("neut."),neut_rule1_str.indexOf("neut.")+5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_neut_rule1.setSpan(new StyleSpan(Typeface.BOLD),neut_rule1_str.indexOf("о"),neut_rule1_str.indexOf("о")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_neut_rule1.setSpan(new StyleSpan(Typeface.BOLD),neut_rule1_str.indexOf("а"),neut_rule1_str.indexOf("а")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         neut_rule1_textview.setText(spannableString_neut_rule1);
 
         TextView neut_rule2_textview=rootView.findViewById(R.id.neut_rule2);
         String neut_rule2_str="* If a neut. noun ends with an е, replace it with an я.";
         SpannableString spannableString_neut_rule2=new SpannableString(neut_rule2_str);
         spannableString_neut_rule2.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),neut_rule2_str.indexOf("neut."),neut_rule2_str.indexOf("neut.")+5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_neut_rule2.setSpan(new StyleSpan(Typeface.BOLD),neut_rule2_str.indexOf("е"),neut_rule2_str.indexOf("е")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString_neut_rule2.setSpan(new StyleSpan(Typeface.BOLD),neut_rule2_str.indexOf("я"),neut_rule2_str.indexOf("я")+1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         neut_rule2_textview.setText(spannableString_neut_rule2);
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");

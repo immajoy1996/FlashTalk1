@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.immanuel.flashtalk.RussianLanguageActivity"
-    android:background="@drawable/ocean3"
+    android:background="@drawable/nature1"
     >
 
     <android.support.v7.widget.Toolbar
@@ -42,7 +42,7 @@
                 android:layout_weight="@integer/language_recycler_view_weight_title"
                 android:gravity="center|left"
                 android:text="FlashTalk"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
                 android:fontFamily="@font/treb_ms_regular"
 

@@ -3,7 +3,6 @@
     package="com.example.immanuel.flashtalk">
 
     <application
-        android:name=".MyApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/lightning1"
@@ -11,9 +10,56 @@
         android:largeHeap="true"
         android:supportsRtl="true">
         <activity
-            android:name=".RussianBePoliteActivity"
+            android:name=".RussianDialog10Activity"
             android:theme="@style/NoTitleBar"
             ></activity>
+        <activity
+            android:name=".RussianPrepositionalExceptionsActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianToSeeActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianDialog9Activity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianDialog8Activity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianDialog7Activity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianToWorkActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianToUseActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianImGladActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianImHungryActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianImBoredActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianINeedActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity android:name=".RussianINeed" />
+        <activity
+            android:name=".RussianYouShouldActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianTheBestActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".RussianBetterThanActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity android:name=".RussianInANiceRestaurant1Activity" />
+        <activity
+            android:name=".RussianBePoliteActivity"
+            android:theme="@style/NoTitleBar" />
         <activity
             android:name=".RussianAccentsActivity"
             android:theme="@style/NoTitleBar" />

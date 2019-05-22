@@ -126,6 +126,7 @@ public class RussianVocabFragment4 extends Fragment {
     public void onPause() {
         super.onPause();
         adapter.mediaPlayer_vocab.stop();
+        adapter.mediaPlayer_vocab.reset();
         adapter.mediaPlayer_vocab.release();
         Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
         adapter.mediaPlayer_vocab= MediaPlayer.create(getContext(),uri);

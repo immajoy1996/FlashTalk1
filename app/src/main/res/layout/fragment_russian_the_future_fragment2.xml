@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     tools:context=".RussianTheFutureFragment2">
 
     <android.support.v7.widget.Toolbar
@@ -38,16 +38,37 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="@integer/ihave_fragment1_title_weight"
+                android:layout_weight="1"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center|left"
-                android:text="Tomorrow I Will ..."
-                android:textColor="@color/white_smoke"
+                android:text="Tomorrow, I Will . . ."
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:visibility="visible"
 
                 />
+
+            <LinearLayout
+                android:id="@+id/seekbar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="@dimen/seekbar_length"
+                    android:layout_height="match_parent"
+                    android:thumbTint="@color/white"
+                    android:progressDrawable="@drawable/audio_progress_bar"
+                    />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -55,12 +76,21 @@
                 android:gravity="center">
 
                 <com.example.immanuel.flashtalk.CircularImageView2
-                    android:id="@+id/audio_white"
+                    android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
                     android:src="@drawable/volumetrans2"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     />
+
+                <com.example.immanuel.flashtalk.CircularImageView2
+                    android:id="@+id/pause"
+                    android:layout_width="@dimen/circular_button_volume_width"
+                    android:layout_height="@dimen/circular_button_volume_height"
+                    android:src="@drawable/pause_icon1"
+                    android:visibility="gone"
+                    />
+
 
             </LinearLayout>
 
@@ -71,8 +101,8 @@
 
                 <ImageButton
                     android:id="@+id/forward_button"
-                    android:layout_width="@dimen/circular_button_volume_width"
-                    android:layout_height="@dimen/circular_button_volume_height"
+                    android:layout_width="@dimen/arrow_button_width"
+                    android:layout_height="@dimen/arrow_button_height"
                     android:background="@drawable/arrow_forward_pressed" />
 
             </LinearLayout>
@@ -80,6 +110,18 @@
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Let's put the future tense to use! Notice that the same pattern works for any verb."
+        android:textColor="@color/black"
+        android:textSize="@dimen/gender_fragment2_font_size_translit" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,102 +131,114 @@
         android:gravity="center"
         >
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
             >
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/ihave_fragment1_padding"
-                >
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Откуда вы? Вы из Америки?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                <TextView
-                    android:id="@+id/intro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Let's put the future tense to use! Notice that the same pattern works for any verb."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="bold" />
+                />
 
-                <TextView
-                    android:id="@+id/example1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/ihave_fragment1_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Завтра я буду делать моё задание. "
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/explanation1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Tomorrow, I will do my homework."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-                <TextView
-                    android:id="@+id/explanation1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Tomorrow I will do my homework."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="italic" />
+                />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/example2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/ihave_fragment1_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Ты будешь читать книгу завтра?"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
 
-                <TextView
-                    android:id="@+id/explanation2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Will you read the book tomorrow?"
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="italic" />
+            <TextView
+                android:id="@+id/example2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Нет. Я из России."
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
 
-                <TextView
-                    android:id="@+id/example3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/ihave_fragment1_vertical_spacing"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="Я работаю сейчас. Тогда я буду идти в парк."
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="bold" />
+                />
 
-                <TextView
-                    android:id="@+id/explanation3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="casual"
-                    android:gravity="center"
-                    android:text="I'm working now. Then, I'll go to the park."
-                    android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/ihave_fragment1_font_size_intro"
-                    android:textStyle="italic" />
+            <TextView
+                android:id="@+id/explanation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Will you read the book tomorrow?"
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
-            </LinearLayout>
+                />
 
+        </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/imreadingmybook_fragment3_padding"
+            android:background="@drawable/rect_white"
+            >
+
+            <TextView
+                android:id="@+id/example3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="Хорошо. Я из Франции."
+                android:textColor="@color/black"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/explanation3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center"
+                android:text="I'm working now. I will eat later."
+                android:textColor="@color/transliteration_color"
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
+
+                />
+        </LinearLayout>
 
     </LinearLayout>
 

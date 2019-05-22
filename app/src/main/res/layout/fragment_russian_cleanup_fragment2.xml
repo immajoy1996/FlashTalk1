@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/river1"
     tools:context=".RussianCleanupFragment2">
 
     <!-- TODO: Update blank fragment layout -->
@@ -122,15 +123,11 @@
         android:textSize="@dimen/cleanup2_font_size_intro"
         />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@color/medium_sea_green"
             >
 
             <LinearLayout
@@ -257,9 +254,6 @@
 
         </LinearLayout>
 
-
-
-    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>

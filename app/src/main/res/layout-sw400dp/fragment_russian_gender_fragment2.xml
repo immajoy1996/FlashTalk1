@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianGenderFragment2">
 
@@ -174,9 +174,10 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="мой (moy) дом"
+                android:text="мой дом"
                 android:textColor="@color/transliteration_color"
-                android:textSize="@dimen/gender_fragment2_font_size_translit" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -220,9 +221,10 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="моя (ma-ya) машина"
+                android:text="моя машина"
                 android:textColor="@color/red"
-                android:textSize="@dimen/gender_fragment2_font_size_translit" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -265,9 +267,10 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="моё (ma-yo) фото"
+                android:text="моё фото"
                 android:textColor="@color/medium_sea_green"
-                android:textSize="@dimen/gender_fragment2_font_size_translit" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -311,9 +314,10 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="твой (t-voy) дом"
+                android:text="твой дом"
                 android:textColor="@color/transliteration_color"
-                android:textSize="@dimen/gender_fragment2_font_size_translit" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -357,9 +361,10 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="твоя (t-va-ya) машина"
+                android:text="твоя машина"
                 android:textColor="@color/red"
-                android:textSize="@dimen/gender_fragment2_font_size_translit" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -402,9 +407,10 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="твоё (t-va-yo) фото"
+                android:text="твоё фото"
                 android:textColor="@color/medium_sea_green"
-                android:textSize="@dimen/gender_fragment2_font_size_translit" />
+                android:textSize="@dimen/gender_fragment2_font_size_translit"
+                android:textStyle="bold" />
 
 
         </LinearLayout>

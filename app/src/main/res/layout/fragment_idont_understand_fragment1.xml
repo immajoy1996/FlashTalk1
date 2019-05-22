@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/light_grey"
+    android:background="@drawable/river1"
     tools:context=".IDontUnderstandFragment1">
 
 
@@ -17,7 +17,6 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        android:background="@color/light_grey"
         tools:context=".IDontUnderstandFragment1">
 
 
@@ -173,344 +172,336 @@
             app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
             tools:layout_editor_absoluteX="0dp">
 
-            <android.support.v7.widget.CardView
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
 
                 <LinearLayout
+                    android:id="@+id/headerLayout1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_medium_sea_green"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:id="@+id/headerLayout1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
                         android:layout_weight="1"
-                        android:background="@drawable/rect_medium_sea_green"
-                        android:orientation="horizontal">
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="понимать"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/idontunderstand_font_size_word"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="понимать"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="pon-i-mat"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="italic" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="to understand"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/idontunderstand_font_size_word" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
                         android:layout_weight="1"
-                        android:background="@drawable/rect_white_smoke"
-                        android:orientation="horizontal">
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="pon-i-mat"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/idontunderstand_font_size_translit"
+                        android:textStyle="italic" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="я понимаю"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="pon-i-ma-yu"
-                            android:textColor="@color/transliteration_color"
-                            android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="italic" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="I understand"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
                         android:layout_weight="1"
-                        android:background="@drawable/rect_white_smoke"
-                        android:orientation="horizontal">
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="to understand"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/idontunderstand_font_size_word" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="ты понимаешь"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="pon-i-ma-yesh"
-                            android:textColor="@color/transliteration_color"
-                            android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="italic" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="you understand"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout3"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/rect_white_smoke"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="он/она понимает"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="pon-i-ma-yet"
-                            android:textColor="@color/transliteration_color"
-                            android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="italic" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="he/she understands"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout4"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/rect_white_smoke"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="мы понимаем"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="pon-i-ma-yem"
-                            android:textColor="@color/transliteration_color"
-                            android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="italic" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="we understand"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout5"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/rect_white_smoke"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="вы понимаете"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="pon-i-ma-ye-te"
-                            android:textColor="@color/transliteration_color"
-                            android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="italic" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="you(pl) understand"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout6"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/rect_white_smoke"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="они понимают"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="pon-i-ma-yut"
-                            android:textColor="@color/transliteration_color"
-                            android:textSize="@dimen/idontunderstand_font_size_translit"
-                            android:textStyle="italic" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/tothink_fragment1_height"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/treb_ms_regular"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="they understand"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/idontunderstand_font_size_word" />
-
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_white_smoke"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="я понимаю"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="pon-i-ma-yu"
+                        android:textColor="@color/transliteration_color"
+                        android:textSize="@dimen/idontunderstand_font_size_translit"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="I understand"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word" />
 
 
-            </android.support.v7.widget.CardView>
+                </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_white_smoke"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="ты понимаешь"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="pon-i-ma-yesh"
+                        android:textColor="@color/transliteration_color"
+                        android:textSize="@dimen/idontunderstand_font_size_translit"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="you understand"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_white_smoke"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="он/она понимает"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="pon-i-ma-yet"
+                        android:textColor="@color/transliteration_color"
+                        android:textSize="@dimen/idontunderstand_font_size_translit"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="he/she understands"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_white_smoke"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="мы понимаем"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="pon-i-ma-yem"
+                        android:textColor="@color/transliteration_color"
+                        android:textSize="@dimen/idontunderstand_font_size_translit"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="we understand"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_white_smoke"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="вы понимаете"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="pon-i-ma-ye-te"
+                        android:textColor="@color/transliteration_color"
+                        android:textSize="@dimen/idontunderstand_font_size_translit"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="you(pl) understand"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rect_white_smoke"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="они понимают"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="pon-i-ma-yut"
+                        android:textColor="@color/transliteration_color"
+                        android:textSize="@dimen/idontunderstand_font_size_translit"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/tothink_fragment1_height"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/treb_ms_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="they understand"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/idontunderstand_font_size_word" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 

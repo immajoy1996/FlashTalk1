@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RussianReadingAGoodBookFragment1">
 
@@ -45,9 +45,9 @@
                 android:layout_weight="@integer/imreadingmybook_fragment1_title_weight"
                 android:gravity="center|left"
                 android:text="Reading A Good Book"
-                android:textColor="@color/white_smoke"
+                android:textColor="@color/white"
                 android:textSize="@dimen/toolbar_font_size"
-                android:textStyle="bold"
+                android:fontFamily="@font/treb_ms_regular"
 
                 />
 
@@ -89,13 +89,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:gravity="center"
         android:padding="@dimen/imreadingmybook_fragment2_padding"
         android:text="Adjectives also have special forms in the accusative. It's easy! Only the feminine form changes. "
         android:textColor="@color/black"
-        android:textSize="@dimen/imreadingmybook_fragment2_font_size_intro"
-        android:textStyle="bold" />
+        android:textSize="@dimen/imreadingmybook_fragment2_font_size_intro" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -119,7 +118,7 @@
                 android:id="@+id/example1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я смотрю хороший фильм."
                 android:textColor="@color/transliteration_color"
@@ -132,12 +131,11 @@
                 android:id="@+id/explanation1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="I'm watching a good film."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -156,7 +154,7 @@
                 android:id="@+id/example2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я читаю хорошую книгу."
                 android:textColor="@color/red"
@@ -169,12 +167,11 @@
                 android:id="@+id/explanation2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="I'm reading a good book."
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -194,7 +191,7 @@
                 android:id="@+id/example3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я ем хорошее мороженое."
                 android:textColor="@color/medium_sea_green"
@@ -207,12 +204,11 @@
                 android:id="@+id/explanation3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="I'm eating good ice-cream."
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -232,7 +228,7 @@
                 android:id="@+id/example4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я смотрю красивый фильм."
                 android:textColor="@color/transliteration_color"
@@ -245,12 +241,11 @@
                 android:id="@+id/explanation4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="I'm watching a beautiful movie."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
         </LinearLayout>
@@ -269,7 +264,7 @@
                 android:id="@+id/example5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я вижу красивую девушку."
                 android:textColor="@color/red"
@@ -282,12 +277,11 @@
                 android:id="@+id/explanation5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="I see a beautiful woman."
+                android:text="I see a beautiful girl."
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic"
 
                 />
 
@@ -307,7 +301,7 @@
                 android:id="@+id/example6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="Я вижу красивое фото."
                 android:textColor="@color/medium_sea_green"
@@ -320,12 +314,11 @@
                 android:id="@+id/explanation6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:text="I see a beautiful photo."
                 android:textColor="@color/medium_sea_green"
-                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
-                android:textStyle="italic" />
+                android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro" />
 
         </LinearLayout>
 

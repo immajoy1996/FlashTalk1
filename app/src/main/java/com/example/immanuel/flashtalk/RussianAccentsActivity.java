@@ -10,6 +10,8 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -29,17 +31,17 @@ public class RussianAccentsActivity extends AppCompatActivity {
         TextView explanation1=(TextView)findViewById(R.id.intro);
         //final TextView translation1=(TextView)findViewById(R.id.translation1);
 
-        String str1="An unstressed о in Russian is pronounced like an а. A stressed о is pronounced like the normal о. Usually, accents aren't written in Russian but we've included them in the beginning lessons so you get the hang of pronounciation.";
-        String keyword1="о in";
+        String str1="Russian words aren't always pronounced like they're written. When the letter о is unstressed, it sounds like а. See if you can hear it. These stresses are never written. You'll get the hang of it!";
+        //String keyword1="о in";
         String keyword2="а.";
         String keyword3="о is";
-        String keyword4="о.";
+        //String keyword4="о.";
 
 
         SpannableString spannableString1=new SpannableString(str1);
         //SpannableString spannableString1_trans=new SpannableString(trans1);
-        spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str1.indexOf(keyword1),str1.indexOf(keyword1)+1,0);
-        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword1),str1.indexOf(keyword1)+1,0);
+        //spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str1.indexOf(keyword1),str1.indexOf(keyword1)+1,0);
+        //spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword1),str1.indexOf(keyword1)+1,0);
 
         spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str1.indexOf(keyword2),str1.indexOf(keyword2)+1,0);
         spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword2),str1.indexOf(keyword2)+1,0);
@@ -47,8 +49,8 @@ public class RussianAccentsActivity extends AppCompatActivity {
         spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str1.indexOf(keyword3),str1.indexOf(keyword3)+1,0);
         spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword3),str1.indexOf(keyword3)+1,0);
 
-        spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str1.indexOf(keyword4),str1.indexOf(keyword4)+1,0);
-        spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword4),str1.indexOf(keyword4)+1,0);
+        //spannableString1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.medium_sea_green)),str1.indexOf(keyword4),str1.indexOf(keyword4)+1,0);
+        //spannableString1.setSpan(new StyleSpan(Typeface.BOLD),str1.indexOf(keyword4),str1.indexOf(keyword4)+1,0);
 
         explanation1.setText(spannableString1);
 
@@ -107,6 +109,7 @@ public class RussianAccentsActivity extends AppCompatActivity {
             }
         });
 
+
         CircularImageViewTest games=findViewById(R.id.games);
         games.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +126,9 @@ public class RussianAccentsActivity extends AppCompatActivity {
             }
         });
 
+        final Animation anim = AnimationUtils.loadAnimation(this, R.anim.wobble);
+        back_button.startAnimation(anim);
+        games.startAnimation(anim);
 
     }
 

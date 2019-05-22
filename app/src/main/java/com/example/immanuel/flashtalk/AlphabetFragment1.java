@@ -46,7 +46,7 @@ public class AlphabetFragment1 extends Fragment {
             String msg2 = "See the arrows in the toolbar? This means you can click them or swipe the page to see more.";
             SpannableString spannableString2 = new SpannableString(msg2);
 
-            (new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_PRONOUNCE","HINT_SWIPE");
+            //(new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_PRONOUNCE","HINT_SWIPE");
 
 
             //HintDialogDoubleClass hints = HintDialogDoubleClass.newInstance(spannableString1, spannableString2,"HINT_SWIPEdfs","HINT_PRONOUNCEdsfd");
