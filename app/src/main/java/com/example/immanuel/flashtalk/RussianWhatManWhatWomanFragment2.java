@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -40,7 +41,8 @@ public class RussianWhatManWhatWomanFragment2 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -56,6 +58,19 @@ public class RussianWhatManWhatWomanFragment2 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_russian_what_man_what_woman_fragment2, container, false);
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_What?","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_What?","shown");
+            mEditor.commit();
+        }
 
         TextView textView_intro=rootView.findViewById(R.id.intro);
         String str_intro="To say something like \"what class\" or \"which woman\", use this one. It acts just like an adjective! Notice that \"what\" and \"which\" are the same word in Russian. The meaning depends on context.";
@@ -246,7 +261,8 @@ public class RussianWhatManWhatWomanFragment2 extends Fragment {
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","What?");
                 //pause.setVisibility(View.GONE);

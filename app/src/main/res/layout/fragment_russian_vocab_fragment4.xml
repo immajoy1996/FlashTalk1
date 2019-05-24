@@ -54,7 +54,7 @@
                 android:visibility="gone"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/audio"
                     android:layout_width="@dimen/arrow_button_width"
                     android:layout_height="@dimen/arrow_button_height"
@@ -69,7 +69,7 @@
                 android:layout_weight="@integer/ican_fragment3_games_weight"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.example.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/arrow_button_width"
                     android:layout_height="@dimen/arrow_button_height"

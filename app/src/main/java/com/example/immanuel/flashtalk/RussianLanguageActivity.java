@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -40,8 +41,9 @@ public class RussianLanguageActivity extends AppCompatActivity {
         final CircularImageViewTest dialogView=findViewById(R.id.dialog);
         back_arrow.startAnimation(anim_wobble);
 
-        SpannableString msg1=new SpannableString("See the icons in the top right. Click one to read some funny dialogues. Click the other to test yourself.");
-        (new MyApplication(getApplicationContext())).show_hints(getSupportFragmentManager(),msg1,"Language_Activity");
+        SpannableString msg1=new SpannableString("See the icons in the top right? Click one to read some funny dialogues. Click the other to test yourself.");
+        //SpannableString msg2=new SpannableString("Click the buttons for audio.");
+        (new MyApplication(getApplicationContext())).show_hints(getSupportFragmentManager(),msg1,"Language_Activity1");
 
         dialogView.startAnimation(anim_wobble);
 
@@ -221,5 +223,40 @@ public class RussianLanguageActivity extends AppCompatActivity {
             //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
             //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences mPrefs=getApplicationContext().getSharedPreferences("Hints",0);
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+        mEditor.putString("var_Alphabet","not shown");
+        mEditor.putString("var_Accents","not shown");
+        mEditor.putString("var_BasicPronouns","not shown");
+        mEditor.putString("var_QuestionWords","not shown");
+        mEditor.putString("var_BasicVerbs","not shown");
+        mEditor.putString("var_PluralPronouns","not shown");
+        mEditor.putString("var_BasicVerbs","not shown");
+        mEditor.putString("var_SomethingNice!","not shown");
+        mEditor.putString("var_Basic_Pronouns","not shown");
+        mEditor.putString("var_BePolite!","not shown");
+        mEditor.putString("var_IDontUnderstand","not shown");
+        mEditor.putString("var_ImStudying","not shown");
+        mEditor.putString("var_Nouns","not shown");
+        mEditor.putString("var_HisHouseHerCar","not shown");
+        mEditor.putString("var_Dialog2","not shown");
+        mEditor.putString("var_Vocab2","not shown");
+        mEditor.putString("var_HowsTheWeather","not shown");
+        mEditor.putString("var_APrettyWoman","not shown");
+        mEditor.putString("var_AnImportantException","not shown");
+        mEditor.putString("var_CountriesAndPeople","not shown");
+        mEditor.putString("var_Dialog3","not shown");
+        mEditor.putString("var_ThisManThisWoman","not shown");
+        mEditor.putString("var_What?","not shown");
+        mEditor.putString("var_IWant","not shown");
+        mEditor.putString("var_ILike","not shown");
+        mEditor.putString("var_Dialog4","not shown");
+        mEditor.commit();
     }
 }

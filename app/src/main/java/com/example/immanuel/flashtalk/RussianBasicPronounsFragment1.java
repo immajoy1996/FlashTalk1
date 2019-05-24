@@ -37,10 +37,6 @@ public class RussianBasicPronounsFragment1 extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         // Make sure that we are currently visible
         if(isVisibleToUser){
-            String msg1 = "Click the boxes to hear the pronunciation.";
-            SpannableString spannableString1 = new SpannableString(msg1);
-            String msg2 = "See the arrows in the toolbar? This means you can click them or swipe the page to see more.";
-            SpannableString spannableString2 = new SpannableString(msg2);
 
             //(new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_CLICK_BOXES","HINT_SWIPE");
 
@@ -56,7 +52,8 @@ public class RussianBasicPronounsFragment1 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/louder1");
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -74,11 +71,18 @@ public class RussianBasicPronounsFragment1 extends Fragment {
         //toolbar.setTitle("Basic Pronouns");
         //getFragmentManager().beginTransaction().commit();
 
-        SharedPreferences mPrefs = getActivity().getSharedPreferences("Hints", 0);
-        state_hint_click_rects = mPrefs.getString("HINT_CLICK_RECTS", "not found");
-        state_hint_swipe = mPrefs.getString("HINT_SWIPE", "not found");
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_BasicPronouns","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
 
-        SharedPreferences.Editor mEditor = mPrefs.edit();
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2, "-1","-1");
+            mEditor.putString("var_BasicPronouns","shown");
+            mEditor.commit();
+        }
 
         /*if(true) {
             String msg1 = "See the arrows in the toolbar? This means you can click them or swipe the page to see more.";

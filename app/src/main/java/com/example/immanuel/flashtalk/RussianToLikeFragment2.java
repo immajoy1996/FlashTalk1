@@ -30,7 +30,8 @@ public class RussianToLikeFragment2 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment2_sentence1");
                 mediaPlayer= MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }

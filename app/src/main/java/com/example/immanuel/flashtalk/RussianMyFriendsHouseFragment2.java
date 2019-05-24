@@ -35,10 +35,11 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
-                mediaPlayer= MediaPlayer.create(getContext(),uri);
+                mediaPlayer= MediaPlayer.create(getContext(),uri);*/
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -59,8 +60,8 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
         ImageButton forward_button=(ImageButton)rootView.findViewById(R.id.forward_button);
         final ViewPager viewPager=getActivity().findViewById(R.id.myfriendshouse_pager);
 
-        final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
-        mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
+        //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
+        //mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,10 +166,7 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer= MediaPlayer.create(getContext(),uri1);
-                mediaPlayer.start();
+                doit(view,uri1);
             }
         });
 
@@ -177,10 +175,7 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri2);
-                mediaPlayer.start();
+                doit(view,uri2);
             }
         });
 
@@ -189,10 +184,7 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri3);
-                mediaPlayer.start();
+                doit(view,uri3);
             }
         });
 
@@ -201,10 +193,7 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri4);
-                mediaPlayer.start();
+                doit(view,uri4);
             }
         });
 
@@ -213,10 +202,11 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri5);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri5);
             }
         });
 
@@ -225,14 +215,70 @@ public class RussianMyFriendsHouseFragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri6);
-                mediaPlayer.start();
+                doit(view,uri6);
             }
         });
 
 
         return rootView;
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+        }
     }
 }

@@ -32,13 +32,8 @@ public class IDontUnderstandFragment4 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                /*mediaPlayer.stop();
-                mediaPlayer.release();
-                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment4");
-                mediaPlayer= MediaPlayer.create(getContext(),uri);*/
-                //volume.setVisibility(View.VISIBLE);
-                //pause.setVisibility(View.GONE);
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
             }
             else {
                 // do what you like
@@ -81,7 +76,8 @@ public class IDontUnderstandFragment4 extends Fragment {
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","I Don't Understand");
                 //pause.setVisibility(View.GONE);

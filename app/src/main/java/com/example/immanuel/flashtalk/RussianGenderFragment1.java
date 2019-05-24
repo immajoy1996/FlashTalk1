@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -42,7 +43,8 @@ public class RussianGenderFragment1 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
                 mediaPlayer= MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -58,6 +60,20 @@ public class RussianGenderFragment1 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_russian_gender_fragment1, container, false);
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_Gender","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_Gender","shown");
+            mEditor.commit();
+        }
+
         TextView intro_textview=rootView.findViewById(R.id.intro);
         String str="Russian has three genders. Every Russian noun is either masculine, feminine, or neuter. This has nothing to do with whether the noun itself is masculine or feminine. It's just a grammatical term.";
 

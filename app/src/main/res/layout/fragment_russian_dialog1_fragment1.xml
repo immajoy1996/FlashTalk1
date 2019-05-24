@@ -99,7 +99,7 @@
         android:gravity="center"
         android:background="@color/white"
         android:padding="@dimen/imreadingmybook_fragment3_padding"
-        android:text="Read the dialog between John and Natasha."
+        android:text="Read the dialog between John and Natasha. Click for translation. Hold down for audio. Swipe right to see new words."
         android:fontFamily="@font/treb_ms_regular"
         android:textColor="@color/black"
         android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"

@@ -2,6 +2,8 @@ package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -17,7 +19,7 @@ import android.widget.TextView;
 
 public class RussianSomethingNiceFragment2 extends Fragment {
 
-    //MediaPlayer mediaPlayer;
+    MediaPlayer mediaPlayer;
     //int STEP_TIME=100;
     //ImageView volume;
     //ImageView pause;
@@ -26,17 +28,19 @@ public class RussianSomethingNiceFragment2 extends Fragment {
         // Required empty public constructor
     }
 
-    /*@Override
+    @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         // Make sure that we are currently visible
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                mediaPlayer.stop();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/nouns_fragment2_sentence1");
-                mediaPlayer= MediaPlayer.create(getContext(),uri);
+                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
+                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -44,7 +48,8 @@ public class RussianSomethingNiceFragment2 extends Fragment {
                 // do what you like
             }
         }
-    }*/
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -73,7 +78,8 @@ public class RussianSomethingNiceFragment2 extends Fragment {
             public void onClick(View view) {
                 //mediaPlayer.stop();
                 //mediaPlayer.release();
-                //mediaPlayer=MediaPlayer.create(getContext(),uri);
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","Something Nice!");
                 //pause.setVisibility(View.GONE);
@@ -221,5 +227,65 @@ public class RussianSomethingNiceFragment2 extends Fragment {
         });*/
 
         return rootView;
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
     }
 }

@@ -1,5 +1,8 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -38,34 +41,13 @@ public class AlphabetFragment1 extends Fragment {
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         // Make sure that we are currently visible
-        if(isVisibleToUser){
-            //FragmentManager fm=getFragmentManager();
-            String msg1 = "Click the letters to hear the pronounciation.";
-            SpannableString spannableString1 = new SpannableString(msg1);
-            //hint_box1.show(fm,"Dialog Tag");
-            String msg2 = "See the arrows in the toolbar? This means you can click them or swipe the page to see more.";
-            SpannableString spannableString2 = new SpannableString(msg2);
-
-            //(new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_PRONOUNCE","HINT_SWIPE");
-
-
-            //HintDialogDoubleClass hints = HintDialogDoubleClass.newInstance(spannableString1, spannableString2,"HINT_SWIPEdfs","HINT_PRONOUNCEdsfd");
-            //FragmentManager fm = getFragmentManager();
-            //hints.show(fm, "Dialog Double Tag");
-            //hints.show(fm,"Dialog Double Tag");*/
-        }
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                /*if(adapter.mediaPlayer_alphabet!=null) {
-                    adapter.mediaPlayer_alphabet.stop();
-                    adapter.mediaPlayer_alphabet.reset();
-                    adapter.mediaPlayer_alphabet.release();
-                    adapter.mediaPlayer_alphabet=null;
-                    //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-                    //adapter.mediaPlayer_alphabet=MediaPlayer.create(getContext(),uri);
-                }*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
+
+                //endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -85,6 +67,19 @@ public class AlphabetFragment1 extends Fragment {
         ImageView back_button=(ImageView)rootView.findViewById(R.id.back_button);
         ImageView forward_button=(ImageView)rootView.findViewById(R.id.forward_button);
         final ViewPager viewPager=getActivity().findViewById(R.id.alphabet_view_pager);
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_Alphabet","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            //SpannableString msg2=new SpannableString("Click the buttons for audio.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1, "var_Alphabet");
+            mEditor.putString("var_Alphabet","shown");
+            mEditor.commit();
+        }
 
         //Toast.makeText(getContext(),state_hint_pronunciation,Toast.LENGTH_SHORT).show();
         //SharedPreferences mPrefs = getActivity().getSharedPreferences("Hints", 0);
@@ -349,6 +344,60 @@ public class AlphabetFragment1 extends Fragment {
             adapter.mediaPlayer_alphabet=null;
             //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
             //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view,Uri uri) {
+        if (adapter.mediaPlayer_alphabet == null) {
+            adapter.mediaPlayer_alphabet = MediaPlayer.create(view.getContext(), uri);
+            adapter.mediaPlayer_alphabet.start();
+
+            adapter.mediaPlayer_alphabet.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    adapter.mediaPlayer_alphabet.reset();
+                    adapter.mediaPlayer_alphabet.release();
+                    adapter.mediaPlayer_alphabet = null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                }
+
+                ;
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (adapter.mediaPlayer_alphabet.isPlaying()) {
+            adapter.mediaPlayer_alphabet.stop();
+            adapter.mediaPlayer_alphabet.reset();
+            adapter.mediaPlayer_alphabet.release();
+            adapter.mediaPlayer_alphabet = MediaPlayer.create(view.getContext(), uri);
+            adapter.mediaPlayer_alphabet.start();
+
+
+            adapter.mediaPlayer_alphabet.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    adapter.mediaPlayer_alphabet.reset();
+                    adapter.mediaPlayer_alphabet.release();
+                    adapter.mediaPlayer_alphabet = null;
+
+                }
+
+                ;
+            });
+        } else {
+            adapter.mediaPlayer_alphabet = MediaPlayer.create(view.getContext(), uri);
+            adapter.mediaPlayer_alphabet.start();
+
+            adapter.mediaPlayer_alphabet.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    adapter.mediaPlayer_alphabet.reset();
+                    adapter.mediaPlayer_alphabet.release();
+                    adapter.mediaPlayer_alphabet = null;
+                }
+
+                ;
+            });
+
         }
     }
 

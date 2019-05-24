@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -41,7 +42,8 @@ public class RussianAPrettyWomanFragment1 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -57,6 +59,19 @@ public class RussianAPrettyWomanFragment1 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_russian_apretty_woman_fragment1, container, false);
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_APrettyWoman","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_APrettyWoman","shown");
+            mEditor.commit();
+        }
 
         TextView textView_intro=rootView.findViewById(R.id.intro);
         String str_intro="Making adjectives is easy. Just remove the final -о from the adverb and add the adjective ending. Whether you add -ый (ee), -ая (a-ya), or -ое (a-ye) depends on the gender of the noun. Get the pattern?";

@@ -25,10 +25,6 @@ public class RussianIHaveFragment3 extends Fragment {
     //ImageView volume;
     //ImageView pause;
 
-    public RussianIHaveFragment3() {
-        // Required empty public constructor
-    }
-
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
@@ -36,10 +32,7 @@ public class RussianIHaveFragment3 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1");
-                mediaPlayer= MediaPlayer.create(getContext(),uri);
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -60,16 +53,14 @@ public class RussianIHaveFragment3 extends Fragment {
         //ImageButton forward_button=(ImageButton)rootView.findViewById(R.id.forward_button);
         final ViewPager viewPager=getActivity().findViewById(R.id.ihave_pager);
 
-        final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
-        mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
+        //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
+        //mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
 
         CircularImageView2 games=rootView.findViewById(R.id.games);
         games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri);
+                endit();
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","I Have");
                 //pause.setVisibility(View.GONE);
@@ -94,11 +85,9 @@ public class RussianIHaveFragment3 extends Fragment {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri1);
-                mediaPlayer.start();
+
+                doit(view,uri1);
+
             }
         });
 
@@ -107,10 +96,11 @@ public class RussianIHaveFragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri2);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri2);
             }
         });
 
@@ -119,10 +109,11 @@ public class RussianIHaveFragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri3);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri3);
             }
         });
 
@@ -186,9 +177,66 @@ public class RussianIHaveFragment3 extends Fragment {
         spannableString3.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.transliteration_color)), str3.indexOf(str3_keyword1), str3.indexOf(str3_keyword1)+str3_keyword1.length(), 0);
         example3.setText(spannableString3);
 
-
-
-
         return rootView;
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                }
+            });
+
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
@@ -40,7 +42,8 @@ public class RussianHisHouseHerCarFragment1 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/hishousehercar_fragment1_sentence1");
                 mediaPlayer= MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -56,6 +59,19 @@ public class RussianHisHouseHerCarFragment1 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_russian_his_house_her_car_fragment1, container, false);
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_HisHouseHerCar","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_HisHouseHerCar","shown");
+            mEditor.commit();
+        }
 
         final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/hishousehercar_fragment1_sentence1");
         final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/hishousehercar_fragment1_sentence2");

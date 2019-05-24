@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white_smoke"
+    android:background="@drawable/river1"
     tools:context=".RussianDialog3Fragment1"
     >
 
@@ -16,7 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/white_smoke"
         tools:context=".RussianDialog3Fragment1">
 
         <android.support.v7.widget.Toolbar
@@ -101,7 +100,7 @@
             android:fontFamily="@font/treb_ms_regular"
             android:gravity="center"
             android:padding="@dimen/imreadingmybook_fragment3_padding"
-            android:text="Read the dialog between Lena and Dimitri."
+            android:text="Read the dialog between Lena and Dimitri. Click for translation. Hold down for audio. Swipe right to see new words."
             android:textColor="@color/black"
             android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro" />
 

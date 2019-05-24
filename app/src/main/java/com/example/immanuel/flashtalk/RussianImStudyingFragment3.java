@@ -237,7 +237,7 @@ public class RussianImStudyingFragment3 extends Fragment {
         return rootView;
     }
 
-    void doit(View view,Uri uri){
+    void doit(View view, Uri uri){
         if (mediaPlayer == null) {
             mediaPlayer = MediaPlayer.create(view.getContext(), uri);
             mediaPlayer.start();

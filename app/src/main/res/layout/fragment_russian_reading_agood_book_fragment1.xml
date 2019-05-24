@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="I'm watching a good film."
+                android:text="I'm watching an interesting film."
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
@@ -169,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="I'm reading a good book."
+                android:text="I'm reading an interesting book."
                 android:textColor="@color/red"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 
@@ -206,7 +206,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
-                android:text="I'm eating good ice-cream."
+                android:text="I'm see an interesting photo."
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/imreadingmybook_fragment3_font_size_intro"
 

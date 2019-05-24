@@ -22,10 +22,6 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
     //ImageView volume;
     //ImageView pause;
 
-    public RussianReadingAGoodBookFragment1() {
-        // Required empty public constructor
-    }
-
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
@@ -33,10 +29,7 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment3");
-                mediaPlayer= MediaPlayer.create(getContext(),uri);
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -57,15 +50,13 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
         ImageButton forward_button=(ImageButton)rootView.findViewById(R.id.forward_button);
         final ViewPager viewPager=getActivity().findViewById(R.id.readingagoodbook_pager);
 
-        final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_verbs_fragment1");
-        mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
+        //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_verbs_fragment1");
+        //mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(getContext(),uri);
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
                 getActivity().finish();
@@ -80,24 +71,24 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
         });
 
         TextView example1=rootView.findViewById(R.id.example1);
-        String str1="Я смотрю хороший фильм.";
-        String keyword1="хороший";
+        String str1="Я смотрю интересный фильм.";
+        String keyword1="интересный";
 
         SpannableString spannableString1=new SpannableString(str1);
         spannableString1.setSpan(new UnderlineSpan(), str1.indexOf(keyword1), str1.indexOf(keyword1)+keyword1.length(), 0);
         example1.setText(spannableString1);
 
         TextView example2=rootView.findViewById(R.id.example2);
-        String str2="Я читаю хорошую книгу.";
-        String keyword2="хорошую";
+        String str2="Я читаю интересную книгу.";
+        String keyword2="интересную";
 
         SpannableString spannableString2=new SpannableString(str2);
         spannableString2.setSpan(new UnderlineSpan(), str2.indexOf(keyword2), str2.indexOf(keyword2)+keyword2.length(), 0);
         example2.setText(spannableString2);
 
         TextView example3=rootView.findViewById(R.id.example3);
-        String str3="Я ем хорошее мороженое.";
-        String keyword3="хорошее";
+        String str3="Я вижу интересное фото.";
+        String keyword3="интересное";
 
         SpannableString spannableString3=new SpannableString(str3);
         spannableString3.setSpan(new UnderlineSpan(), str3.indexOf(keyword3), str3.indexOf(keyword3)+keyword3.length(), 0);
@@ -127,9 +118,9 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
         spannableString6.setSpan(new UnderlineSpan(), str6.indexOf(keyword6), str6.indexOf(keyword6)+keyword6.length(), 0);
         example6.setText(spannableString6);
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/moro1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/moro2");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/moro3");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
         final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/moro4");
         final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/moro5");
         final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/moro6");
@@ -140,10 +131,9 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer= MediaPlayer.create(getContext(),uri1);
-                mediaPlayer.start();
+
+                doit(view,uri1);
+
             }
         });
 
@@ -152,10 +142,11 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri2);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri2);
             }
         });
 
@@ -164,10 +155,11 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri3);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri3);
             }
         });
 
@@ -176,10 +168,11 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri4);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri4);
             }
         });
 
@@ -188,10 +181,11 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri5);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri5);
             }
         });
 
@@ -200,10 +194,11 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri6);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri6);
             }
         });
 
@@ -224,5 +219,71 @@ public class RussianReadingAGoodBookFragment1 extends Fragment {
 
 
         return rootView;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        endit();
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                }
+            });
+
+        }
     }
 }

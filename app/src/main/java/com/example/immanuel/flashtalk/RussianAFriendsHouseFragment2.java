@@ -1,6 +1,8 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -11,6 +13,28 @@ import android.widget.ImageButton;
 
 
 public class RussianAFriendsHouseFragment2 extends Fragment {
+
+    MediaPlayer mediaPlayer;
+    int STEP_TIME=100;
+    //ImageView volume;
+    //ImageView pause;
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                endit();
+                //volume.setVisibility(View.VISIBLE);
+                //pause.setVisibility(View.GONE);
+            }
+            else {
+                // do what you like
+            }
+        }
+    }
 
     public RussianAFriendsHouseFragment2() {
         // Required empty public constructor
@@ -37,6 +61,8 @@ public class RussianAFriendsHouseFragment2 extends Fragment {
         games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 //mediaPlayer.stop();
                 //mediaPlayer.release();
                 //mediaPlayer= MediaPlayer.create(getContext(),uri);
@@ -88,5 +114,64 @@ public class RussianAFriendsHouseFragment2 extends Fragment {
         neut_rule2_textview.setText(spannableString_neut_rule2);*/
 
         return rootView;
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view, Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+        }
     }
 }

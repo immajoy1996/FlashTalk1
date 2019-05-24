@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,28 +27,17 @@ public class RussianBasicPronounsFragment2 extends Fragment {
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         // Make sure that we are currently visible
-        if(isVisibleToUser){
-            String msg1 = "Click the sentences to hear them.";
-            SpannableString spannableString1 = new SpannableString(msg1);
-            String msg2 = "See the arrows in the toolbar? This means you can keep swiping!";
-            SpannableString spannableString2 = new SpannableString(msg2);
-
-            //(new MyApplication()).show_hints(getFragmentManager(),spannableString1,spannableString2,"HINT_CLICK_SENTENCES","HINT_SWIPE_AGAIN");
-            //HintDialogDoubleClass hints = HintDialogDoubleClass.newInstance(spannableString1, spannableString2,"HINT_SENTENCES","HINT_SWIPE_AGAIN");
-            //FragmentManager fm = getFragmentManager();
-            //hints.show(fm, "Dialog Double Tag");
-            //hints.launch();
-        }
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_pronouns_fragment2_sentence1");
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
-                endit();
             }
             else {
                 // do what you like

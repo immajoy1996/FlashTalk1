@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -59,6 +60,19 @@ public class RussianImStudyingFragment1 extends Fragment {
         //pause=rootView.findViewById(R.id.pause);
         //final SeekBar seekBar=rootView.findViewById(R.id.seekbar);
         //final LinearLayout seekbar_layout=rootView.findViewById(R.id.seekbar_layout);
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_ImStudying","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_ImStudying","shown");
+            mEditor.commit();
+        }
 
         TextView textView_intro=rootView.findViewById(R.id.intro);
         String intro_str="Я изучаю could mean either \"I study\" or \"I am studying\" based on context.";

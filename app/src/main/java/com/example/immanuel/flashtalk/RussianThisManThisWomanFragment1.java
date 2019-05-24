@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
@@ -40,7 +42,8 @@ public class RussianThisManThisWomanFragment1 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -57,7 +60,18 @@ public class RussianThisManThisWomanFragment1 extends Fragment {
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
 
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_ThisManThisWoman","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
 
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_ThisManThisWoman","shown");
+            mEditor.commit();
+        }
 
         String str="To say \"this\" or \"that\", use either этот (etot), эта (eta) or это (eta). Which one you use depends on the gender of the noun. Get the pattern?";
         String keyword1="этот (etot)";

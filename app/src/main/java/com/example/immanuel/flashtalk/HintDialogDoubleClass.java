@@ -2,12 +2,15 @@ package com.example.immanuel.flashtalk;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -20,12 +23,14 @@ public class HintDialogDoubleClass extends DialogFragment implements
     public TextView textView_msg;
     public SpannableString msg1=null;
     public SpannableString msg2=null;
+    public CheckBox check_annoying;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.hint_dialog, container, false);
         //getDialog().setTitle("Simple Dialog");
         check = (LinearLayout) rootView.findViewById(R.id.check);
+        check_annoying=(CheckBox)rootView.findViewById(R.id.check_annoying);
 
         Bundle args = getArguments();
         msg1 = (SpannableString) args.getCharSequence("SPANNABLE_MSG1", "-1");
@@ -45,6 +50,8 @@ public class HintDialogDoubleClass extends DialogFragment implements
                 //next_hint.show(fm,"Dialog Tag 2");
             }
         });
+
+        HintDialogDoubleClass.this.getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 
         return rootView;
@@ -67,8 +74,20 @@ public class HintDialogDoubleClass extends DialogFragment implements
     @Override
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
-        HintDialogClass next_hint = HintDialogClass.newInstance(msg2);
-        next_hint.show(getFragmentManager(), "Dialog");
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(check_annoying.isChecked()){
+            mEditor.putString("TUTORIAL_OFF","true");
+            mEditor.commit();
+        }
+        String tutorial_off=mPrefs.getString("TUTORIAL_OFF","false");
+        //Toast.makeText(getContext(),tutorial_off, Toast.LENGTH_SHORT).show();
+        if(tutorial_off.equals("false")) {
+            HintDialogClass next_hint = HintDialogClass.newInstance(msg2);
+            next_hint.show(getFragmentManager(), "Dialog");
+        }
         //state_hint_swipe = mPrefs.getString("HINT_SWIPE", "not found");
     }
 

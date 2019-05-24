@@ -48,15 +48,13 @@ public class RussianWhereAreYouGoingActivity extends AppCompatActivity {
         //final ViewPager viewPager=findViewById(R.id._pager);
 
 
-        final Uri uri=Uri.parse("android.resource://"+this.getPackageName()+"/raw/basic_pronouns_fragment3");
-        mediaPlayer=MediaPlayer.create(this,uri);
+        //final Uri uri=Uri.parse("android.resource://"+this.getPackageName()+"/raw/basic_pronouns_fragment3");
+        //mediaPlayer=MediaPlayer.create(this,uri);
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(view.getContext(),uri);
+                endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
                 finish();
@@ -67,9 +65,7 @@ public class RussianWhereAreYouGoingActivity extends AppCompatActivity {
         games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(view.getContext(),uri);
+                endit();
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","Where Are You Going?");
                 //pause.setVisibility(View.GONE);
@@ -86,11 +82,9 @@ public class RussianWhereAreYouGoingActivity extends AppCompatActivity {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(view.getContext(),uri1);
-                mediaPlayer.start();
+
+                doit(view,uri1);
+
             }
         });
 
@@ -99,10 +93,11 @@ public class RussianWhereAreYouGoingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer= MediaPlayer.create(view.getContext(),uri2);
-                mediaPlayer.start();
+                mediaPlayer=MediaPlayer.create(getContext(),uri2);
+                mediaPlayer.start();*/
+                doit(view,uri2);
             }
         });
 
@@ -111,13 +106,79 @@ public class RussianWhereAreYouGoingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
-                mediaPlayer=MediaPlayer.create(view.getContext(),uri3);
-                mediaPlayer.start();
+                mediaPlayer=MediaPlayer.create(getContext(),uri3);
+                mediaPlayer.start();*/
+                doit(view,uri3);
             }
         });
 
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        endit();
+    }
+
+    void endit(){
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer=null;
+            //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
+            //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view,Uri uri){
+        if (mediaPlayer == null) {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                };
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+
+                };
+            });
+        }
+        else {
+            mediaPlayer = MediaPlayer.create(view.getContext(), uri);
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    mediaPlayer.reset();
+                    mediaPlayer.release();
+                    mediaPlayer=null;
+                };
+            });
+
+        }
     }
 }

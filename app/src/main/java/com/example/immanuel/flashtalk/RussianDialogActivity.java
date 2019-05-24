@@ -49,10 +49,10 @@ public class RussianDialogActivity extends AppCompatActivity {
         final ArrayList<String>dialog_titles=new ArrayList<>();
 
         dialog_images.add("N/A");
-        dialog_images.add("lightning1");
-        dialog_images.add("lightning1");
-        dialog_images.add("lightning1");
-        dialog_images.add("lightning1");
+        dialog_images.add("homework");
+        dialog_images.add("tourist");
+        dialog_images.add("building");
+        dialog_images.add("earth");
         dialog_images.add("N/A");
         dialog_images.add("lightning1");
         dialog_images.add("lightning1");

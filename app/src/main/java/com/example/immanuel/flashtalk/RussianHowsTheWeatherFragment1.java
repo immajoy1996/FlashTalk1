@@ -1,11 +1,13 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
@@ -36,13 +38,8 @@ public class RussianHowsTheWeatherFragment1 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                /*mediaPlayer.stop();
-                mediaPlayer.release();
-                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1");
-                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                //volume.setVisibility(View.VISIBLE);
-                //pause.setVisibility(View.GONE);
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
             }
             else {
                 // do what you like
@@ -56,6 +53,20 @@ public class RussianHowsTheWeatherFragment1 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_russian_hows_the_weather_fragment1, container, false);
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs");
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_HowsTheWeather","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Read the instructions carefully! Swipe right to see new words.");
+            //SpannableString msg2=new SpannableString("Swipe right to see");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,"-1");
+            mEditor.putString("var_HowsTheWeather","shown");
+            mEditor.commit();
+        }
+
         TextView intro_textview=rootView.findViewById(R.id.intro);
         String str_intro="хорошо is an adverb. It modifies a verb. All Russian adverbs end in a final -о. Read the dialogue between Anna and Sergei to learn a few more.";
         String keyword1="хорошо";

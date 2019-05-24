@@ -41,7 +41,7 @@
                 android:gravity="center"
                 android:text="Я в парке"
                 android:textColor="@color/rosy_brown"
-                android:textSize="26sp"
+                android:textSize="@dimen/dialogue_text_size"
                 />
 
         </LinearLayout>

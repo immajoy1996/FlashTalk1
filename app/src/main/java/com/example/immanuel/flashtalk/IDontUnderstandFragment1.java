@@ -1,10 +1,12 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +32,8 @@ public class IDontUnderstandFragment1 extends Fragment {
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/idontunderstand_fragment1_verb1");
                 mediaPlayer= MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -51,6 +54,19 @@ public class IDontUnderstandFragment1 extends Fragment {
         //pause=rootView.findViewById(R.id.pause);
         //final SeekBar seekBar=rootView.findViewById(R.id.seekbar);
         //final LinearLayout seekbar_layout=rootView.findViewById(R.id.seekbar_layout);
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_IDontUnderstand","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_IDontUnderstand","shown");
+            mEditor.commit();
+        }
 
         ImageButton back_button=rootView.findViewById(R.id.back_button);
         ImageButton forward_button=rootView.findViewById(R.id.forward_button);

@@ -3,6 +3,9 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="check_annoying_dim">30dp</dimen>
+    <dimen name="check_annoying_textsize">12sp</dimen>
+
     <dimen name="splash_screen_dim">200dp</dimen>
     <dimen name="launcher_screen_dim">140dp</dimen>
     <dimen name="launcher_font_size">38sp</dimen>

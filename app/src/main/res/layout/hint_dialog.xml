@@ -37,15 +37,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="right"
         android:background="@color/white"
+        android:orientation="horizontal"
         >
+
+        <LinearLayout
+            android:id="@+id/checkbox_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <CheckBox
+                android:id="@+id/check_annoying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/transliteration_color"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stop being annoying"
+                android:fontFamily="@font/treb_ms_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/check_annoying_textsize"
+
+                />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rect_white"
+            android:gravity="center"
             >
 
             <TextView

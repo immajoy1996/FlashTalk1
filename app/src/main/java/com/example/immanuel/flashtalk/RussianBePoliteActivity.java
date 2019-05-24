@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -29,6 +30,19 @@ public class RussianBePoliteActivity extends AppCompatActivity {
 
         TextView explanation1=(TextView)findViewById(R.id.intro);
         //final TextView translation1=(TextView)findViewById(R.id.translation1);
+
+        SharedPreferences mPrefs=getApplicationContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_BePolite!","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getApplicationContext())).show_hints(getSupportFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_BePolite!","shown");
+            mEditor.commit();
+        }
 
         String str1="ты is the friendly way to say \"you\". If you're talking to someone you don't know well, use вы. It can mean either \"you guys\" or a polite \"you\". It's conjugated in the same way. Look at the examples.";
         String keyword1="ты";
@@ -106,7 +120,8 @@ public class RussianBePoliteActivity extends AppCompatActivity {
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","Be Polite!");
                 //pause.setVisibility(View.GONE);

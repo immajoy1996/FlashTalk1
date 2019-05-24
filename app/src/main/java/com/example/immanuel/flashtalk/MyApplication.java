@@ -15,6 +15,9 @@ public class MyApplication {
 
     void show_hints(FragmentManager fm, SpannableString spannableString1, SpannableString spannableString2, String var_name1, String var_name2){
         SharedPreferences mPrefs=context.getSharedPreferences("Hints",0);
+
+        String tutorial_off=mPrefs.getString("TUTORIAL_OFF","false");
+
         String str1=mPrefs.getString(var_name1,"not found");
         String str2=mPrefs.getString(var_name2,"not found");
         HintDialogDoubleClass hints1 = HintDialogDoubleClass.newInstance(spannableString1, spannableString2);
@@ -23,7 +26,10 @@ public class MyApplication {
 
         SharedPreferences.Editor mEditor=mPrefs.edit();
 
-        if(str1.equals("not found") && str2.equals("not found")){
+        if(tutorial_off.equals("true")){return;}
+        hints1.show(fm,"Dialog Double");
+
+        /*if(str1.equals("not found") && str2.equals("not found")){
             hints1.show(fm,"Dialog Double");
             mEditor.putString(var_name1,"found");
             mEditor.putString(var_name2,"found");
@@ -42,7 +48,7 @@ public class MyApplication {
             mEditor.putString(var_name2,"found");
             mEditor.commit();
         }
-        else{}
+        else{}*/
     }
 
     void show_hints(FragmentManager fm, SpannableString spannableString1, String var_name1){
@@ -55,12 +61,16 @@ public class MyApplication {
 
         SharedPreferences.Editor mEditor=mPrefs.edit();
 
-        if(str1.equals("not found")){
+        String tutorial_off=mPrefs.getString("TUTORIAL_OFF","false");
+        if(tutorial_off.equals("true")){return;}
+
+
+        //if(str1.equals("not found")){
             hints1.show(fm,"Dialog");
             mEditor.putString(var_name1,"found");
             //mEditor.putString(var_name2,"found");
             mEditor.commit();
 
-        }
+        //}
     }
 }

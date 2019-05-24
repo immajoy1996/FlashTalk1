@@ -1,5 +1,6 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -35,13 +36,8 @@ public class RussianDialog1Fragment1 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                /*mediaPlayer.stop();
-                mediaPlayer.release();
-                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment1");
-                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                //volume.setVisibility(View.VISIBLE);
-                //pause.setVisibility(View.GONE);
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
 
             }
             else {
@@ -56,6 +52,19 @@ public class RussianDialog1Fragment1 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_russian_dialog1_fragment1, container, false);
         //android.support.v7.widget.Toolbar Toolbar=rootView.findViewById(R.id.toolbar);
         //Toolbar.setTitle("Basic Verbs")
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_Dialog1","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Read the instructions carefully! Swipe right to see new words.");
+            //SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,"-1");
+            mEditor.putString("var_Dialog1","shown");
+            mEditor.commit();
+        }
 
         ImageButton back_button=(ImageButton)rootView.findViewById(R.id.back_button);
         ImageButton forward_button=(ImageButton)rootView.findViewById(R.id.forward_button);
@@ -441,18 +450,18 @@ public class RussianDialog1Fragment1 extends Fragment {
             }
         });
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri7=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri8=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri9=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri10=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri11=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
-        final Uri uri12=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/question_words_fragment1");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/abcde1");
+        final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/bask1");
+        final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/abcde3");
+        final Uri uri4=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/bask2");
+        final Uri uri5=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/abcde5");
+        final Uri uri6=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/bask3");
+        final Uri uri7=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/abcde7");
+        final Uri uri8=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/bask4");
+        final Uri uri9=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/abcde9");
+        final Uri uri10=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/bask5");
+        final Uri uri11=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/abcde11");
+        final Uri uri12=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/bask6");
 
         linearLayout1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override

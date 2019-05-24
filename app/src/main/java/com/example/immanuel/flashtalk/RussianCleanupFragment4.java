@@ -126,8 +126,8 @@ public class RussianCleanupFragment4 extends Fragment {
         final ViewPager viewPager=getActivity().findViewById(R.id.cleanup_pager);
         //final int MAX=mediaPlayer.getDuration() / STEP_TIME;
 
-        final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_verbs_fragment4_sentence1");
-        mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
+        //final Uri uri=Uri.parse("android.resource://"+rootView.getContext().getPackageName()+"/raw/basic_verbs_fragment4_sentence1");
+        //mediaPlayer=MediaPlayer.create(rootView.getContext(),uri);
 
         CircularImageViewTest games=rootView.findViewById(R.id.games);
         games.setOnClickListener(new View.OnClickListener() {
@@ -136,6 +136,8 @@ public class RussianCleanupFragment4 extends Fragment {
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","Wrap Up");
                 //pause.setVisibility(View.GONE);

@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -36,6 +37,19 @@ public class RussianAdjectiveExceptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_russian_adjective_exception);
+
+        SharedPreferences mPrefs=getApplicationContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_AnImportantException","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Click the quiz icon at the top to test yourself.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getApplicationContext())).show_hints(getSupportFragmentManager(), msg1,"-1");
+            mEditor.putString("var_AnImportantException","shown");
+            mEditor.commit();
+        }
 
         final Uri uri1=Uri.parse("android.resource://"+this.getPackageName()+"/raw/animportantexception_sentence1");
         final Uri uri2=Uri.parse("android.resource://"+this.getPackageName()+"/raw/animportantexception_sentence2");
@@ -95,7 +109,8 @@ public class RussianAdjectiveExceptionActivity extends AppCompatActivity {
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getApplicationContext(),uri);*/
-                endit();
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","An Important Exception");
                 //pause.setVisibility(View.GONE);

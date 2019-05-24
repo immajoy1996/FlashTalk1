@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -30,6 +31,19 @@ public class RussianAccentsActivity extends AppCompatActivity {
 
         TextView explanation1=(TextView)findViewById(R.id.intro);
         //final TextView translation1=(TextView)findViewById(R.id.translation1);
+
+        SharedPreferences mPrefs=getApplicationContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_Accents","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Click the quiz icon at the top to test yourself.");
+            //SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getApplicationContext())).show_hints(getSupportFragmentManager(), msg1,"-1");
+            mEditor.putString("var_Accents","shown");
+            mEditor.commit();
+        }
 
         String str1="Russian words aren't always pronounced like they're written. When the letter о is unstressed, it sounds like а. See if you can hear it. These stresses are never written. You'll get the hang of it!";
         //String keyword1="о in";
@@ -117,7 +131,8 @@ public class RussianAccentsActivity extends AppCompatActivity {
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","Accents");
                 //pause.setVisibility(View.GONE);

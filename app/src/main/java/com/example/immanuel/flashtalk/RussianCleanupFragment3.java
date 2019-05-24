@@ -26,13 +26,8 @@ public class RussianCleanupFragment3 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                /*mediaPlayer.stop();
-                mediaPlayer.release();
-                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment3_sentence1");
-                mediaPlayer= MediaPlayer.create(getContext(),uri);*/
-                //volume.setVisibility(View.VISIBLE);
-                //pause.setVisibility(View.GONE);
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
             }
             else {
                 // do what you like

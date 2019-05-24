@@ -27,6 +27,9 @@ public class RussianToLikeFragment3 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
+
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_verbs_fragment4");
@@ -61,7 +64,8 @@ public class RussianToLikeFragment3 extends Fragment {
                 /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                endit();
+                final Uri uri_swoosh=Uri.parse("android.resource://"+view.getContext().getPackageName()+"/raw/swoosh");
+                doit(view,uri_swoosh);
                 Intent intent=new Intent(view.getContext(),RussianLessonGamesSplashActivity.class);
                 intent.putExtra("LESSON_NAME","I Like");
                 //pause.setVisibility(View.GONE);
@@ -84,7 +88,7 @@ public class RussianToLikeFragment3 extends Fragment {
             }
         });
 
-        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/lv1");
+        final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
         final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/lv2");
         final Uri uri3=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/lv3");
 
@@ -93,10 +97,11 @@ public class RussianToLikeFragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri1);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri1);
             }
         });
 
@@ -105,10 +110,11 @@ public class RussianToLikeFragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri2);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri2);
             }
         });
 
@@ -117,10 +123,11 @@ public class RussianToLikeFragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getContext(),"Hello",Toast.LENGTH_SHORT).show();
-                mediaPlayer.stop();
+                /*mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer=MediaPlayer.create(getContext(),uri3);
-                mediaPlayer.start();
+                mediaPlayer.start();*/
+                doit(view,uri3);
             }
         });
 

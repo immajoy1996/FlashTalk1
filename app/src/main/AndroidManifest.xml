@@ -9,313 +9,532 @@
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true">
+
         <activity
             android:name=".RussianDialog10Activity"
             android:theme="@style/NoTitleBar"
-            ></activity>
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
         <activity
             android:name=".RussianPrepositionalExceptionsActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToSeeActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog9Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog8Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog7Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToWorkActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
+
         <activity
             android:name=".RussianToUseActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianImGladActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianImHungryActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianImBoredActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianINeedActivity"
-            android:theme="@style/NoTitleBar" />
-        <activity android:name=".RussianINeed" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".RussianINeed"
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianYouShouldActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianTheBestActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianBetterThanActivity"
-            android:theme="@style/NoTitleBar" />
-        <activity android:name=".RussianInANiceRestaurant1Activity" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".RussianInANiceRestaurant1Activity"
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianBePoliteActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAccentsActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianTheOneActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToGoAndReturnByVehicleActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToGoAndReturnOnFootActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianActualAPrettyLadysHouseActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianSomethingNiceActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianWhatManWhatWomanActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianArticlesActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog6Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianReadingAGoodBookActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianReadingHisBookActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianHisHouseHerCarActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianImStudyingActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianWhatManActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToLiveActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToThinkActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToDrinkActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToEatActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAdjectiveExceptionActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianHowsTheWeatherActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianCountriesAndPeopleActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog5Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog4Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog3Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog2Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianLessonGamesSplashActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianActualLessonGameActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialogueSplashActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDativeActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIReadItPerfectiveActualActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIDidItPerfectiveActualActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianISaidItPerfectiveActualActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianISaidItPerfectiveActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianTheFutureActivity"
-            android:theme="@style/NoTitleBar" />
-        <activity android:name=".RussianIWentOnFootActivity" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".RussianIWentOnFootActivity"
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIWasActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAFewMoreActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIDidItActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIKnewItActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianISaidItActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianInANiceRestaurantActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianYoureTalkingAboutMyFriendActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianWhatAreYouTalkingAboutActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIDontSeeMyFriendActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianForMyCountryActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianForAFriendActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianForMeForYouActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianImFromAmericaActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialog1Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianDialogActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIWantToDoActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianInTheStoreActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAFriendsHouse2Activity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianThesePeopleActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianPluralAdjectivesActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianPluralPossessivePronounsActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianPluralExceptionsActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianPluralsActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToLikeActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianThisManThisWomanActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToGoByVehicleActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianWhereAreYouGoingActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianToGoOnFootActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAPrettyLadysHouseActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianMyFriendsHouseActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAFriendsHouseActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIHaveActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianImReadingAGoodBookActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAPrettyWomanActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianImReadingMyBookActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianICanActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianImWatchingTVActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAccusativeCaseActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIWantActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianGenderActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianIDontUnderstandActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianActualGameActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianGameSelectionActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianGamesSplashActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianVocabSplash"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianVocabActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianCleanupActivity"
             android:label="Cleanup"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianPluralPronounsActivity"
             android:label="Plural Pronouns"
-            android:theme="@style/NoTitleBar" />
-        <activity android:name=".RecyclerViewHorizontal" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".RecyclerViewHorizontal"
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".LauncherActivity"
-            android:theme="@style/NoTitleBar">
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -324,31 +543,44 @@
         </activity>
         <activity
             android:name=".RussianSplash"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianLanguageActivity"
+            android:screenOrientation="portrait"
             android:label="FlashTalk"
             android:theme="@style/NoTitleBar" />
         <activity
             android:name=".RussianAlphabetActivity"
             android:label="Alphabets"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianAlphabetPractice"
             android:label="Practice"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianBasicPronounsActivity"
             android:label="Basic Pronouns"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianQuestionWordsActivity"
             android:label="Question Words"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".RussianBasicVerbsActivity"
             android:label="Basic Verbs"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/NoTitleBar"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

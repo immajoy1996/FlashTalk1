@@ -1,10 +1,12 @@
 package com.example.immanuel.flashtalk;
 
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,13 +32,8 @@ public class RussianPluralPronounsFragment1 extends Fragment {
         if (this.isVisible()) {
             // If we are becoming invisible, then...
             if (!isVisibleToUser) {
-                /*mediaPlayer.stop();
-                mediaPlayer.release();
-                Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_plurals_fragment1_word1");
-                mediaPlayer=MediaPlayer.create(getContext(),uri);*/
-                //volume.setVisibility(View.VISIBLE);
-                //pause.setVisibility(View.GONE);
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
             }
             else {
                 // do what you like
@@ -50,6 +47,19 @@ public class RussianPluralPronounsFragment1 extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_russian_plural_pronouns_fragment1, container, false);
         //Toolbar toolbar = (Toolbar)rootView.findViewById(R.id.toolbar_fragment1);
         //toolbar.setTitle("Plural Pronouns");
+
+        SharedPreferences mPrefs=getContext().getSharedPreferences("Hints",0);
+        String str0=mPrefs.getString("var_PluralPronouns","not shown");
+        SharedPreferences.Editor mEditor=mPrefs.edit();
+
+        if(str0.equals("not shown")) {
+
+            SpannableString msg1 = new SpannableString("Click for audio. Swipe right to practice.");
+            SpannableString msg2=new SpannableString("Click the quiz icon at the end of this lesson to test yourself.");
+            (new MyApplication(getContext())).show_hints(getFragmentManager(), msg1,msg2,"-1","-1");
+            mEditor.putString("var_PluralPronouns","shown");
+            mEditor.commit();
+        }
 
         final Uri uri1=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_plurals_fragment1_word1");
         final Uri uri2=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/basic_plurals_fragment1_word2");

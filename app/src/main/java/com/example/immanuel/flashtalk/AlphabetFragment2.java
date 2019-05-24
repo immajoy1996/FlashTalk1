@@ -1,6 +1,7 @@
 package com.example.immanuel.flashtalk;
 
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -69,7 +70,9 @@ public class AlphabetFragment2 extends Fragment {
                     //Uri uri = Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/basic_pronouns_fragment3");
                     //adapter.mediaPlayer_words = MediaPlayer.create(getContext(), uri);
                 }*/
-                endit();
+                final Uri uri_flip=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/pageflipmod");
+                doit(getView(),uri_flip);
+                //endit();
                 //volume.setVisibility(View.VISIBLE);
                 //pause.setVisibility(View.GONE);
             }
@@ -240,6 +243,60 @@ public class AlphabetFragment2 extends Fragment {
             adapter.mediaPlayer_words=null;
             //Uri uri=Uri.parse("android.resource://"+getContext().getPackageName()+"/raw/wrong_answer");
             //adapter.mediaPlayer_alphabet= MediaPlayer.create(getContext(),uri);
+        }
+    }
+
+    void doit(View view,Uri uri) {
+        if (adapter.mediaPlayer_words == null) {
+            adapter.mediaPlayer_words = MediaPlayer.create(view.getContext(), uri);
+            adapter.mediaPlayer_words.start();
+
+            adapter.mediaPlayer_words.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    adapter.mediaPlayer_words.reset();
+                    adapter.mediaPlayer_words.release();
+                    adapter.mediaPlayer_words = null;
+                    //mediaPlayer_alphabet = MediaPlayer.create(vw.getContext(), uri);
+                }
+
+                ;
+            });
+            //mediaPlayer_alphabet.release();
+        } else if (adapter.mediaPlayer_words.isPlaying()) {
+            adapter.mediaPlayer_words.stop();
+            adapter.mediaPlayer_words.reset();
+            adapter.mediaPlayer_words.release();
+            adapter.mediaPlayer_words = MediaPlayer.create(view.getContext(), uri);
+            adapter.mediaPlayer_words.start();
+
+
+            adapter.mediaPlayer_words.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    adapter.mediaPlayer_words.reset();
+                    adapter.mediaPlayer_words.release();
+                    adapter.mediaPlayer_words = null;
+
+                }
+
+                ;
+            });
+        } else {
+            adapter.mediaPlayer_words = MediaPlayer.create(view.getContext(), uri);
+            adapter.mediaPlayer_words.start();
+
+            adapter.mediaPlayer_words.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    //mediaPlayer_alphabet.stop();
+                    adapter.mediaPlayer_words.reset();
+                    adapter.mediaPlayer_words.release();
+                    adapter.mediaPlayer_words = null;
+                }
+
+                ;
+            });
+
         }
     }
 }
