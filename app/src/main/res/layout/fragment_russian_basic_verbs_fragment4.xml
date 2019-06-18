@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianBasicVerbsFragment4"
+    tools:context="com.languageapp.immanuel.flashtalk.RussianBasicVerbsFragment4"
     >
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".RussianBasicVerbsFragment4">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianBasicVerbsFragment4">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
@@ -47,8 +47,23 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+                    android:id="@+id/home"
+                    android:layout_width="@dimen/circular_button_games_width"
+                    android:layout_height="@dimen/circular_button_games_height"
+                    android:src="@drawable/home_icon7"
+                    />
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/title"
+                android:padding="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="10"
@@ -85,7 +100,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -93,7 +108,7 @@
                     android:visibility="gone"
                     />
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/pause"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -109,7 +124,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"

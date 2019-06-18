@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white_smoke"
-    tools:context=".RussianIWentOnFootFragment2">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianIWentOnFootFragment2">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -55,7 +55,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -70,7 +70,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"

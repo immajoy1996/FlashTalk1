@@ -1,8 +1,12 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="lang_radius">110dp</dimen>
+
     <integer name="circular_image_view_width">13</integer>
     <integer name="circular_image_view_width2">10</integer>
     <integer name="circular_image_view_test_width">2</integer>
+
+    <dimen name="language_text_size">16sp</dimen>
 
     <dimen name="check_annoying_dim">30dp</dimen>
     <dimen name="check_annoying_textsize">12sp</dimen>
@@ -69,6 +73,8 @@
     <dimen name="alphabet_practice_recycler_view_height">60dp</dimen>
 
     <color name="transliteration_color">#6495ED</color>
+
+    <dimen name="arabic_basic_pronouns_width">165dp</dimen>
 
     <dimen name="basic_pronouns_width">140dp</dimen>
     <dimen name="basic_pronouns_height">50dp</dimen>

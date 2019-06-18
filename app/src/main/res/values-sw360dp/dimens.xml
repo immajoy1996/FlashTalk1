@@ -1,7 +1,12 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="lang_radius">110dp</dimen>
+
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="language_text_size">16sp</dimen>
 
     <dimen name="check_annoying_dim">35dp</dimen>
     <dimen name="check_annoying_textsize">13sp</dimen>
@@ -13,8 +18,8 @@
     <dimen name="seekbar_length">170dp</dimen>
     <integer name="seekbar_weight">1</integer>
 
-    <dimen name="dialogue_image_height">200dp</dimen>
-    <dimen name="dialogue_image_width">200dp</dimen>
+    <dimen name="dialogue_image_height">210dp</dimen>
+    <dimen name="dialogue_image_width">210dp</dimen>
     <dimen name="dialogue_header_height">70dp</dimen>
     <dimen name="dialogue_image_padding">11dp</dimen>
     <dimen name="dialogue_text_size">26sp</dimen>
@@ -63,6 +68,8 @@
     <dimen name="alphabet_practice_recycler_view_font_size_word">20sp</dimen>
     <dimen name="alphabet_practice_recycler_view_font_size_translit">18sp</dimen>
     <dimen name="alphabet_practice_recycler_view_height">65dp</dimen>
+
+    <dimen name="arabic_basic_pronouns_width">170dp</dimen>
 
     <dimen name="basic_pronouns_font_size_word">20sp</dimen>
     <dimen name="basic_pronouns_font_size_translit">17sp</dimen>
@@ -207,7 +214,7 @@
     <dimen name="recycler_view_checkbox_width">30dp</dimen>
 
     <dimen name="recycler_view_row_height">65dp</dimen>
-    <dimen name="recycler_view_row_font_size">18dp</dimen>
+    <dimen name="recycler_view_row_font_size">18sp</dimen>
 
     <dimen name="russian_game_selection_play_width">110dp</dimen>
     <dimen name="russian_game_selection_play_height">60dp</dimen>

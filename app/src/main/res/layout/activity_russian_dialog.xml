@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.immanuel.flashtalk.RussianDialogActivity"
+    tools:context="com.languageapp.immanuel.flashtalk.my.example.immanuel.flashtalk.RussianDialogActivity"
     android:background="@drawable/river1"
     >
 

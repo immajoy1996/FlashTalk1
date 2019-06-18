@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianToGoAndReturnByVehicleFragment3"
+    tools:context="com.languageapp.immanuel.flashtalk.RussianToGoAndReturnByVehicleFragment3"
     >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        tools:context=".RussianToGoAndReturnByVehicleFragment3">
+        tools:context="com.languageapp.immanuel.flashtalk.RussianToGoAndReturnByVehicleFragment3">
 
         <!-- TODO: Update blank fragment layout -->
         <android.support.v7.widget.Toolbar
@@ -66,7 +66,7 @@
                     android:visibility="gone"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/audio"
                         android:layout_width="@dimen/arrow_button_width"
                         android:layout_height="@dimen/arrow_button_height"
@@ -81,7 +81,7 @@
                     android:layout_weight="@integer/ican_fragment3_games_weight"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/games"
                         android:layout_width="@dimen/arrow_button_width"
                         android:layout_height="@dimen/arrow_button_height"

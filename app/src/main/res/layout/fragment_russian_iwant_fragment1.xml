@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/light_grey"
-    tools:context=".RussianIWantFragment1">
+    android:background="@drawable/river1"
+    tools:context="com.languageapp.immanuel.flashtalk.RussianIWantFragment1">
 
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        tools:context=".RussianIWantFragment1">
+        tools:context="com.languageapp.immanuel.flashtalk.RussianIWantFragment1">
 
 
         <android.support.v7.widget.Toolbar
@@ -87,7 +87,7 @@
                     android:visibility="gone"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/audio"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -95,7 +95,7 @@
                         android:visibility="visible"
                         />
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/pause"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -172,9 +172,6 @@
             app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
             tools:layout_editor_absoluteX="0dp">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -209,7 +206,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="khot-yet"
+                            android:text="kha-tyet"
                             android:textColor="@color/white"
                             android:textSize="@dimen/iwant_fragment1_font_size_translit"
                             android:textStyle="italic" />
@@ -505,10 +502,6 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
-
-
-            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>

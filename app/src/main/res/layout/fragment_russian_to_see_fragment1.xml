@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianToSeeFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianToSeeFragment1">
 
 
 
@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        tools:context=".RussianToSeeFragment1">
+        tools:context="com.languageapp.immanuel.flashtalk.RussianToSeeFragment1">
 
 
         <android.support.v7.widget.Toolbar
@@ -88,7 +88,7 @@
                     android:visibility="gone"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/audio"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -96,7 +96,7 @@
                         android:visibility="visible"
                         />
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/pause"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -207,7 +207,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="veed-yet"
+                        android:text="veedeet"
                         android:textColor="@color/white"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />
@@ -437,7 +437,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="vee-deet-ye"
+                        android:text="veedeetee"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />

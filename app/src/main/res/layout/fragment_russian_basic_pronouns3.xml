@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.immanuel.flashtalk.RussianBasicPronounsFragment2">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianBasicPronounsFragment2">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
@@ -36,11 +36,26 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+                    android:id="@+id/home"
+                    android:layout_width="@dimen/circular_button_games_width"
+                    android:layout_height="@dimen/circular_button_games_height"
+                    android:src="@drawable/home_icon7"
+                    />
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="10"
+                android:padding="5dp"
                 android:gravity="center|left"
                 android:text="Examples"
                 android:fontFamily="@font/treb_ms_regular"
@@ -74,7 +89,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -82,7 +97,7 @@
                     android:visibility="gone"
                     />
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/pause"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -98,7 +113,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"
@@ -121,7 +136,7 @@
         android:padding="5dp"
         android:text="More useful sentences!"
         android:textColor="@color/black"
-        android:textSize="@dimen/plural_pronouns3_font_size_intro" />
+        android:textSize="@dimen/basic_pronouns3_font_size_intro" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,7 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout1"
-                android:layout_marginTop="@dimen/plural_pronouns3_vertical_spacing"
+                android:layout_marginTop="@dimen/basic_pronouns2_vertical_spacing"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:orientation="vertical"
@@ -142,13 +157,13 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/plural_pronouns3_height"
+                    android:layout_height="@dimen/basic_pronouns3_height"
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Привет. Он Саша?"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/plural_pronouns3_font_size"
+                    android:textSize="@dimen/basic_pronouns3_font_size"
                     android:textStyle="bold" />
 
                 <TextView
@@ -159,13 +174,13 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/plural_pronouns3_height"
+                    android:layout_height="@dimen/basic_pronouns3_height"
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Hi. Is he Sasha?"
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/plural_pronouns3_font_size" />
+                    android:textSize="@dimen/basic_pronouns3_font_size" />
 
             </LinearLayout>
 
@@ -173,7 +188,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout2"
-                android:layout_marginTop="@dimen/plural_pronouns3_vertical_spacing"
+                android:layout_marginTop="@dimen/basic_pronouns2_vertical_spacing"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:orientation="vertical"
@@ -182,13 +197,13 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/plural_pronouns3_height"
+                    android:layout_height="@dimen/basic_pronouns2_height"
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
                     android:text="Нет. Он не Саша. Она Саша."
                     android:textColor="@color/black"
-                    android:textSize="@dimen/plural_pronouns3_font_size"
+                    android:textSize="@dimen/basic_pronouns3_font_size"
                     android:textStyle="bold" />
 
                 <TextView
@@ -205,7 +220,7 @@
                     android:gravity="center|left"
                     android:text="No. He's not Sasha. She's Sasha."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/plural_pronouns3_font_size" />
+                    android:textSize="@dimen/basic_pronouns3_font_size" />
 
             </LinearLayout>
 
@@ -213,7 +228,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout3"
-                android:layout_marginTop="@dimen/plural_pronouns3_vertical_spacing"
+                android:layout_marginTop="@dimen/basic_pronouns2_vertical_spacing"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:orientation="vertical"
@@ -228,7 +243,7 @@
                     android:gravity="center|left"
                     android:text="Да. Окей. Я Сергей."
                     android:textColor="@color/black"
-                    android:textSize="@dimen/plural_pronouns3_font_size"
+                    android:textSize="@dimen/basic_pronouns2_font_size"
                     android:textStyle="bold" />
 
                 <TextView
@@ -245,7 +260,7 @@
                     android:gravity="center|left"
                     android:text="Yes. Okay. I'm Sergei."
                     android:textColor="@color/transliteration_color"
-                    android:textSize="@dimen/plural_pronouns3_font_size" />
+                    android:textSize="@dimen/basic_pronouns2_font_size" />
 
             </LinearLayout>
 

@@ -6,7 +6,7 @@
     android:background="@drawable/river1"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.immanuel.flashtalk.RussianBasicPronounsFragment1"
+    tools:context="com.languageapp.immanuel.flashtalk.my.example.immanuel.flashtalk.RussianBasicPronounsFragment1"
     >
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -15,7 +15,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.immanuel.flashtalk.RussianBasicPronounsFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.my.example.immanuel.flashtalk.RussianBasicPronounsFragment1">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -85,7 +85,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -93,7 +93,7 @@
                     android:visibility="gone"
                     />
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/pause"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"

@@ -4,18 +4,35 @@ android {
     compileSdkVersion 27
     buildToolsVersion "28.0.2"
     defaultConfig {
-        applicationId "com.example.immanuel.flashtalk"
+        applicationId "com.languageapp.immanuel.flashtalk"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 1
+        versionCode 10
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            debuggable true
+        }
         release {
             minifyEnabled false
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("/Users/Immanuel/.android/lastapp.keystore")
+            storePassword "PUdred5u"
+            keyAlias "last_one"
+            keyPassword "PUdred5u"
+        }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }
 

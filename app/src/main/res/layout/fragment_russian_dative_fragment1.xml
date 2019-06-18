@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianDativeFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianDativeFragment1">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -75,7 +75,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -83,7 +83,7 @@
                     android:visibility="gone"
                     />
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/pause"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"

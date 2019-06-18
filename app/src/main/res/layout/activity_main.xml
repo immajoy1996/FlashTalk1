@@ -5,14 +5,78 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ocean3"
-    tools:context="com.example.immanuel.flashtalk.MainActivity">
+    android:background="@drawable/river1"
+    tools:context="com.languageapp.immanuel.flashtalk.MainActivity">
 
-    <com.example.immanuel.flashtalk.CircularImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/russia_button"
-        android:src="@drawable/russiaflag"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_alignParentTop="true"
+        android:background="@color/medium_sea_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white_smoke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/plurals_fragment2_title_weight"
+                android:fontFamily="@font/treb_ms_regular"
+                android:gravity="center|left"
+                android:text="FlashTalk"
+                android:textColor="@color/white"
+                android:textSize="@dimen/toolbar_font_size"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="@integer/plurals_fragment2_volume_weight"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
+                    android:id="@+id/audio"
+                    android:layout_width="@dimen/circular_button_volume_width"
+                    android:layout_height="@dimen/circular_button_volume_height"
+                    android:src="@drawable/volumetrans2"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/plurals_fragment2_games_weight"
+                android:gravity="center">
+
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+                    android:id="@+id/settings"
+                    android:layout_width="@dimen/circular_button_games_width"
+                    android:layout_height="@dimen/circular_button_games_height"
+                    android:src="@drawable/tools"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/center"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
@@ -24,157 +88,140 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp" />
 
-   <com.example.immanuel.flashtalk.CircularImageView
-       android:layout_width="60dp"
-       android:layout_height="60dp"
-       android:id="@+id/portugal_button"
-       android:src="@drawable/portugalflag"
-       app:layout_constraintCircle="@+id/russia_button"
-       app:layout_constraintCircleAngle="0"
-       app:layout_constraintCircleRadius="125dp"
-       tools:layout_editor_absoluteY="144dp"
-       tools:layout_editor_absoluteX="162dp" />
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintCircle="@+id/center"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="@dimen/lang_radius"
+        tools:layout_editor_absoluteY="144dp"
+        tools:layout_editor_absoluteX="162dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+   <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+       android:layout_width="@dimen/circular_image_dim"
+       android:layout_height="@dimen/circular_image_dim"
+       android:id="@+id/russian_button"
+       android:src="@drawable/russia_flag_tiny"
         />
 
-    <com.example.immanuel.flashtalk.CircularImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/french_button"
-        android:src="@drawable/frenchflag2"
-        app:layout_constraintCircle="@+id/russia_button"
-        app:layout_constraintCircleAngle="60"
-        app:layout_constraintCircleRadius="125dp"
-        tools:layout_editor_absoluteY="199dp"
-        tools:layout_editor_absoluteX="258dp" />
-
-    <com.example.immanuel.flashtalk.CircularImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/spanish_button"
-        android:src="@drawable/spanishflagsmall"
-        app:layout_constraintCircle="@+id/russia_button"
-        app:layout_constraintCircleAngle="120"
-        app:layout_constraintCircleRadius="125dp"
-        tools:layout_editor_absoluteY="309dp"
-        tools:layout_editor_absoluteX="258dp" />
-
-
-    <com.example.immanuel.flashtalk.CircularImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/arabic_button"
-        android:src="@drawable/syriaflag1"
-        app:layout_constraintCircle="@+id/russia_button"
-        app:layout_constraintCircleAngle="180"
-        app:layout_constraintCircleRadius="125dp"
-        tools:layout_editor_absoluteY="364dp"
-        tools:layout_editor_absoluteX="162dp" />
-
-
-    <com.example.immanuel.flashtalk.CircularImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/italian_button"
-        android:src="@drawable/italianflag"
-        app:layout_constraintCircle="@+id/russia_button"
-        app:layout_constraintCircleAngle="240"
-        app:layout_constraintCircleRadius="125dp"
-        tools:layout_editor_absoluteY="309dp"
-        tools:layout_editor_absoluteX="67dp" />
-
-
-
-    <com.example.immanuel.flashtalk.CircularImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/german_button"
-        android:src="@drawable/germanflag"
-        app:layout_constraintCircle="@+id/russia_button"
-        app:layout_constraintCircleAngle="300"
-        app:layout_constraintCircleRadius="125dp"
-        tools:layout_editor_absoluteY="199dp"
-        tools:layout_editor_absoluteX="67dp" />
-
     <TextView
-        android:layout_width="60dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/russian_text"
-        android:text="русский"
+        android:text="Russian"
         android:gravity="center"
-        android:fontFamily="casual"
+        android:fontFamily="@font/treb_ms_regular"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/russia_button"
-        app:layout_constraintRight_toRightOf="@+id/russia_button" />
+        android:textSize="@dimen/language_text_size"
+        app:layout_constraintTop_toBottomOf="@+id/center"
+        app:layout_constraintRight_toRightOf="@+id/center" />
 
-    <TextView
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:id="@+id/portugese_text"
-        android:text="português"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintCircle="@+id/center"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="@dimen/lang_radius"
+        tools:layout_editor_absoluteY="144dp"
+        tools:layout_editor_absoluteX="162dp"
         android:gravity="center"
-        android:fontFamily="casual"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/portugal_button"
-        app:layout_constraintRight_toRightOf="@+id/portugal_button" />
+        android:orientation="vertical"
+        >
 
+        <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+            android:layout_width="@dimen/circular_image_dim"
+            android:layout_height="@dimen/circular_image_dim"
+            android:id="@+id/arabic_button"
+            android:src="@drawable/lebanese_flag2"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/arabic_text"
+            android:text="Arabic"
+            android:gravity="center"
+            android:fontFamily="@font/treb_ms_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/language_text_size"
+            app:layout_constraintTop_toBottomOf="@+id/center"
+            app:layout_constraintRight_toRightOf="@+id/center" />
 
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:id="@+id/french_text"
-        android:text="français"
-        android:fontFamily="casual"
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintCircle="@+id/center"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="@dimen/lang_radius"
+        tools:layout_editor_absoluteY="144dp"
+        tools:layout_editor_absoluteX="162dp"
         android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/french_button"
-        app:layout_constraintRight_toRightOf="@+id/french_button" />
+        android:orientation="vertical"
+        >
 
-    <TextView
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:id="@+id/spanish_text"
-        android:text="español"
-        android:fontFamily="casual"
+        <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+            android:layout_width="@dimen/circular_image_dim"
+            android:layout_height="@dimen/circular_image_dim"
+            android:id="@+id/turkish_button"
+            android:src="@drawable/turkish_flag_tiny"
+            />
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/turkish_text"
+            android:text="Turkish"
+            android:gravity="center"
+            android:fontFamily="@font/treb_ms_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/language_text_size"
+            app:layout_constraintTop_toBottomOf="@+id/center"
+            app:layout_constraintRight_toRightOf="@+id/center" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintCircle="@+id/center"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="@dimen/lang_radius"
+        tools:layout_editor_absoluteY="144dp"
+        tools:layout_editor_absoluteX="162dp"
         android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/spanish_button"
-        app:layout_constraintRight_toRightOf="@+id/spanish_button" />
+        android:orientation="vertical"
+        >
 
-    <TextView
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:id="@+id/arabic_text"
-        android:text="عربى"
-        android:fontFamily="casual"
-        android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/arabic_button"
-        app:layout_constraintRight_toRightOf="@+id/arabic_button" />
+        <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+            android:layout_width="@dimen/circular_image_dim"
+            android:layout_height="@dimen/circular_image_dim"
+            android:id="@+id/persian_button"
+            android:src="@drawable/persian_flag"
+            />
+        />
 
-    <TextView
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:id="@+id/italian_text"
-        android:text="italiano"
-        android:fontFamily="casual"
-        android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/italian_button"
-        app:layout_constraintRight_toRightOf="@+id/italian_button" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/persian_text"
+            android:text="Persian"
+            android:gravity="center"
+            android:fontFamily="@font/treb_ms_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/language_text_size"
+            app:layout_constraintTop_toBottomOf="@+id/center"
+            app:layout_constraintRight_toRightOf="@+id/center" />
 
-    <TextView
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:id="@+id/german_text"
-        android:text="deutsche"
-        android:fontFamily="casual"
-        android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/german_button"
-        app:layout_constraintRight_toRightOf="@+id/german_button" />
-
+    </LinearLayout>
 
 
 

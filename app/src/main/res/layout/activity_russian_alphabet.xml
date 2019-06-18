@@ -5,7 +5,7 @@
     android:id="@+id/activity_russian_alphabet2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.immanuel.flashtalk.RussianAlphabetActivity"
+    tools:context="com.languageapp.immanuel.flashtalk.my.example.immanuel.flashtalk.RussianAlphabetActivity"
     android:background="@drawable/ocean3"
     >
 

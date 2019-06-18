@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.immanuel.flashtalk.RussianLanguageActivity"
+    tools:context="com.languageapp.immanuel.flashtalk.my.example.immanuel.flashtalk.RussianLanguageActivity"
     android:background="@drawable/river1"
     >
 
@@ -54,7 +54,7 @@
                 android:layout_weight="@integer/language_recycler_view_weight_books"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/dialog"
                     android:layout_width="@dimen/circular_button_books_width"
                     android:layout_height="@dimen/circular_button_books_height"
@@ -69,7 +69,7 @@
                 android:layout_weight="@integer/language_recycler_view_weight_games"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_books_width"
                     android:layout_height="@dimen/circular_button_books_height"

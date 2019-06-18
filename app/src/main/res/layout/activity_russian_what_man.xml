@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RussianWhatManActivity">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianWhatManActivity">
 
 </android.support.constraint.ConstraintLayout>

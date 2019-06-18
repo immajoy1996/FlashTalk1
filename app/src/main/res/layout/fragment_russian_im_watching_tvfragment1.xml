@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/light_grey"
-    tools:context=".RussianImWatchingTVFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianImWatchingTVFragment1">
 
 
 
@@ -18,7 +18,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:background="@color/light_grey"
-        tools:context=".RussianImWatchingTVFragment1">
+        tools:context="com.languageapp.immanuel.flashtalk.RussianImWatchingTVFragment1">
 
 
         <android.support.v7.widget.Toolbar

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.immanuel.flashtalk.RussianSplash"
+    tools:context="com.languageapp.immanuel.flashtalk.LauncherActivity"
     >
 
     <LinearLayout
@@ -20,10 +20,10 @@
         <TextView
             android:layout_width="@dimen/launcher_screen_dim"
             android:layout_height="@dimen/launcher_screen_dim"
-            android:background="@drawable/lightning1" />
+            android:background="@drawable/newlogo1" />
 
 
-        <com.example.immanuel.flashtalk.TypeWriter
+        <com.languageapp.immanuel.flashtalk.TypeWriter
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RussianDialog6Fragment2">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianDialog6Fragment2">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
@@ -58,7 +58,7 @@
                 android:visibility="gone"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/audio"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -74,7 +74,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -136,7 +136,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="o-feets-ee-ant"
+                android:text="afitsyant"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="italic" />

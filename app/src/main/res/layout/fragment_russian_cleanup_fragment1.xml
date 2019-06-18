@@ -8,7 +8,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianCleanupFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianCleanupFragment1">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        tools:context=".RussianCleanupFragment1">
+        tools:context="com.languageapp.immanuel.flashtalk.RussianCleanupFragment1">
 
 
         <android.support.v7.widget.Toolbar
@@ -86,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/audio"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -94,7 +94,7 @@
                         android:visibility="gone"
                         />
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/pause"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -298,7 +298,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="zna-yet-e"
+                            android:text="znaye-tye"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/cleanup_font_size_translit"
                             android:textStyle="italic" />
@@ -459,7 +459,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="dyel-a-yem"
+                            android:text="dye-la-yem"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/cleanup_font_size_translit"
                             android:textStyle="italic" />
@@ -505,7 +505,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="dyel-at-ye"
+                            android:text="dye-la-ye-tye"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/cleanup_font_size_translit"
                             android:textStyle="italic" />
@@ -550,7 +550,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="dyel-a-yut"
+                            android:text="dye-la-yut"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/cleanup_font_size_translit"
                             android:textStyle="italic" />
@@ -616,7 +616,7 @@
                             android:layout_height="@dimen/tothink_fragment1_height"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="gah-var-eet"
+                            android:text="ga-va-reet"
                             android:padding="5dp"
                             android:textColor="@color/white"
                             android:textSize="@dimen/cleanup_font_size_translit"
@@ -666,7 +666,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="gah-var-eem"
+                            android:text="ga-va-reem"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/cleanup_font_size_translit"
                             android:textStyle="italic" />
@@ -712,7 +712,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="gah-var-eesh"
+                            android:text="ga-va-ree-tye"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/cleanup_font_size_translit"
                             android:fontFamily="@font/treb_ms_regular"
@@ -761,7 +761,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:padding="5dp"
                             android:gravity="center"
-                            android:text="gah-var-yat"
+                            android:text="ga-var-yat"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/cleanup_font_size_translit"
                             android:textStyle="italic" />

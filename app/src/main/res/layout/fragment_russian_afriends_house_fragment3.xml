@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white_smoke"
-    tools:context=".RussianAFriendsHouseFragment3">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianAFriendsHouseFragment3">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

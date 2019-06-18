@@ -4,7 +4,7 @@
     android:id="@+id/activity_russian_basic_pronouns"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.immanuel.flashtalk.RussianBasicPronounsActivity">
+    tools:context="com.languageapp.immanuel.flashtalk.my.example.immanuel.flashtalk.RussianBasicPronounsActivity">
 
     <android.support.v4.view.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"

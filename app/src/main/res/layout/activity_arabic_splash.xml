@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_russian_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.languageapp.immanuel.flashtalk.ArabicSplashActivity"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:background="@color/medium_sea_green"
+        app:titleTextColor="@color/white_smoke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/language_recycler_view_weight_title"
+                android:gravity="center|left"
+                android:text="FlashTalk"
+                android:fontFamily="@font/treb_ms_regular"
+                android:textColor="@color/white_smoke"
+                android:textSize="@dimen/toolbar_font_size"
+
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_vertical_margin"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/pic"
+            android:layout_width="@dimen/splash_screen_dim"
+            android:layout_height="@dimen/splash_screen_dim"
+            android:background="@drawable/saintpetersburg1" />
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/treb_ms_regular"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Buildings in Saint Petersburg, one of the most beautiful cities on Earth."
+            android:textColor="@color/black"
+            android:textSize="@dimen/splash_font_size_1" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

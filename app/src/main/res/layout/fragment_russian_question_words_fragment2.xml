@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.immanuel.flashtalk.RussianQuestionWordsFragment2">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianQuestionWordsFragment2">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_fragment2"
@@ -35,10 +35,25 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+                    android:id="@+id/home"
+                    android:layout_width="@dimen/circular_button_games_width"
+                    android:layout_height="@dimen/circular_button_games_height"
+                    android:src="@drawable/home_icon7"
+                    />
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:padding="5dp"
                 android:layout_weight="1"
                 android:gravity="center|left"
                 android:text="Examples"
@@ -73,7 +88,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -81,7 +96,7 @@
                     android:visibility="gone"
                     />
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/pause"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -144,7 +159,7 @@
                     android:layout_height="@dimen/question_words2_height"
                     android:text="Привет! Кто ты?"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/question_words2_font_size"
                     android:textStyle="bold"
                     android:gravity="center|left"
                     android:fontFamily="@font/treb_ms_regular"

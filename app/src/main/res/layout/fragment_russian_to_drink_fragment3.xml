@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianToDrinkFragment3">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianToDrinkFragment3">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
@@ -56,7 +56,7 @@
                 android:visibility="gone"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/arrow_button_width"
                     android:layout_height="@dimen/arrow_button_height"
@@ -71,7 +71,7 @@
                 android:layout_weight="@integer/ican_fragment3_games_weight"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/arrow_button_width"
                     android:layout_height="@dimen/arrow_button_height"
@@ -159,7 +159,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/treb_ms_regular"
                     android:gravity="center|left"
-                    android:text="Он только хочет пить, не есть."
+                    android:text="Он хочет только пить, не есть."
                     android:textColor="@color/black"
                     android:textSize="@dimen/ican_fragment3_font_size"
                     android:textStyle="bold" />

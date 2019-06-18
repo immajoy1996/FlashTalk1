@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".IDontUnderstandFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.IDontUnderstandFragment1">
 
 
 
@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        tools:context=".IDontUnderstandFragment1">
+        tools:context="com.languageapp.immanuel.flashtalk.IDontUnderstandFragment1">
 
 
         <android.support.v7.widget.Toolbar
@@ -88,7 +88,7 @@
                     android:visibility="gone"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/audio"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -96,7 +96,7 @@
                         android:visibility="visible"
                         />
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/pause"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -206,7 +206,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="pon-i-mat"
+                        android:text="pa-ni-mat"
                         android:textColor="@color/white"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />
@@ -252,7 +252,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="pon-i-ma-yu"
+                        android:text="pa-ni-ma-yu"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />
@@ -298,7 +298,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="pon-i-ma-yesh"
+                        android:text="pa-ni-ma-yesh"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />
@@ -344,7 +344,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="pon-i-ma-yet"
+                        android:text="pa-ni-ma-yet"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />
@@ -390,7 +390,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="pon-i-ma-yem"
+                        android:text="pa-ni-ma-yem"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />
@@ -436,7 +436,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="pon-i-ma-ye-te"
+                        android:text="pa-ni-ma-ye-tye"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />
@@ -482,7 +482,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="pon-i-ma-yut"
+                        android:text="pa-ni-ma-yut"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/idontunderstand_font_size_translit"
                         android:textStyle="italic" />

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RussianActualAPrettyLadysHouseFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianActualAPrettyLadysHouseFragment1">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.immanuel.flashtalk.CircularImageView1 android:id="@+id/audio"
+<com.languageapp.immanuel.flashtalk.CircularImageView1 android:id="@+id/audio"
     android:layout_width="40dp"
     android:layout_height="40dp"
     android:src="@drawable/volumetrans2"

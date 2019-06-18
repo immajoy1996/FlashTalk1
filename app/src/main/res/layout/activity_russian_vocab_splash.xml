@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianVocabSplash">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianVocabSplash">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_fragment1"
@@ -35,7 +35,7 @@
         android:orientation="vertical"
         >
 
-        <com.example.immanuel.flashtalk.CircularImageViewTest
+        <com.languageapp.immanuel.flashtalk.CircularImageViewTest
             android:id="@+id/image"
             android:layout_width="@dimen/vocab_splash_circular_image_width"
             android:layout_height="@dimen/vocab_splash_circular_image_height"
@@ -46,7 +46,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
+            android:padding="@dimen/activity_horizontal_margin"
             android:text="Vocab"
             android:gravity="center"
             android:fontFamily="@font/treb_ms_regular"

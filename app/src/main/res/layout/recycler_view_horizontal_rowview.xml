@@ -22,7 +22,7 @@
             android:gravity="center"
             >
 
-            <com.example.immanuel.flashtalk.CircularImageViewTest2
+            <com.languageapp.immanuel.flashtalk.CircularImageViewTest2
                 android:id="@+id/circular_image_view1"
                 android:layout_width="@dimen/circular_image_dim"
                 android:layout_height="@dimen/circular_image_dim"
@@ -35,8 +35,8 @@
                 android:layout_height="wrap_content"
                 android:text="russian"
                 android:fontFamily="@font/treb_ms_regular"
-                android:textColor="@color/white_smoke"
-                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/language_text_size"
             />
 
         </LinearLayout>
@@ -49,7 +49,7 @@
             android:orientation="vertical"
             >
 
-            <com.example.immanuel.flashtalk.CircularImageViewTest2
+            <com.languageapp.immanuel.flashtalk.CircularImageViewTest2
                 android:id="@+id/circular_image_view2"
                 android:layout_width="@dimen/circular_image_dim"
                 android:layout_height="@dimen/circular_image_dim"
@@ -62,8 +62,8 @@
                 android:layout_height="wrap_content"
                 android:text="russian"
                 android:fontFamily="@font/treb_ms_regular"
-                android:textColor="@color/white_smoke"
-                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/language_text_size"
                 />
 
         </LinearLayout>
@@ -76,7 +76,7 @@
             android:orientation="vertical"
             >
 
-            <com.example.immanuel.flashtalk.CircularImageViewTest2
+            <com.languageapp.immanuel.flashtalk.CircularImageViewTest2
                 android:id="@+id/circular_image_view3"
                 android:layout_width="@dimen/circular_image_dim"
                 android:layout_height="@dimen/circular_image_dim"
@@ -89,8 +89,8 @@
                 android:layout_height="wrap_content"
                 android:text="russian"
                 android:fontFamily="@font/treb_ms_regular"
-                android:textColor="@color/white_smoke"
-                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/language_text_size"
                 />
 
         </LinearLayout>

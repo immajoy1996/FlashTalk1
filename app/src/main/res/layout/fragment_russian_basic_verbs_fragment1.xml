@@ -8,7 +8,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianBasicVerbsFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianBasicVerbsFragment1">
 
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +17,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
 
-    tools:context=".RussianBasicVerbsFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianBasicVerbsFragment1">
 
 
     <android.support.v7.widget.Toolbar
@@ -87,7 +87,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -95,7 +95,7 @@
                     android:visibility="gone"
                     />
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/pause"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -482,7 +482,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="dyel-a-yu"
+                        android:text="dyel-la-yu"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/basic_verbs_font_size_translit"
                         android:textStyle="italic" />
@@ -529,7 +529,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="dyel-ash"
+                        android:text="dye-la-yesh"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/basic_verbs_font_size_translit"
                         android:textStyle="italic" />
@@ -576,7 +576,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="dyel-at"
+                        android:text="dye-lat"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/basic_verbs_font_size_translit"
                         android:textStyle="italic" />
@@ -647,7 +647,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="gah-var-eet"
+                        android:text="ga-var-eet"
                         android:textColor="@color/white_smoke"
                         android:textSize="@dimen/basic_verbs_font_size_translit"
                         android:textStyle="italic" />
@@ -694,7 +694,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="gah-var-yu"
+                        android:text="ga-va-ryu"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/basic_verbs_font_size_translit"
                         android:textStyle="italic" />
@@ -741,7 +741,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="gah-var-eesh"
+                        android:text="ga-va-reesh"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/basic_verbs_font_size_translit"
                         android:textStyle="italic" />
@@ -788,7 +788,7 @@
                         android:fontFamily="@font/treb_ms_regular"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="gah-var-eet"
+                        android:text="ga-va-reet"
                         android:textColor="@color/transliteration_color"
                         android:textSize="@dimen/basic_verbs_font_size_translit"
                         android:textStyle="italic" />

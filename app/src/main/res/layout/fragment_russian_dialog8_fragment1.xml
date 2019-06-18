@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianDialog8Fragment1"
+    tools:context="com.languageapp.immanuel.flashtalk.RussianDialog8Fragment1"
     >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".RussianDialog8Fragment1">
+        tools:context="com.languageapp.immanuel.flashtalk.RussianDialog8Fragment1">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -65,7 +65,7 @@
                     android:visibility="gone"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/audio_white"
                         android:layout_width="40dp"
                         android:layout_height="40dp"

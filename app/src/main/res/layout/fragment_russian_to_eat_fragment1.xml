@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianToEatFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianToEatFragment1">
 
 
 
@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        tools:context=".RussianToEatFragment1">
+        tools:context="com.languageapp.immanuel.flashtalk.RussianToEatFragment1">
 
 
         <android.support.v7.widget.Toolbar
@@ -67,7 +67,7 @@
                     android:visibility="gone"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/audio_white"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -360,7 +360,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
-                            android:text="yed-eem"
+                            android:text="yeedeem"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
                             android:textStyle="italic" />
@@ -406,7 +406,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
-                            android:text="yed-eet-ye"
+                            android:text="yeedeetee"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
                             android:textStyle="italic" />
@@ -452,7 +452,7 @@
                             android:fontFamily="@font/treb_ms_regular"
                             android:gravity="center"
                             android:padding="@dimen/ican_fragment1_padding_boxes"
-                            android:text="yed-yat"
+                            android:text="yeedyat"
                             android:textColor="@color/transliteration_color"
                             android:textSize="@dimen/ican_fragment1_font_size_translit"
                             android:textStyle="italic" />

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RussianDialog10Fragment2">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianDialog10Fragment2">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
@@ -58,7 +58,7 @@
                 android:visibility="gone"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -74,7 +74,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/arrow_button_width"
                     android:layout_height="@dimen/arrow_button_height"
@@ -124,7 +124,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="самолёт"
+                android:text="шутка"
                 android:textColor="@color/black"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="bold" />
@@ -136,7 +136,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="cam-al-yot"
+                android:text="shootka"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="italic" />
@@ -148,7 +148,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="airplane"
+                android:text="joke"
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
@@ -171,7 +171,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="пятьдесят"
+                android:text="девушка"
                 android:textColor="@color/black"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="bold" />
@@ -183,7 +183,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="pyat-dec-yat"
+                android:text="dyevooshka"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="italic" />
@@ -195,53 +195,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="fifty"
-                android:textColor="@color/medium_sea_green"
-                android:textSize="@dimen/gender_fragment3_font_size_translit" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/gender_fragment2_height"
-            android:orientation="horizontal"
-            android:background="@drawable/rect_white"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:fontFamily="@font/treb_ms_regular"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="вот"
-                android:textColor="@color/black"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:fontFamily="@font/treb_ms_regular"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="vot"
-                android:textColor="@color/transliteration_color"
-                android:textSize="@dimen/gender_fragment3_font_size_translit"
-                android:textStyle="italic" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:fontFamily="@font/treb_ms_regular"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="here"
+                android:text="girlfriend"
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
@@ -252,9 +206,8 @@
             android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="@dimen/gender_fragment2_height"
-            android:orientation="horizontal"
             android:background="@drawable/rect_white"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -263,7 +216,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="ну"
+                android:text="извини"
                 android:textColor="@color/black"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="bold" />
@@ -275,7 +228,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="noo"
+                android:text="izveenee"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="italic" />
@@ -287,7 +240,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="well"
+                android:text="sorry"
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
@@ -298,9 +251,8 @@
             android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="@dimen/gender_fragment2_height"
-            android:orientation="horizontal"
             android:background="@drawable/rect_white"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -309,7 +261,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="ещё раз"
+                android:text="другой"
                 android:textColor="@color/black"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="bold" />
@@ -321,7 +273,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="yesh-yo-raz"
+                android:text="droogoy"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="italic" />
@@ -333,21 +285,19 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="again"
+                android:text="other"
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
 
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="@dimen/gender_fragment2_height"
-            android:orientation="horizontal"
             android:background="@drawable/rect_white"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -356,7 +306,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="сто"
+                android:text="вместе"
                 android:textColor="@color/black"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="bold" />
@@ -368,7 +318,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="stoh"
+                android:text="vmyestee"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="italic" />
@@ -380,12 +330,13 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="hundred"
+                android:text="together"
                 android:textColor="@color/medium_sea_green"
                 android:textSize="@dimen/gender_fragment3_font_size_translit" />
 
 
         </LinearLayout>
+
 
     </LinearLayout>
 

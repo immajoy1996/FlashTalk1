@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RussianDialog8Fragment2">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianDialog8Fragment2">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
@@ -58,7 +58,7 @@
                 android:visibility="gone"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -74,7 +74,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/arrow_button_width"
                     android:layout_height="@dimen/arrow_button_height"
@@ -136,7 +136,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="pros-ta"
+                android:text="prosta"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="italic" />
@@ -183,7 +183,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="cyem-ya"
+                android:text="simya"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment3_font_size_translit"
                 android:textStyle="italic" />
@@ -229,7 +229,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="skol-ka"
+                android:text="skolka"
                 android:textAllCaps="false"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment2_font_size_translit"
@@ -274,7 +274,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="mn-o-ga"
+                android:text="mnoga"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment2_font_size_translit"
                 android:textStyle="italic" />
@@ -318,7 +318,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="den-gee"
+                android:text="dengee"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment2_font_size_translit"
                 android:textStyle="italic" />
@@ -362,7 +362,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="fs-yo"
+                android:text="fsyo"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment2_font_size_translit"
                 android:textStyle="italic" />
@@ -406,7 +406,7 @@
                 android:fontFamily="@font/treb_ms_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="cob-a-ka"
+                android:text="sabaka"
                 android:textColor="@color/transliteration_color"
                 android:textSize="@dimen/gender_fragment2_font_size_translit"
                 android:textStyle="italic" />

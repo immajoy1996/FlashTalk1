@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rect_dialog"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/medium_sea_green"
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="ب"
+        android:textColor="@color/white"
+        android:textSize="@dimen/toolbar_font_size"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/treb_ms_regular"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text='This is the letter "b". Notice that all three forms have a single dot underneath.'
+        android:textColor="@color/black"
+        android:textSize="@dimen/toolbar_font_size">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:text="ب"
+                android:textAllCaps="false"
+                android:textSize="@dimen/toolbar_font_size"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:text="end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/toolbar_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:text="ب"
+                android:textAllCaps="false"
+                android:textSize="@dimen/toolbar_font_size"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:text="middle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/toolbar_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:text="ب"
+                android:textAllCaps="false"
+                android:textSize="@dimen/toolbar_font_size"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/treb_ms_regular"
+                android:text="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/toolbar_font_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="5dp"
+        >
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:text="ببب"
+        android:fontFamily="@font/treb_ms_regular"
+        android:textSize="@dimen/toolbar_font_size"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@drawable/rect_white"
+        />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:text="بببببب"
+            android:fontFamily="@font/treb_ms_regular"
+            android:textSize="@dimen/toolbar_font_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/rect_white"
+            />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="بببببب"
+            android:fontFamily="@font/treb_ms_regular"
+            android:textSize="@dimen/toolbar_font_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/rect_white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center|right"
+        >
+
+        <LinearLayout
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_white"
+            >
+
+            <TextView
+                android:layout_width="@dimen/russian_actual_games_checkmark_width"
+                android:layout_height="@dimen/russian_actual_games_checkmark_height"
+                android:background="@drawable/checkmark1"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

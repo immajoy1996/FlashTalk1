@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/river1"
-    tools:context=".RussianToGoAndReturnByVehicleFragment1">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianToGoAndReturnByVehicleFragment1">
 
 
 
@@ -17,7 +17,7 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
-        tools:context=".RussianToGoAndReturnByVehicleFragment1">
+        tools:context="com.languageapp.immanuel.flashtalk.RussianToGoAndReturnByVehicleFragment1">
 
 
         <android.support.v7.widget.Toolbar
@@ -87,7 +87,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center">
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/audio"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"
@@ -95,7 +95,7 @@
                         android:visibility="gone"
                         />
 
-                    <com.example.immanuel.flashtalk.CircularImageView2
+                    <com.languageapp.immanuel.flashtalk.CircularImageView2
                         android:id="@+id/pause"
                         android:layout_width="@dimen/circular_button_volume_width"
                         android:layout_height="@dimen/circular_button_volume_height"

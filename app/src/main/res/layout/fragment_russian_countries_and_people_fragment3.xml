@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/river1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RussianCountriesAndPeopleFragment3">
+    tools:context="com.languageapp.immanuel.flashtalk.RussianCountriesAndPeopleFragment3">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.Toolbar
@@ -39,10 +39,25 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
+                    android:id="@+id/home"
+                    android:layout_width="@dimen/circular_button_games_width"
+                    android:layout_height="@dimen/circular_button_games_height"
+                    android:src="@drawable/home_icon7"
+                    />
+
+            </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="10"
+                android:padding="5dp"
                 android:gravity="center|left"
                 android:text="French"
                 android:textColor="@color/white"
@@ -57,7 +72,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageView2
+                <com.languageapp.immanuel.flashtalk.CircularImageView2
                     android:id="@+id/audio"
                     android:layout_width="@dimen/circular_button_volume_width"
                     android:layout_height="@dimen/circular_button_volume_height"
@@ -73,7 +88,7 @@
                 android:layout_weight="1"
                 android:gravity="center">
 
-                <com.example.immanuel.flashtalk.CircularImageViewTest
+                <com.languageapp.immanuel.flashtalk.CircularImageViewTest
                     android:id="@+id/games"
                     android:layout_width="@dimen/circular_button_games_width"
                     android:layout_height="@dimen/circular_button_games_height"
